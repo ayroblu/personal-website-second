@@ -1,0 +1,129 @@
+.leftmenu {
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0; 
+  bottom: 0;
+  z-index: 1; /* so the menu or its navicon stays above all content */
+  overflow-y: auto;
+  -webkit-overflow-scroll: touch; /* for smooth scrolling on mobile */
+
+  /*-webkit-transition: all 0.2s ease-out;
+     -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+       -o-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
+          */
+}
+.leftmenu ul{
+  background: #222;
+  width:170px;
+  height: 100%;
+  font-size:20px;
+  line-height:50px;
+  color:#ccc;
+  text-align:left;
+}
+.leftmenu .menulist{
+  -webkit-box-shadow: 2px 0 10px 0 #555;
+     -moz-box-shadow: 2px 0 10px 0 #555;
+          box-shadow: 2px 0 10px 0 #555;
+}
+.leftmenu a{
+  display:block;
+  color:inherit;
+  border-bottom:1px solid #333;
+  padding-left:5%
+}
+.leftmenu a:hover{
+  background:#456;
+}
+.leftmenu ul ul a {
+  font-size:80%;
+  line-height:40px;
+  padding-left:10%
+}
+.leftmenu .header{
+  background:#37c;
+  color:#fff;
+  font-weight:bold;
+  font-size:25px;
+  line-height:60px;
+}
+.leftmenu .header:hover{
+  background:#48d;
+}
+#maincontainer{
+  height:inherit;
+  margin-left:170px;
+}
+.menuselect{
+  background:#456;
+}
+
+.leftmenu .overhang{
+  height:100%;
+  top:0;
+  bottom:0;
+  left:170px;
+  width:30px;
+  position:absolute;
+}
+
+/* ----------------------------------------------------------closer */
+.leftmenu #closer{
+  position:absolute;
+  bottom:10px;
+  left:45px;
+  color:#fff;
+  cursor:pointer;
+  padding:10px 10px;
+  width:60px;
+}
+.leftmenu #closer:hover{
+  background:black;
+}
+
+/* ---------------------------------------------------Javascript class switch */
+.leftmenu.hidden {
+  left: -170px;
+}
+.leftmenu.hidden .overhang{
+  background: rgba(50,50,50,0.02);
+}
+.leftmenu.hidden:hover{
+  left: 0;
+}
+.leftmenu.hidden:hover .overhang{
+  background: transparent;
+}
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+@media (max-width: 900px) {
+  #maincontainer{
+    margin-left:0;
+  }
+  .leftmenu {
+    left: -170px;
+  }
+  .leftmenu .overhang{
+    background: rgba(50,50,50,0.02);
+  }
+  .leftmenu:hover{
+    left: 0;
+  }
+  .leftmenu:hover .overhang{
+    background: transparent;
+  }
+  .leftmenu #closer{
+    display:none;
+  }
+}
+@media (min-width: 600px) {
+  .leftmenu{
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+         -o-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+  }
+}

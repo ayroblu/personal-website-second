@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block head %}
+<title>Image Carousel</title>
+<link rel="stylesheet" type="text/css" href="/static/gallery.css">
+{% endblock %}
+
+{% block mainbody %}
+<header><span class="heading">Image Carousel</span></header>
+<h1 class="subtitle">Why? Why not?</h1>
+
+<div class="viewcontainer">
+  <div class="dummy"></div>
+  <section class="viewport">
+    <div class="imagepadding"></div>
+    <div class="imagepadding"></div>
+  </section>
+  <div class="leftmove" onclick="previousImg()"><div class="arrowleft"></div></div>
+  <div class="rightmove" onclick="nextImg()"><div class="arrowright"></div></div>
+</div>
+
+<footer>Brought to you by Ben</footer>
+{% endblock %}
+
+{% block scripts %}
+<script>
+var imgList = {{ imgList|safe }};
+</script>
+<script src="/static/reqanifra-shim.js"></script>
+<script src="/static/gallery.js"></script>
+{% endblock %}
+

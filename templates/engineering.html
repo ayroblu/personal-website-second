@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block head %}
+<title>Ben Lu</title>
+<style>
+/* specific to this page */
+header{
+  height:40px;
+  background:#59f; 
+  font-size:30px;
+  line-height:40px;
+  color:white;
+}
+footer{
+  color:white;
+  margin-top:20px;
+}
+.subtitle{
+  background:black;
+  color:white;
+  padding:10px 0;
+  font-size:2em;
+}
+.image{
+  -webkit-transition: height 0.2s ease-out;
+     -moz-transition: height 0.2s ease-out;
+      -ms-transition: height 0.2s ease-out;
+       -o-transition: height 0.2s ease-out;
+          transition: height 0.2s ease-out;
+}
+</style>
+{% include 'subtemp/slidecss.html' %}
+{% endblock %}
+
+{% block mainbody %}
+<header>Ben Lu</header>
+<h1 class="subtitle">Engineering Science</h1>
+
+
+<section class="tboard">
+<div class="image" id="image1">
+  <div>
+    <h1>Operations Research</h1>
+    <p>Optimisation: <ul><li>Queues</li><li>Systems</li><li>Design</li></ul></p>
+  </div>
+</div>
+<div class="image" id="image2">
+  <div>
+    <h1>Continuum Mechanics</h1>
+    <p>Fluid and Solid modelling: <ul><li>Stresses</li><li>Water and air flow</li></ul></p>
+  </div>
+</div>
+<div class="image" id="image3">
+  <div>
+    <h1>Design</h1>
+    <p>Creative decomposition of problems</p>
+  </div>
+</div>
+
+</section>
+
+<footer>Brought to you by Ben</footer>
+{% endblock %}
+
+
+{% block scripts %}
+{% include 'subtemp/slidejs.html' %}
+<script>
+</script>
+{% endblock %}

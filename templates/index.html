@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block head %}
+<title>Ben Lu</title>
+<style>
+/* specific to this page */
+header{
+  height:40px;
+  background:#59f; 
+  font-size:30px;
+  line-height:40px;
+  color:white;
+}
+footer{
+  color:white;
+  margin-top:20px;
+}
+.subtitle{
+  background:black;
+  color:white;
+  padding:10px 0;
+  font-size:2em;
+}
+</style>
+{% include 'subtemp/slidecss.html' %}
+{% endblock %}
+
+{% block mainbody %}
+<header>Ben Lu</header>
+<h1 class="subtitle">Strategy and Tactics</h1>
+
+
+<section class="tboard">
+<div class="image" id="image1">
+  <div>
+    <h1>Degrees</h1>
+    <p>Engineering / Commerce</p>
+  </div>
+</div>
+<div class="image" id="image2">
+  <div>
+    <h1>Majors</h1>
+    <p>Engineering Science, Economics</p>
+  </div>
+</div>
+<div class="image" id="image3">
+  <div>
+    <h1>Goal</h1>
+    <p>To learn and do the most important things</p>
+  </div>
+</div>
+
+</section>
+
+<footer>Brought to you by Ben</footer>
+{% endblock %}
+
+
+{% block scripts %}
+{% include 'subtemp/slidejs.html' %}
+{% endblock %}

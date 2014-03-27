@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block head %}
+<title>Scoring Input</title>
+<style>
+.backboard{
+  background:#eee;
+  width:100%;
+  min-height:300px;
+}
+.scoreboard{
+  width:300px;
+  margin: 0 auto;
+}
+.score{
+  display:inline-block;
+  background:#fff;
+  width:50%;
+  line-height:50px;
+  font-size:35px;
+  min-height:50px;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.score:hover {
+  background:#eef;
+}
+.score:active{
+  background:#f60;
+}
+</style>
+{% endblock %}
+
+{% block mainbody %}
+<header><span class="heading">Scoring Input</span></header>
+<h1 class="subtitle">Add scores here</h1>
+
+<section class="backboard">
+<div class="scoreboard">
+  <p id="left" class="score" onclick="incleft()"></p><p id="right" class="score" onclick="incright()"></p>
+</div>
+<button onclick="resetScore()">Reset Score</button>
+<p id="connectionstatus"></p>
+</section>
+
+<footer>Brought to you by Ben</footer>
+{% endblock %}
+
+{% block scripts %}
+<script src='/socket.io/socket.io.js'></script>
+<script>
+var socket = io.connect();
+
+function incleft(){
+  socket.emit("scoring:leftscore");
+}
+function incright(){
+  socket.emit("scoring:rightscore");
+}
+function resetScore(){
+  socket.emit("scoring:resetscore");
+}
+
+socket.on('getscore', function (leftscore,rightscore){
+  left.innerHTML = leftscore;
+  right.innerHTML = rightscore;
+});
+socket.on('connect', function (){
+  socket.emit("scoring");
+  connectionstatus.innerHTML = "Connected!";
+});
+socket.on('disconnect', function (){
+  connectionstatus.innerHTML = "I've lost my server!";
+});
+</script>
+{% endblock %}
+

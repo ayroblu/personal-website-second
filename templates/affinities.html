@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block head %}
+<title>Affinities</title>
+<style>
+.block{
+  padding:10px 2%;
+  width:96%;
+  background:#eee;
+  text-align:left;
+}
+</style>
+{% endblock %}
+
+{% block mainbody %}
+<header><span class="heading">Affinities for Processes</span></header>
+<h1 class="subtitle">From linux processes (ps, taskset)</h1>
+<div class="block"><pre>{{ fileout }}</pre></div>
+<footer>Brought to you by Ben</footer>
+{% endblock %}

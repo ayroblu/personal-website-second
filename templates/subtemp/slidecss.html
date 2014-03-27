@@ -1,0 +1,69 @@
+<style>
+/* -------------------images on the board */
+.tboard{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+}
+.image{
+  position:relative;
+  top:0;
+  left:0;
+  width:100%;
+  /*background-position: 0px 0;*/
+  background-position: center;
+  background-repeat:no-repeat;
+  display:table;
+}
+.image#image1{
+  background-image: url('/static/img/boxcatc.jpg');
+}
+.image#image2{
+  background-image: url('/static/img/pharohcatc.jpg');
+}
+.image#image3{
+  background-image: url('/static/img/dreamingcatc.jpg');
+}
+.image div{
+  width:100%;
+  display:inline-block;
+  display:table-cell;
+  vertical-align:middle;
+}
+.image h1{
+  color:#fff;
+  font-size:5em;
+  border-bottom:2px solid #fff;
+  width:auto;
+  display:inline-block;
+  padding-left:20px;
+  padding-right:20px;
+}
+.image p{
+  color:#fff;
+  font-size:3em;
+}
+.image ul{
+  color:#fff;
+  font-size:2em;
+}
+
+
+
+@media (min-width: 600px) {
+  .image{
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 600px) {
+  .image h1{
+    font-size:2em;
+  }
+  .image p{
+    font-size:1.5em;
+  }
+  .image ul{
+    font-size:1em;
+  }
+}
+</style>

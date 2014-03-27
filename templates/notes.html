@@ -1,0 +1,580 @@
+{% extends "base.html" %}
+{% block head %}
+<title>Notes</title>
+<style>
+.mainbody{
+  background:#eef;
+  min-width:600px;
+}
+.menu ul{
+  background:#59f;
+  height:50px;
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+@media (min-width: 750px) {
+  .menu ul{
+    font-size:23px;
+  }
+}
+.menu a{
+  padding:0 10px;
+  height:50px;
+  color:#fff;
+  text-decoration:none;
+  line-height:50px;
+  display:inherit;
+}
+@media (max-width: 750px) {
+  .menu ul{
+    font-size:18px;
+    height:30px;
+  }
+  .menu a{
+    height:30px;
+    line-height:30px;
+  }
+}
+.menu li{
+  display:inline-block;
+}
+.menu a:hover{
+  background:#48f;
+}
+
+.card{
+  background:#fff;
+  width:95%;
+  max-width: 1000px;
+  margin:10px auto;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+  padding:10px;
+  position:relative;
+
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.card:hover{
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+}
+.card > ul{
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  text-align:left;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+  width:95%;
+  max-width:1000px;
+  margin:10px auto;
+  padding:10px;
+  height:70px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper{}
+.flip-container.hover .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.front, .back {
+  background:#fff;
+  width:100%;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+  backface-visibility: hidden;
+
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  position: absolute;
+  padding:10px;
+  top: 0;
+  left: -10px;
+}
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position:relative;
+}
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
+/* back, initially hidden pane */
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.hide{
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #ddd;
+  position:absolute;
+  right:0;
+  top:0;
+}
+.hider{
+  cursor:pointer;
+}
+
+.subcard{
+  padding:10px 10px;
+  border-bottom:1px solid #ddd;
+}
+.subcard:hover{
+  background:rgba(240,240,240,0.1);
+}
+.subcard img{
+  width:100%;
+}
+
+p{
+  margin-top:5px;
+}
+h1{
+  font-size:35px;
+  font-weight:700;
+  color:#599;
+  border-bottom:1px solid #ccc;
+}
+h3{
+  padding-left:10px;
+}
+h4{
+  margin-top:5px;
+  color:#366;
+}
+</style>
+{% endblock %}
+
+{% block mainbody %}
+<section class="mainbody">
+<header><span class="heading">Notes</span></header>
+<h1 class="subtitle">Cards of results</h1>
+
+
+<section class='card'><h1 class="hider">About</h1><ul>
+
+<li><section class='subcard'>
+  <h3>Me: Ben</h3>
+  <p>I'm an intern at Endace</p>
+</section>
+
+<li><section class='subcard'>
+  <h3>Project: CPU Affinity</h3>
+  <h4>Use Cases</h4><ul>
+    <li>Packet Capture
+    <li>VM Tools<ul>
+      <li>NetFlow
+      <li>Proprietary</ul>
+    <li>Vision (browser visualisation)<ul>
+      <li>Read over the data (Large file v lots of small)
+      <li>Render on Screen</ul>
+  </ul>
+</section>
+
+</ul></section>
+
+
+<section class='card'><h1 class="hider">Probes</h1><ul>
+
+<li><section class='subcard'>
+  <h3>&lt;NoName&gt;</h3>
+  <span>192.168.132.143</span>
+</section>
+
+<li><section class='subcard'>
+  <h3>idsakl7000-1</h3>
+  <span>192.168.132.204</span>
+</section>
+
+</ul></section>
+
+
+<section class='card'><h1 class="hider">Project Status</h1><ul>
+
+<li><section class='subcard'>
+  <h3>Things to note about Vision call</h3>
+  <p>I want to try looking at the vision url call, two examples shown below, note that the calls are cached so calls to the url should be made to different times (t_0, t_f, ?, ?)</p>
+  <p>http://192.168.132.143/vision/data_flows/json/prot/050eb45c-592c-3eac-6c04-802098f409a5/138611<b>4019</b>/13861<b>18060</b>/?request_id=<b>360a142d-ac47-47f2-95ec-77e10e53c27c</b>&amp;limit=10&amp;_=1386272<b>287153</b></p>
+  <p>http://192.168.132.143/vision/data_flows/json/prot/050eb45c-592c-3eac-6c04-802098f409a5/138611<b>8247</b>/13861<b>21943</b>/?request_id=<b>f619bc1f-6d01-4dee-b17c-4337a52a9bcf</b>&amp;limit=10&amp;_=1386272<b>189005</b></p>
+</section>
+
+<li><section class='subcard'>
+  <h3>Coding Task: </h3>
+  <p>I am writing code to set affinities based on what state the user wants</p>
+  <p>Set based on expected number of pipes, VM spreadsheet, allocate Vision to rest</p>
+</section>
+
+<li><section class='subcard'>
+  <h3>Checking core 0 assignment</h3>
+  <p>Why set platform daemons to cpu 0 12? Why not cpu 6 18, other socket means more cores for erfstreams</p>
+  <p>It appears that drivers set affinities to specific CPUs (notably 0 12)</p>
+  <h4>Command to check interrupts: </h4>
+  <p><code><pre>less /proc/interrupts</pre></code></p>
+  <h4>Commands to check affinities: </h4>
+  <p><code><pre>ps -eLf | less # gets all processes</pre></code></p>
+  <p><code><pre>taskset -pc LWP # find LWP from above cmd</pre></code></p>
+</section>
+
+</ul></section>
+
+
+<section class='card'><h1 class="hider">Results</h1><ul>
+
+<li><section class='subcard'>
+  <h3>Initial Findings</h3><ol>
+    <li>ERFStream Manager runs 1 core to 100% per pipe (listening, needed for no packet drop)
+    <li>ERFStream Manager allocation should be 1 core per pipe + 1 for IO. 
+    <li>No allocation of hyperthreading cores (we don't control core allocation so potentially IO core might be allocated on pipe core
+    <li>Vision is a multi threaded process, more cores, faster traffic breakdown viewing, variableresults
+    <li>CPD with vision: variation between results &gt;&gt; any difference between two builds
+    <li>Virtualisation: not relevant, just do what the spreadsheet says (could be prettier and easier though)
+    <li>Platform Daemons: core 0 can only be allocated to platform daemons, might as well include the hyperthreaded core (core 12) as there are multiple threads in OS
+    <li>Some VMware might be packet critical (e.g. Netflow) so perhaps allocating other processes ontop of Virtualisation may cause loss of data</ol>
+</section>
+
+<li><section class='subcard'>
+  <h3>CPD drop point</h3><ul>
+  <li>Data drops start between 7100m and 7200m
+  <li>Data drops start between 7000m and 7100m when cpd is disabled
+  </ul>
+  <p>This is due to IO operations</p>
+</section>
+
+<li><section class='subcard'>
+  <h3>CPD drop point</h3>
+  <p>No packet drop when there is no sink. Turned on App detect</p>
+  <ul>
+  <li>2973822489 - 2972828039 = 994450 on dagstream at 10Gbps
+  <li>2974562916 - 2973822489 = 740427 on dagstream at 9Gbps
+  <li>2974740654 - 2974740654 = 0 on dagstream at 6Gbps
+  <li>2975462453 - 2975462453 = 0 on dagstream at 7Gbps
+  <li>2975529947 - 2975462453 = 67494 on dagstream at 7.5Gbps
+  <li>2975529947 - 2975529947 = 0 on dagstream at 7.25Gbps
+  <li>2975772620 - 2975772620 = 0 on dagstream at 7.4Gbps
+  <li>2975772620 - 2975772620 = 0 on dagstream at 7.5Gbps
+  <li>2975772620 - 2975772620 = 0 on dagstream at 7.6Gbps
+  <li>2975915526 - 2975772620 = 142906 on dagstream at 8Gbps
+  <li>2976331663 - 2976161855 = 169808 on dagstream at 8Gbps
+  <li>2976331663 - 2976331663 = 0 on dagstream at 7.7Gbps
+  <li>2976480794 - 2976331663 = 149131 on dagstream at 7.9Gbps 
+  <li>2977151526 - 2976480794 = 670732 on dagstream at 7.8Gbps 
+  <li>2977223635 - 2977151526 = 72109 on dagstream at 7.8Gbps
+  <li>2977331613 - 2977223635 = 107978 on dagstream at 7.75Gbps
+  <li>2977348041 - 2977331613 = 16428 on dagstream at 7.7Gbps
+  <li>2977865051 - 2977348041 = 517010 on dagstream at 7.7Gbps
+  <li>2977882685 - 2977865051 = 17634 on dagstream at 7.7Gbps
+  </ul>
+  <h3>No CPD drop point</h3>
+  <ul>
+  <li>2989486393 - 2989377044 = 109349 on dagstream at 7.7 Gbps
+  <li>2989593429 - 2989486393 = 107036 on dagstream at 7.7 Gbps
+  <li>2989816911 - 2989486393 = 330518 on dagstream at 7.7 Gbps
+  <li>2989880144 - 2989816911 = 63233 on dagstream at 7.5 Gbps
+  <li>2989939469 - 2989880144 = 59325 on dagstream at 7.5 Gbps
+  <li>2989939469 - 2989939469 = 0 on dagstream at 7.5 Gbps
+  </ul>
+
+</section>
+
+<li><section class='subcard'>
+  <h3>Graph of results: </h3>
+  <p><a href='/cpdperf'>Graph link</a></p>
+
+</section>
+
+
+<li><section class='subcard'>
+  <h3>Programs: </h3><ol>
+  <li>Bash script to set affinity settings based off purpose of machine
+  <li><a href="/static/setupprobe.sh">Bash script to setup probe</a>
+  </ol>
+
+</section>
+
+</ul></section>
+
+
+<section class='card'><h1 class="hider">Existing Information</h1><ul>
+
+<li><section class='subcard'>
+  <h3>Platform Daemons OSm</h3>
+  <p>0 and 12 always</p>
+</section>
+
+<li><section class='subcard'>
+  <h3>ERFStream Datapipe</h3>
+  <p>2 Physical Cores per pipe, no corresponding hyperthreaded cores</p>
+  <p>1, 2 assigned, 13, 14 unassigned
+</section>
+
+<li><section class='subcard'>
+  <h3>Vision Web</h3>
+  <p>Full core </p>
+  <p>6, 18</p>
+  <p>Virtualisation y/n</p>
+</section>
+
+<li><section class='subcard'>
+  <h3>ERFStream Download</h3>
+  <p>1 core, no hyperthreading</p>
+  <p>3 assigned, 15 unassigned</p>
+</section>
+
+<li><section class='subcard'>
+  <h3>Vision</h3>
+  <p>Virtual Core per Vision enabled rotfile</p>
+  <p>Virtual Core per concurrent Vision user</p>
+  <p>7 19</p>
+</section>
+
+<li><section class='subcard'>
+  <h3>Example &gt; 5Gbps</h3>
+    <pre>aff set ERFstream\ Manager 1 2 3 4 5
+aff set Platform\ Daemons 0 12
+aff set Vision 7 8 9 10 11 19 20 21 22 23
+aff set Virtualization 6 18</pre>
+</section>
+
+<li><section class='subcard'>
+  <h3>Example &lt; 5Gbps</h3>
+    <pre>aff set ERFstream\ Manager 1 2 3 4 5 7 8
+aff set Platform\ Daemons 0 12
+aff set Vision 9 10 11 21 22 23
+aff set Virtualization 6 18</pre>
+</section>
+
+</ul></section>
+
+
+<section class='card'><h1 class="hider">C coding</h1><ul>
+
+<li><section class='subcard'>
+  <h3>Module fork</h3>
+  <p>I've grabbed the module off: <pre>~/tree/customer/endace/src/bin/mgmtd/modules/md_affinity/</pre> and forked off a md_affinity_new (name to change later probably).</p>
+  <p>I've stripped the C file of all its functions except for the ones under: <pre>md_affinity_set(md_commit *commit, mdb_db **db, const char *action_name, bn_binding_array *params, void *cb_arg)</pre></p>
+  <p>This function currently listens to a node</p>
+  <p>It pulls the ts_csv.ts_str char array e.g. "3,4,5"</p>
+  <p>And ts_disp.ts_str char array e.g. "Vision"</p>
+  <p>ts_disp parsed into proc-&gt;proc_name ("Vision")</p>
+  <p>ts_csv parsed into cpu_list</p>
+</section>
+
+<li><section class='subcard'>
+  <h3>Scenarios</h3>
+  <ol><li>Running VMs
+  <li>Running Pipes
+  <li>Running Vision</ol>
+</section>
+
+<li><section class='subcard'>
+  <h3>Solutions</h3>
+  <ol><li>Set Affinities on load to profile. (e.g. A, B, or C)
+  <li>Set Affinities internally. (e.g. pipe enabled, add core; installing vm, add 16 cores
+  <li>Set Affinities externally. (e.g. add pipe calls change aff; VM call sets aff)</ol>
+</section>
+
+</ul></section>
+
+
+
+
+<section class='card'><h1 class="hider">Raw Streaming Results</h1><ul>
+
+<li><section class='subcard'>
+  <h3>Settings: CPU</h3>
+  <pre>ERFstream Manager:       1  13
+Platform Daemons:        0  12
+Vision:                  7  19
+Virtualization:          6  18</pre>
+  <h3>Settings: flood</h3>
+  <pre>dagconvert -i telstra_nexus.erf -o teln64.erf -A 8 -p1</pre>
+  <pre>dagflood -d1 -f teln64d1.erf -c999999 -w10g -v</pre>
+</section>
+
+<li><section class='subcard'>
+  <h3>Raw out (10Gbps):</h3>
+  <pre id="out1"></pre>
+</section>
+
+<li><section class='subcard'>
+  <h3>Raw out (5Gbps):</h3>
+  <pre id="out2"></pre>
+</section>
+
+<li><section class='subcard'>
+  <h3>Raw out (5Gbps), bigger files:</h3>
+  <pre id="out3"></pre>
+</section>
+
+<li><section class='subcard'>
+  <h3>Raw out (5Gbps), big file 4 hours 10 minutes</h3>
+  <pre id="out4"></pre>
+</section>
+
+</ul></section>
+
+
+<section class='card'><h1 class="hider">Raw Vision Results</h1><ul>
+
+<li><section class='subcard'>
+  <h3>Loading Vision with 2 cores</h3>
+  <pre>about: 50000ms</pre>
+</section>
+
+<li><section class='subcard'>
+  <h3>Loading Vision with 10 cores</h3>
+  <img src="/img/network10.png">
+</section>
+
+<li><section class='subcard'>
+  <h3>Loading Vision with 23 cores</h3>
+  <img src="/img/network.png">
+</section>
+
+<li><section class='subcard'>
+  <h3>Loading Vision cpu history</h3>
+  <p>Notice the 2core usage then the 23 core usage</p>
+  <img src="/img/cpu.png">
+</section>
+
+<li><section class='subcard'>
+  <h3>Loading Vision CPU history 10 cores</h3>
+  <img src="/img/cpu2.png">
+</section>
+
+<li><section class='subcard'>
+  <h3>Loading Vision on older boot with CPD</h3>
+  <img src="/img/visloadoriginal.png">
+</section>
+
+<li><section class='subcard'>
+  <h3>Loading Vision on new boot no CPD</h3>
+  <img src="/img/visloadnocpd.png">
+</section>
+
+<li><section class='subcard'>
+  <h3>Loading Vision on new boot with CPD 1</h3>
+  <img src="/img/visloadcpd1.png">
+</section>
+
+<li><section class='subcard'>
+  <h3>Loading Vision on new boot with CPD 2</h3>
+  <img src="/img/visloadcpd2.png">
+</section>
+
+</ul></section>
+
+
+<section class='card'><h1 class="hider">Notes</h1><ul>
+
+<li><section class='subcard'>
+  <h3>vi</h3>
+  <pre>:set ts=2 sw=2 sts=2 et is scrolloff=1 number autoindent</pre>
+  <pre>:set paste</pre>
+</section>
+
+<li><section class='subcard'>
+  <h3>Probe Commands</h3>
+  <span>cli -m config #starts in config mode</span>
+</section>
+
+</ul></section>
+
+
+
+<section class="flip-container" onclick="this.classList.toggle('hover');">
+<section class="flipper">
+  <section class="front">
+    <h1>YOLO</h1>
+  </section>
+  <section class="back">
+    <h1>SWAG</h1>
+  </section>
+</section>
+</section>
+
+</section>
+
+<footer>Brought to you by Ben</footer>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function loadpage(url,ref) {
+    var xmlhttp;
+    if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    } else {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function(){
+        if (xmlhttp.readyState==4 && (xmlhttp.status==200 || xmlhttp.status==0)){
+          console.log("done");
+          document.getElementById("out"+ref).innerHTML = xmlhttp.responseText;
+        }else{
+          console.log("Error:");
+          console.log("readyState: " + xmlhttp.readyState);
+          console.log("status: " + xmlhttp.status);
+        }
+    }
+    xmlhttp.open("GET",url,true);
+    xmlhttp.send();
+}
+for (var i=1; i<5; ++i) {
+  loadpage('results/out'+i+'.log',i);
+}
+</script>
+<script>
+var cards = document.getElementsByClassName('card');
+for (var i=0; i<cards.length; ++i) {
+  var hiders;
+  try {
+    hiders = cards[i].getElementsByClassName('hider');
+  } catch(err) {
+    txt="There was an error on this page.\n\n";
+    txt+="Error description: " + err.message + "\n\n";
+    txt+="Click OK to continue.\n\n";
+    console.log(txt);
+    console.log(i);
+    continue;
+  }
+  for (var hid in hiders) {
+    hiders[hid].onclick = function() {
+      console.log('some run');
+      var children = this.parentNode.children;
+      if(this.classList.toggle('shortened')){
+        for (child in children) {
+          if(child > 0)
+          children[child].style.display = 'none';
+        }
+      }else{
+        for (child in children) {
+          if (child > 0)
+            children[child].style.display = 'block';
+        }
+      }
+    }
+  }
+}
+</script>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block head %}
+<title>Touch</title>
+<style>
+.backboard{
+  background:#eee;
+  width:100%;
+  height:500px;
+}
+#thing{
+  height:100px;
+  width:100px;
+  margin-left:100px;
+  background:#ace;
+}
+.a{
+  padding-top:100px;
+}
+.leftmenu{
+}
+</style>
+{% endblock %}
+
+{% block mainbody %}
+<header><span class="heading">Touch Test</span></header>
+<h1 class="subtitle">Allowing mobile testing as well</h1>
+
+<section class="backboard">
+<div class="a">
+  <div id='thing'></div>
+</div>
+<div id='statusdiv'>lols</div>
+</section>
+
+<footer>Brought to you by Ben</footer>
+{% endblock %}
+
+{% block scripts %}
+<script>
+var leftmenu = document.getElementById('leftmenu');
+leftmenu.adist = 0;
+leftmenu.open = false;
+leftmenu.scheduledAnimationFrame = false;
+
+leftmenu.addEventListener('touchstart', function(e){
+  var touchobj = e.changedTouches[0] // reference first touch point (ie: first finger)
+  startx = parseInt(touchobj.clientX) // get x position of touch point relative to left edge of browser
+  e.preventDefault()
+}, false)
+
+leftmenu.addEventListener('touchmove', function(e){
+  var touchobj = e.changedTouches[0] // reference first touch point for this event
+  var dist = parseInt(touchobj.clientX) - startx + leftmenu.open*170;
+
+  leftmenu.adist = (dist > 170) ? 170 : (dist < 0) ? 0 : dist;
+
+  if (!leftmenu.scheduledAnimationFrame) {
+    requestAnimationFrame(movemenu);
+
+    console.log(dist);
+    leftmenu.scheduledAnimationFrame = true;
+  }
+  e.preventdefault()
+}, false)
+
+leftmenu.addEventListener('touchend', function(e){
+  var touchobj = e.changedTouches[0] // reference first touch point for this event
+
+  var dist = parseInt(touchobj.clientX) - startx + leftmenu.open*170;
+  if (dist > 85) {
+    leftmenu.adist = 170;
+    leftmenu.open = true;
+    requestAnimationFrame(movemenu);
+  } else {
+    leftmenu.adist = 0;
+    leftmenu.open = false;
+    requestAnimationFrame(movemenu);
+  }
+  e.preventDefault()
+}, false)
+
+function movemenu(time){
+  leftmenu.style.left = -170 + leftmenu.adist + 'px';
+  leftmenu.scheduledAnimationFrame = false;
+}
+
+</script>
+{% endblock %}
+

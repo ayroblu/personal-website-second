@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+{% block head %}
+<title>Direct Chat</title>
+<style>
+.backboard{
+  background:#eee;
+  width:100%;
+  min-height:200px;
+}
+.chathistory{
+  height:400px;
+  overflow:scroll;
+  background:#ddd;
+  text-align:left;
+  padding:10px;
+}
+</style>
+{% endblock %}
+
+{% block mainbody %}
+<header><span class="heading">Chatting</span></header>
+<h1 class="subtitle">WebRTC</h1>
+
+<section class="backboard">
+<h2>Direct Chat</h2>
+<p id="constatus">Connection Status</p>
+<input type="text" autofocus onkeypress="return sendmessage(event,this)">
+<div id="chathistory" class="chathistory"></div>
+</section>
+
+<footer>Brought to you by Ben</footer>
+{% endblock %}
+
+{% block scripts %}
+<script src='/socket.io/socket.io.js'></script>
+<script src='/static/js/lib/adapter.js'></script>
+<script>
+var socket = io.connect();
+
+socket.on('connect', function (){
+  constatus.style.background = "#2f2";
+  socket.emit("chat");
+});
+socket.on('disconnect', function (){
+  constatus.style.background = "#f22";
+});
+socket.on('ice', function(candidate){
+  candidate = new RTCIceCandidate(candidate);
+  lpc.addIceCandidate(candidate);
+  trace('remote candidate added');
+});
+socket.on('joined',function(){
+  lpc.createOffer(function(desc) {
+    console.log('createOffer');
+    lpc.setLocalDescription(desc);
+    console.log('locallocaldescription set');
+    socket.emit("chat:offerdescription",desc)
+  }, function(){});
+});
+socket.on('answer',function(desc){
+  desc = new RTCSessionDescription(desc);
+  lpc.setRemoteDescription(desc);
+  console.log('remoteremotedescription set');
+  lpc.createAnswer(function(desc){
+    console.log('createAnswer');
+    lpc.setLocalDescription(desc);
+    console.log('remotelocaldescription set');
+    socket.emit("chat:answerremotedescription",desc);
+  },function(){});
+});
+socket.on('reply',function(desc){
+  desc = new RTCSessionDescription(desc);
+  lpc.setRemoteDescription(desc);
+  console.log('localremotedescription set');
+});
+</script>
+<script>
+window.onload = function() {
+  createConnection();
+}
+function sendmessage(e,ctx){
+  if (e.keyCode == 13) {
+    sendChannel.send(ctx.value);
+    ctx.value = "";
+  }
+}
+</script>
+<script>
+var sendChannel, receiveChannel;
+var lpc,rpc;
+
+function trace(text) {
+  console.log((performance.now() / 1000).toFixed(3) + ": " + text);
+}
+
+function createConnection() {
+  var servers = null;
+  lpc = new RTCPeerConnection(servers, {optional: [{RtpDataChannels: true}]});
+  trace('Created local peer connection object lpc');
+
+  try {
+    // Reliable Data Channels not yet supported in Chrome
+    sendChannel = lpc.createDataChannel("sendDataChannel", {reliable: false});
+    trace('Created send data channel');
+  } catch (e) {
+    alert('Failed to create data channel. ' +
+          'You need Chrome M25 or later with RtpDataChannel enabled');
+    trace('createDataChannel() failed with exception: ' + e.message);
+  }
+  lpc.onicecandidate = function(event) {
+    trace('local ice callback');
+    if (event.candidate) {
+      socket.emit('chat:candidate',event.candidate);
+      //rpc.addIceCandidate(event.candidate);
+    }
+  }
+  lpc.ondatachannel = function(event) {
+    trace('Receive Channel Callback');
+    receiveChannel = event.channel;
+    receiveChannel.onmessage = function(event){
+      chathistory.innerHTML = event.data + '<br>' + chathistory.innerHTML;
+    }
+    receiveChannel.onopen = function(){
+      trace('receiveChannel open');
+    }
+    receiveChannel.onclose = function(){
+      trace('receiveChannel closed');
+    }
+  }
+  sendChannel.onopen = function(){
+    var readyState = sendChannel.readyState;
+    trace('Send channel state is: ' + readyState);
+    if (readyState == "open") {
+    } else {
+    }
+  }
+  sendChannel.onclose = function(){
+    var readyState = sendChannel.readyState;
+    trace('Send channel state is: ' + readyState);
+    if (readyState == "open") {
+    } else {
+    }
+  }
+
+  ///*
+  rpc = new RTCPeerConnection(servers, {optional: [{RtpDataChannels: true}]});
+  trace('Created remote peer connection object rpc');
+
+  rpc.onicecandidate = function(event) {
+    trace('rpc: remote ice callback');
+    if (event.candidate) {
+      lpc.addIceCandidate(event.candidate);
+      trace('rpc: Remote ICE candidate: \n ' + event.candidate.candidate);
+    }
+  }
+  rpc.ondatachannel = function(event) {
+    trace('rpc: Receive Channel Callback');
+    receiveChannel = event.channel;
+    receiveChannel.onmessage = function(event){
+      chathistory.innerHTML = event.data + '<br>' + chathistory.innerHTML;
+    }
+    receiveChannel.onopen = function(){
+      trace('rpc: receiveChannel closed');
+    }
+    receiveChannel.onclose = function(){
+      trace('rpc: receiveChannel closed');
+    }
+  }
+  //*/
+
+}
+
+function sendData() {
+  sendChannel.send("Hello World");
+}
+
+function closeDataChannels() {
+  sendChannel.close();
+  receiveChannel.close();
+  lpc.close();
+  rpc.close();
+}
+
+function handleError(){}
+</script>
+{% endblock %}
+
