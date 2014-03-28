@@ -1,19 +1,45 @@
+#hamburger{
+  width:70px;
+  height:50px;
+  position:absolute;
+  left:170px;
+  top:0;
+  background: #58f;
+  padding:10px 0;
+  cursor:pointer;
+  z-index:1;
+  opacity:0.5;
+
+  -webkit-transition: opacity 0.5s ease-out 0.5s;
+     -moz-transition: opacity 0.5s ease-out 0.5s;
+      -ms-transition: opacity 0.5s ease-out 0.5s;
+       -o-transition: opacity 0.5s ease-out 0.5s;
+          transition: opacity 0.5s ease-out 0.5s;
+}
+#hamburger div{
+  width:40px;
+  height:5px;
+  background:#fff;
+  margin: 9px auto;
+}
+#hamburger:hover{
+  opacity:1;
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
 .leftmenu {
-  width: 200px;
+  width: 240px;
   position: fixed;
   top: 0;
   left: 0; 
   bottom: 0;
   z-index: 1; /* so the menu or its navicon stays above all content */
   overflow-y: auto;
+  overflow-x: visible;
   -webkit-overflow-scroll: touch; /* for smooth scrolling on mobile */
-
-  /*-webkit-transition: all 0.2s ease-out;
-     -moz-transition: all 0.2s ease-out;
-      -ms-transition: all 0.2s ease-out;
-       -o-transition: all 0.2s ease-out;
-          transition: all 0.2s ease-out;
-          */
 }
 .leftmenu ul{
   background: #222;
@@ -91,8 +117,8 @@
 .leftmenu.hidden .overhang{
   background: rgba(50,50,50,0.02);
 }
-.leftmenu.hidden:hover{
-  left: 0;
+.leftmenu.hidden.enabled:hover{
+  /*left: 0;*/
 }
 .leftmenu.hidden:hover .overhang{
   background: transparent;

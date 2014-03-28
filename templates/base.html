@@ -76,23 +76,18 @@ colours = {
 
 <body>
 
-<nav id="leftmenu" class="leftmenu"><ul class="menulist">
+<nav id="leftmenu" class="leftmenu">
+<div id="hamburger">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<ul class="menulist">
   <li><a class="header" href="/">Home</a>
   {# <li><a {% if scoringPage %}class="menuselect" {% endif %}href="/scoring">Scoring tests</a>
   <li><a {% if scoringInputPage %}class="menuselect" {% endif %}href="/scoringinput">Scoring Input</a> #}
   <li><a {% if engineeringPage %}class="menuselect" {% endif %}href="/engineering">Engineering</a>
   <li><a {% if photoPage %}class="menuselect" {% endif %}href="/photosphere">Photo Spheres</a>
-  <!-- <li><a {% if notesPage %}class="menuselect" {% endif %}href="/notes">Notes</a>
-  <li><ul>
-    <li><a href="https://iwebmail.emulex.com/OWA/">Email</a>
-    <li><a href="http://wiki.et.endace.com/index.php/SDG_Probe_Reservation_Page">Probe Reservation</a>
-    <li><a href="http://share.ems.endace.com/">Sharepoint</a>
-    <li><a href="http://nzaklwss03.ems.endace.com/sites/DynamicsAx/EmployeeServices/ManageTimesheets/Enterprise Portal">Timesheets</a>
-    <li><a href="http://confluence.ems.endace.com:8090/">Confluence</a>
-  </ul>
-  <li><a {% if cpdPage %}class="menuselect" {% endif %}href="/cpdperf">Perf tests</a>
-  <li><a {% if affPage %}class="menuselect" {% endif %}href="/affinities">Affinities</a>
-  -->
 </ul>
 <div id="closer" onclick="closemenu()">&lt;&lt;</div>
 <div class="overhang"></div>
@@ -111,6 +106,8 @@ colours = {
 var leftmenu = document.getElementById('leftmenu');
 var maincontainer = document.getElementById('maincontainer');
 var closer = document.getElementById('closer');
+var hamburger = document.getElementById('hamburger');
+hamburger.onclick = function(){ closemenu() };
 leftmenu.adist = 0;
 leftmenu.open = false;
 leftmenu.scheduledAnimationFrame = false;
@@ -120,9 +117,11 @@ function closemenu(){
   if (leftmenu.classList.contains('hidden')){
     maincontainer.style.marginLeft = "0";
     closer.innerHTML = "&gt;&gt;";
+    //setTimeout(function(){ leftmenu.classList.add('enabled'); },200);
   } else {
-    maincontainer.style.marginLeft = "170px";
+    setTimeout(function(){maincontainer.style.marginLeft = "170px";},200);
     closer.innerHTML = "&lt;&lt;";
+    //leftmenu.classList.remove('enabled');
   }
 }
 // --------------------------------------------------------Touch Start
