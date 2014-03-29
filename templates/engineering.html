@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
 <title>Ben Lu</title>
+{% include 'subtemp/slidecss.html' %}
 <style>
 /* specific to this page */
 header{
@@ -20,20 +21,35 @@ footer{
   padding:10px 0;
   font-size:2em;
 }
-.image{
+{# .image{
   -webkit-transition: height 0.2s ease-out;
      -moz-transition: height 0.2s ease-out;
       -ms-transition: height 0.2s ease-out;
        -o-transition: height 0.2s ease-out;
           transition: height 0.2s ease-out;
+} #}
+.image#image1{
+  background-image: url('/static/img/rsm.jpg');
+}
+#image1 div{
+  background: rgba(30,50,50,0.4);
+}
+.image#image2{
+  background-image: url('/static/img/boundedresult.png');
+}
+#image2 div{
+  background: rgba(50,50,0,0.2);
+}
+.image#image3{
+  background-image: url('/static/img/windturbine.jpg');
+  background-color: #19e;
 }
 </style>
-{% include 'subtemp/slidecss.html' %}
 {% endblock %}
 
 {% block mainbody %}
-<header>Ben Lu</header>
-<h1 class="subtitle">Engineering Science</h1>
+{# <header>Ben Lu</header>
+<h1 class="subtitle">Engineering Science</h1> #}
 
 
 <section class="tboard">
@@ -52,7 +68,7 @@ footer{
 <div class="image" id="image3">
   <div>
     <h1>Design</h1>
-    <p>Creative decomposition of problems</p>
+    <p>Creativity and Validation</p>
   </div>
 </div>
 

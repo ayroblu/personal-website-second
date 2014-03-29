@@ -116,9 +116,7 @@ if (window.innerWidth < 900) leftmenu.classList.add('hidden');
 else leftmenu.classList.remove('hidden');
 
 function closemenu(){
-  console.log(leftmenu.classList.contains('hidden'));
   leftmenu.classList.toggle('hidden');
-  console.log(leftmenu.classList.contains('hidden'));
   if (leftmenu.classList.contains('hidden')){
     if (window.innerWidth < 900){
       leftmenu.adist = 0;
