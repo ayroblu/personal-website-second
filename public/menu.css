@@ -1,11 +1,11 @@
 #hamburger{
-  width:70px;
-  height:50px;
+  width:50px;
+  height:42px;
   position:absolute;
   left:170px;
   top:0;
   background: #58f;
-  padding:10px 0;
+  padding:4px 0;
   cursor:pointer;
   z-index:1;
   opacity:0.5;
@@ -17,10 +17,10 @@
           transition: opacity 0.5s ease-out 0.5s;
 }
 #hamburger div{
-  width:40px;
-  height:5px;
+  width:30px;
+  height:4px;
   background:#fff;
-  margin: 9px auto;
+  margin: 8px auto;
 }
 #hamburger:hover{
   opacity:1;
@@ -31,7 +31,7 @@
           transition: none;
 }
 .leftmenu {
-  width: 240px;
+  width: 220px;
   position: fixed;
   top: 0;
   left: 0; 
@@ -133,12 +133,6 @@
   }
   .leftmenu .overhang{
     background: rgba(50,50,50,0.02);
-  }
-  .leftmenu:hover{
-    left: 0;
-  }
-  .leftmenu:hover .overhang{
-    background: transparent;
   }
   .leftmenu #closer{
     display:none;
