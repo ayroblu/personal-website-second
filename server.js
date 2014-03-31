@@ -21,58 +21,38 @@ nunjucks.configure('templates', {
 });
 
 // ----------------------------------Views
-subdomains = [
-  'a',
-];
-function subdomain(req, res, domain) {
-  if (subdomains.indexOf(domain) == -1) {
-    return false;
-  }
-  res.render('/index.html',{});
-  return true;
-}
 app.get('/', function (req, res) {
-  if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
   res.render('/index.html',{});
 });
 app.get('/notes', function (req, res) {
-  if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
   res.render('/notes.html',{});
 });
 app.get('/affinities', function (req, res) {
-  if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
   res.render('/affinities.html',{});
 });
 app.get('/cpdperf', function (req, res) {
-  if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
   res.render('/cpdperf.html',{});
 });
 app.get('/scoring', function (req, res) {
-  if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
   res.render('/scoring.html',{});
 });
 app.get('/scoringinput', function (req, res) {
-  if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
   res.render('/scoringinput.html',{});
 });
 app.get('/chat', function (req, res) {
-  if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
   res.render('/directchat.html',{});
 });
 app.get('/chattest', function (req, res) {
-  if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
   res.render('/directchat.html~',{});
 });
 app.get('/toucher', function (req, res) {
-  if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
   res.render('touch.html',{});
 });
 app.get('/engineering', function (req, res) {
-  if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
   res.render('engineering.html',{'engineeringPage':true});
 });
 app.get('/photosphere', function (req, res) {
-  if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
+  //if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
   res.render('photosphere.html',{'photoPage':true});
 });
 app.get('/test', function (req, res) {
