@@ -45,7 +45,7 @@ app.get('/chat', function (req, res) {
 app.get('/chattest', function (req, res) {
   res.render('/directchat.html~',{});
 });
-app.get('/touch', function (req, res) {
+app.get('/toucher', function (req, res) {
   res.render('touch.html',{});
 });
 app.get('/engineering', function (req, res) {
