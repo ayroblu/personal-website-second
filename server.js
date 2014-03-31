@@ -25,10 +25,11 @@ subdomains = [
   'a',
 ];
 function subdomain(req, res, domain) {
-  if (subdomains.indexOf(domain) > -1) {
-    return true;
+  if (subdomains.indexOf(domain) == -1) {
+    return false;
   }
   res.render('/index.html',{});
+  return true;
 }
 app.get('/', function (req, res) {
   if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
