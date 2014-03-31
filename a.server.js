@@ -1,6 +1,6 @@
 var express = require('express')
   , nunjucks = require('nunjucks')
-  , app = express()
+  , app = exports.app = express()
   , server = require('http').createServer(app)
   , io = require('socket.io').listen(server)
   , pub = __dirname + '/public'
