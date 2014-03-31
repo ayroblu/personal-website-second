@@ -56,6 +56,7 @@ app.get('/photosphere', function (req, res) {
 });
 app.get('/test', function (req, res) {
   console.log('req.headers.host',req.headers.host);
+  res.render('/index.html',{});
 });
 
 // ---------------------------------Socket io
