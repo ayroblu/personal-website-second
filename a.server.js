@@ -15,7 +15,7 @@ app.use(express.errorHandler());
 app.use(express.favicon(__dirname + '/favicon.ico'));
 //app.set('views', __dirname + '/views');
 //app.set('view engine', 'jade');
-nunjucks.configure('templates', {
+nunjucks.configure('a.templates', {
   autoescape: true,
   express: app,
 });
