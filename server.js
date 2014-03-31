@@ -54,6 +54,9 @@ app.get('/engineering', function (req, res) {
 app.get('/photosphere', function (req, res) {
   res.render('photosphere.html',{'photoPage':true});
 });
+app.get('/test', function (req, res) {
+  console.log('req.headers.host',req.headers.host);
+});
 
 // ---------------------------------Socket io
 var leftscore = 0
