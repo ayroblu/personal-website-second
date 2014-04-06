@@ -6,6 +6,8 @@ var express = require('express')
   , pub = __dirname + '/public'
   , port = 80;
 
+exports.app = server;
+
 //----------------------------------Node setup
 io.set('log level', 1);
 app.use(app.router);
@@ -103,3 +105,4 @@ io.sockets.on('connection', function (socket){
   });
 });
 
+// server.listen(80);
