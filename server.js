@@ -7,7 +7,7 @@ var express = require('express')
   , port = 80;
 
 //var highlight = require('pygments');
-var highlight = require('pygments').colorize;
+//var highlight = require('pygments').colorize;
 
 exports.app = server;
 
