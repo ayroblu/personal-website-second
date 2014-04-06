@@ -1,23 +1,26 @@
 var express = require('express')
   , nunjucks = require('nunjucks')
-  , app = exports.app= express()
+  , app = express()
   , server = require('http').createServer(app)
   , io = require('socket.io').listen(server)
   , pub = __dirname + '/public'
   , port = 80;
 
+//var highlight = require('pygments');
+var highlight = require('pygments').colorize;
+
 exports.app = server;
 
 //----------------------------------Node setup
-io.set('log level', 1);
-app.use(app.router);
-app.use('/static',express.static(pub));
+io.set('log level', 0);
 app.use(express.logger());
-app.use(express.errorHandler());
-app.use(express.favicon(__dirname + '/favicon.ico'));
-//app.set('views', __dirname + '/views');
+app.use(app.router); // Handles get post (or called by get/post), defines the order of call (so like check if a get option before static)
+app.use('/static',express.static(pub)); //Static dir: maps to /public
+app.use(express.errorHandler()); // Allow 500 requests rather than crashing?
+app.use(express.favicon(__dirname + '/favicon.ico')); //Favicon
+//app.set('views', __dirname + '/views'); //Jade: didn't really like it
 //app.set('view engine', 'jade');
-nunjucks.configure('templates', {
+nunjucks.configure('templates', { //nunjucks: jinja templating
   autoescape: true,
   express: app,
 });
@@ -57,9 +60,15 @@ app.get('/photosphere', function (req, res) {
   //if (subdomain(req, res, req.headers.host.split('.')[0])) return true;
   res.render('photosphere.html',{'photoPage':true});
 });
-app.get('/test', function (req, res) {
-  console.log('req.headers.host',req.headers.host.split('.')[0]);
-  res.render('/index.html',{});
+
+//var str = "var js = 5;\n"+
+//"console.log('Awesome');"
+var result = "";
+//highlight('puts "Hello World"', 'ruby', 'console', function(data) {
+//  console.log(data);
+//});
+app.get('/code', function (req, res) {
+  res.render('/code.html',{'code': result});
 });
 
 // ---------------------------------Socket io
@@ -105,4 +114,4 @@ io.sockets.on('connection', function (socket){
   });
 });
 
-// server.listen(80);
+//server.listen(80);

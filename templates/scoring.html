@@ -39,7 +39,7 @@
 {% block scripts %}
 <script src='/socket.io/socket.io.js'></script>
 <script>
-var socket = io.connect();
+var socket = io.connect('',{'connect timeout':500});
 socket.on('getscore', function (leftscore,rightscore){
   left.innerHTML = leftscore;
   right.innerHTML = rightscore;

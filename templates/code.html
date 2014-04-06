@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block head %}
+<title>Code</title>
+<style>
+.backboard{
+  background:#eee;
+  width:100%;
+  height:500px;
+}
+</style>
+{% endblock %}
+
+{% block mainbody %}
+<header><span class="heading">Code</span></header>
+<h1 class="subtitle">Testing out the pygments code interpreter</h1>
+
+<section class="backboard">
+{{ code }}
+</section>
+
+<footer>Brought to you by Ben</footer>
+{% endblock %}
