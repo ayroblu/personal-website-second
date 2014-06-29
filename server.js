@@ -5,6 +5,9 @@ var express = require('express')
   , io = require('socket.io').listen(server)
   , pub = __dirname + '/public'
   , port = 80;
+  , mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/app');
 
 //var highlight = require('pygments');
 //var highlight = require('pygments').colorize;
