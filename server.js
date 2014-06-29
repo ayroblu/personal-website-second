@@ -4,7 +4,7 @@ var express = require('express')
   , server = require('http').createServer(app)
   , io = require('socket.io').listen(server)
   , pub = __dirname + '/public'
-  , port = 80;
+  , port = 80
   , mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/app');
