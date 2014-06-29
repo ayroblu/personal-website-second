@@ -6,26 +6,29 @@
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <link rel="shortcut icon" href="/favicon.ico" type="image/icon">
 <link rel="icon" href="/favicon.ico" type="image/icon">
+<link rel="stylesheet" type="text/css" href="/static/normalise.css">
 <style>
 html{
   height:100%;
-}body{
+}
+body{
   text-align:center;
-  font-family:"Trebuchet MS", Helvetica, sans-serif;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 300;
-  margin:0;
-  padding:0;
   background:#555;
   height:inherit;
-}p,ul,h1,h2,h3,h4,h5,h6,pre{
+}
+body,p,ul,h1,h2,h3,h4,h5,h6,pre{
   padding:0;
   margin:0;
-}ul{
+}
+ul{
   list-style-type: none;
-}a{
+}
+a{
   text-decoration:none;
-}pre{
+}
+pre{
   white-space:      pre-wrap;  /* css-3 */
   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
   white-space:     -pre-wrap;  /* Opera 4-6 */
@@ -70,6 +73,10 @@ colours = {
 }
 #}*/
 </script>
+<!--[if lt IE 9]>
+  <script src="/static/html5shiv.min.js"></script>
+<![endif]-->
+
 {% block head %}{% endblock %}
 </head>
 
