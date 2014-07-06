@@ -52,14 +52,12 @@ var timerID = null;
 var quickfinish = false;
 var gtime = 0;
 
-window.ontouchstart = function() { isMouseDown = true; }
-window.ontouchend = function() {  isMouseDown = false; handleScroll() }
 window.onmousedown = function(e){isMouseDown=true}
 window.onmouseup = function(e){isMouseDown=false; handleScroll()}
 
 // handleScroll -animtime-> snapToCards -itercards-> scrollToi -recurdata-> animateScroll -> animateScroll |
 function handleScroll(e){
-  if (animating){
+  if (true || animating || window.innerWidth < 600){
     return;
   }
   clearTimeout(timerID);
