@@ -34,10 +34,11 @@ function correctImageSize() {
   var maindim = document.getElementById('maincontainer').getBoundingClientRect();
   var aspectratio = window.innerWidth / window.innerHeight;
 
-  y0 = images[0].getBoundingClientRect().top - maindim.top;
+  //y0 = images[0].getBoundingClientRect().top - maindim.top;
   //if (window.pageYOffset - y0 > 0) scrollTo(0, (window.pageYOffset - y0) / oldHeight * window.innerHeight + y0);
 
   var addH = (window.mobilecheck()) ? 50 : 0;
+  addH = 0;
   for (var i = 0; i < images.length; ++i) {
     images[i].style.height = window.innerHeight + addH + 'px';
     if (aspectratio < 4/3) {
