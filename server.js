@@ -8,6 +8,7 @@ var express = require('express')
 var mongoose = require('mongoose');
 var request = require('request');
 var sprintf = require('util').format;
+var mail = require("nodemailer").mail;
 
 mongoose.connect('mongodb://localhost/app');
 
@@ -74,6 +75,16 @@ app.get('/notify', function (req, res) {
       res.send('Fail...');
     }
   );
+});
+app.get('/mail', function (req, res) {
+  mail({
+    'from': 'noreply@benlu.co',
+    'to': 'jackielongstaff@gmail.com',
+    'subject': 'Node emailer test',
+    'text': 'Looks like this was successful',
+    'html': 'Do I need this?',
+  });
+  res.send('Email Sent');
 });
 app.get('/affinities', function (req, res) {
   res.render('/affinities.html',{});
