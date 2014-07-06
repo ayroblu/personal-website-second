@@ -59,7 +59,7 @@ window.onmouseup = function(e){isMouseDown=false; handleScroll()}
 
 // handleScroll -animtime-> snapToCards -itercards-> scrollToi -recurdata-> animateScroll -> animateScroll |
 function handleScroll(e){
-  if (animating || window.innerWidth < 600){
+  if (animating){
     return;
   }
   clearTimeout(timerID);
