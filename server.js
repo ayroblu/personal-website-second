@@ -68,7 +68,10 @@ app.get('/notify', function (req, res) {
     function (error, response, body) {
       if (!error && response.statusCode == 200) {
         console.log(body)
+        res.send(body);
+        return;
       }
+      res.send('Fail...');
     }
   );
 });
