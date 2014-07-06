@@ -4,8 +4,10 @@ var express = require('express')
   , server = require('http').createServer(app)
   , io = require('socket.io').listen(server)
   , pub = __dirname + '/public'
-  , port = 80
-  , mongoose = require('mongoose');
+  , port = 80;
+var mongoose = require('mongoose');
+var request = require('request');
+var sprintf = require('util').format;
 
 mongoose.connect('mongodb://localhost/app');
 
@@ -34,6 +36,37 @@ app.get('/', function (req, res) {
 });
 app.get('/notes', function (req, res) {
   res.render('/notes.html',{});
+});
+app.get('/notify', function (req, res) {
+  var apikey = 'b312b44c0bc573f3ea8e875271f53235c60f146be1501971'
+  var appname = 'Server'
+  var title = 'VPS call'
+  var desc = 'Notification'
+
+  var cmd = 'curl';
+  var data = sprintf('--data \'apikey=%s&application=%s&event=%s&description=%s\'',apikey,appname,title,desc);
+  var url = 'https://www.notifymyandroid.com/publicapi/notify';
+  if (!req.query.cmd) {
+    res.send(sprintf('%s %s %s',cmd, data, url));
+    return;
+  }
+  appname = (req.query.app) ? req.query.app : appname;
+  title = (req.query.title) ? req.query.title : title;
+  desc = (req.query.desc) ? req.query.desc : desc;
+  request.post(
+    url,
+    { form: { 
+      'apikey': apikey,
+      'application': appname,
+      'event': title,
+      'description': desc,
+    } },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body)
+      }
+    }
+  );
 });
 app.get('/affinities', function (req, res) {
   res.render('/affinities.html',{});
