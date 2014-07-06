@@ -46,7 +46,11 @@ app.get('/notify', function (req, res) {
   var cmd = 'curl';
   var data = sprintf('--data \'apikey=%s&application=%s&event=%s&description=%s\'',apikey,appname,title,desc);
   var url = 'https://www.notifymyandroid.com/publicapi/notify';
-  if (!req.query.cmd) {
+  if (req.query.help) {
+    res.send('curl benlu.co/notify?app=[appname]&title=[title]&desc=[description]');
+    return;
+  }
+  if (!req.query.app && !req.query.title && !req.query.desc) {
     res.send(sprintf('%s %s %s',cmd, data, url));
     return;
   }
