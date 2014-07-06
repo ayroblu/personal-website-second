@@ -77,12 +77,20 @@ app.get('/notify', function (req, res) {
   );
 });
 app.get('/mail', function (req, res) {
+  var from = (req.query.app) ? req.query.app : 'noreply@benlu.co';
+  if (!req.query.to || !req.query.subject || !req.query.body) {
+    res.send('Missing message fields, make sure the to, subject and body fields have been filled in');
+    return;
+  }
+  var to = req.query.to;
+  var subject = req.query.subject;
+  var body = req.query.body;
   mail({
-    'from': 'noreply@benlu.co',
-    'to': 'jackielongstaff@gmail.com',
-    'subject': 'Node emailer test',
-    'text': 'Looks like this was successful',
-    'html': 'Do I need this?',
+    'from': from,
+    'to': to,
+    'subject': subject,
+    'text': 'Message sent',
+    'html': body,
   });
   res.send('Email Sent');
 });
