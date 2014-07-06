@@ -21,10 +21,9 @@ var oldHeight = window.innerHeight;
 var oldWidth = 0;
 
 function correctImageSize() {
-  if (Math.abs(oldHeight - window.innerHeight) < 100) {
-    if (oldWidth == window.innerWidth && window.mobilecheck())
+  if (Math.abs(oldHeight - window.innerHeight) < 100 &&
+    oldWidth == window.innerWidth && window.mobilecheck())
       return;
-  }
 
   var images = document.getElementsByClassName('image');
   var maindim = document.getElementById('maincontainer').getBoundingClientRect();
