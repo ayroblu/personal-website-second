@@ -77,7 +77,7 @@ app.get('/notify', function (req, res) {
   );
 });
 app.get('/mail', function (req, res) {
-  var from = (req.query.app) ? req.query.app : 'noreply@benlu.co';
+  var from = (req.query.from) ? req.query.from : 'noreply@benlu.co';
   if (!req.query.to || !req.query.subject || !req.query.body) {
     res.send('Missing message fields, make sure the to, subject and body fields have been filled in');
     return;
