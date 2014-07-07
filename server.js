@@ -89,7 +89,7 @@ app.get('/mail', function (req, res) {
     'from': from,
     'to': to,
     'subject': subject,
-    'text': 'Message sent',
+    'text': body,
     'html': body,
   });
   res.send('Email Sent');
