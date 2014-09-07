@@ -69,7 +69,7 @@ function markdownurl(i){
 
 // ----------------------------------Views
 app.get('/', function (req, res) {
-  var notes = getNotes(__dirname+'notes/notes.md');
+  var notes = getNotes(__dirname+'/notes/notes.md');
   template_values = {'toc':notes['toc'],'markdown':notes['markdown']}
   res.render('index.html', template_values);
 });
