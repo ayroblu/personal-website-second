@@ -6,7 +6,7 @@ var express = require('express')
   , app = exports.app = express()
   , server = require('http').createServer(app)
   , io = require('socket.io').listen(server)
-  , pub = __dirname + '/public/notes'
+  , pub = __dirname + '/public/notes'                 // Static dir
   , port = 8787;
 
 var toc = require('marked-toc');
