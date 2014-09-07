@@ -5,12 +5,12 @@ var express = require('express')
   , io = require('socket.io').listen(server)
   , pub = __dirname + '/public'
   , port = 80;
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 var request = require('request');
 var sprintf = require('util').format;
 var mail = require("nodemailer").mail;
 
-mongoose.connect('mongodb://localhost/app');
+//mongoose.connect('mongodb://localhost/app');
 
 //var highlight = require('pygments');
 //var highlight = require('pygments').colorize;
