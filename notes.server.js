@@ -6,7 +6,7 @@ var express = require('express')
   , app = exports.app = express()
   , server = require('http').createServer(app)
   , io = require('socket.io').listen(server)
-  , pub = __dirname + '/public'
+  , pub = __dirname + '/public/notes'
   , port = 8787;
 
 var toc = require('marked-toc');
@@ -28,7 +28,7 @@ classes = ['econ372', 'econ321', 'geotherm785', 'enggen403','enggen403busplan'];
 io.set('log level', 0);
 app.use(express.logger());
 app.use(app.router); // Handles get post (or called by get/post), defines the order of call (so like check if a get option before static)
-app.use('/static',express.static(pub)+'/notes'); //Static dir: maps to /public
+app.use('/static',express.static(pub)); //Static dir: maps to /public
 app.use(express.errorHandler()); // Allow 500 requests rather than crashing?
 
 nunjucks.configure('', { //nunjucks: jinja templating
@@ -69,7 +69,7 @@ function markdownurl(i){
 
 // ----------------------------------Views
 app.get('/', function (req, res) {
-  var notes = getNotes(__dirname);
+  var notes = getNotes(__dirname+'notes/notes.md');
   template_values = {'toc':notes['toc'],'markdown':notes['markdown']}
   res.render('index.html', template_values);
 });
