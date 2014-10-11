@@ -1,149 +1,182 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<style>
+html{
+  height:100%;
+}
+body{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  height:inherit;
+}
+html,body{
+  padding:0;
+  margin:0;
+}
+li{
+  margin-left:20px;
+}
+a{
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:underline;
+}
+pre{
+  white-space:      pre-wrap;  /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space:     -pre-wrap;  /* Opera 4-6 */
+  white-space:   -o-pre-wrap;  /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+blockquote{
+  background:#dddddd;
+  border-radius:5px;
+  padding:1px 20px;
+}
+img{
+  max-width:90%;
+}
+#markdown{
+  padding: 0 10% 10px;;
+}
+.nav{
+  margin:0;
+  padding:0;
+  text-align:center;
+  box-shadow: 0 0 10px #bbbbbb;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:50px;
+  overflow-y:scroll;
+}
+.nav li{
+  display:inline-block;
+  margin-left:0;
+}
+.nav li > a{
+  color:#aaaaaa;
+  height:50px;
+  line-height:50px;
+  display:inline-block;
+  padding:0 20px;
+  border-bottom:2px solid #ffffff;
+}
+.nav li > a:hover{
+  text-decoration:none;
+  color:black;
+  border-bottom:2px solid #5599dd
+}
+.nav li > a.active{
+  border-bottom:2px solid #88ccff;
+  color:black;
+}
+.dummynav{
+  height:50px;
+}
+.dummynavfixed{
+  height:50px;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background:white;
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+@media (max-width: 600px) {
+  #markdown{
+    padding: 0 1% 10px;;
+  }
+}
+.maincontainer{
+  position:relative;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="/static/menu.css">
+
+<title>Test Notes</title>
+</head>
+
 
 <body>
+<div class='dummynav'></div>
+<div class='dummynavfixed'></div>
+<ul class='nav'
+><li><a href="thing.html">ECON 372</a></li
+><li><a href="econ321">ECON 321</a></li
+><li><a href="geotherm785">GEOTHERM 785</a></li
+><li><a href="enggen403">ENGGEN 403</a></li
+><li><a href="enggen403busplan">ENGGEN 403 A2</a></li
+></ul>
 
-<div ng-controller="MainCtrl" ng-app=app>
 
-<h1>{{page.title()}}</h1>
+<div id="maincontainer">
+  <nav id="leftmenu" class="leftmenu">
+  <div id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="overhang"></div>
+  </nav>
 
-<p> <a href="#/home">Home</a> |
-    <a href="#/list">List</a> |
-    <a href="#/settings">Settings</a>
-</p>
 
-<hr>
-    <ng-view>Loading...</ng-view>
-<hr>
-Footer
-
-<!-- Inline Templates (Partials) -->
-    
-<script type=text/ng-template id=home.html>
-    <!-- Home -->
-    <ul>
-        <li><a href="#/list">Show Items</a></li>
-        <li><a href="#/settings">Settings</a></li>
-    </ul>
-</script>
-
-<script type=text/ng-template id=list.html>
-    <!-- List -->
-    <p>Choose an Item</p>
-    <ul>
-        <li ng-repeat="item in items"><a href="#/detail/{{item.id}}">{{item.title}}</a></li>
-    </ul>
-</script>
-
-<script type=text/ng-template id=detail.html>
-    <!-- Detail -->
-    <h2>{{item.title}}</h2>
-    <p>{{item.detail}}</p>
-    <hr>
-    <p>{{item.id}}</p>
-</script>
-
-<script type=text/ng-template id=settings.html>
-    <!-- Settings -->
-    <p>Settings go here ...</p>
-</script>
-    
-
+  <div id="markdown">
+  </div>
 </div>
 
 
+<script src='/static/menu.js'></script>
+<script src="history.js"></script>
 <script>
-angular.module('app', ['appServices'])
-    .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.
-                when('/home', {templateUrl: 'home.html',   controller: HomeCtrl}).
-                when('/list', {templateUrl: 'list.html',   controller: ListCtrl}).
-                when('/detail/:itemId', {templateUrl: 'detail.html',   controller: DetailCtrl}).
-                when('/settings', {templateUrl: 'settings.html',   controller: SettingsCtrl}).
-                otherwise({redirectTo: '/home'});
-}]);
-
-
-/* Controllers */
-
-function MainCtrl($scope, Page) {
-    console.log(Page);
-    $scope.page= Page; 
+function asyncreq(url,progCallback,finishCallback) {
+    var xhr;
+    if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xhr=new XMLHttpRequest();
+    } else {// code for IE6, IE5
+        xhr=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhr.onprogress = function (e) {
+      progCallback(e.loaded / e.total); // xhr.responseText
+    }
+    xhr.onreadystatechange=function(){
+        if (xhr.readyState==4 && (xhr.status==200 || xhr.status==0)){
+          callback(xhr.responseText);
+        }
+    }
+    xhr.open("GET",url,true);
+    xhr.send();
 }
-
-function HomeCtrl($scope, Page) {
-    Page.setTitle("Welcome");
-}
-
-
-function ListCtrl($scope, Page, Model) {
-    Page.setTitle("Items");
-    $scope.items = Model.notes();
-
-}
-
-function DetailCtrl($scope, Page, Model, $routeParams, $location) {
-    Page.setTitle("Detail");
-    var id = $scope.itemId = $routeParams.itemId;
-    $scope.item = Model.get(id);
-}
-
-function SettingsCtrl($scope, Page) {
-    Page.setTitle("Settings");
-}
-
-/* Services */
-
-angular.module('appServices', [])
-
-        .factory('Page', function($rootScope){
-            var pageTitle = "Untitled";
-            return {
-                title:function(){
-                    return pageTitle;
-                },
-                setTitle:function(newTitle){
-                    pageTitle = newTitle;
-                }
-            }
-        })
-
-        .factory ('Model', function () {
-            var data = [
-                {id:0, title:'Doh', detail:"A dear. A female dear."},
-                {id:1, title:'Re', detail:"A drop of golden sun."},
-                {id:2, title:'Me', detail:"A name I call myself."},
-                {id:3, title:'Fa', detail:"A long, long way to run."},
-                {id:4, title:'So', detail:"A needle pulling thread."},
-                {id:5, title:'La', detail:"A note to follow So."},
-                {id:6, title:'Tee', detail:"A drink with jam and bread."}
-            ];
-            return {
-                notes:function () {
-                    return data;
-                },
-                get:function(id){
-                  return data[id];
-                },
-                add:function (note) {
-                    var currentIndex = data.length;
-                    data.push({
-                        id:currentIndex, title:note.title, detail:note.detail
-                    });
-                },
-                delete:function (id) {
-                    var oldNotes = data;
-                    data = [];
-                    angular.forEach(oldNotes, function (note) {
-                        if (note.id !== id) data.push(note);
-                    });
-                }
-            }
+var History = window.History;
+//History.Adapter.bind(window,'statechange',function(){ 
+History.bind(window,'statechange',function(){ 
+  var State = History.getState(); 
+  History.log(State.data, State.title, State.url);
 });
+function loadpage(url) {
+  History.pushState({data:"any kind of data object"}, "State Title", url); 
+  //History.pushState({urlPath: urlPath}, title, urlPath);
+}
+function replacepage(url) {
+  History.replaceState({data:"any kind of data object"}, "State Title", url); 
+}
+var body = document.getElementsByTagName('body')[0];
+var links = body.getElementsByTagName('a');
+for (var i=0; i<links.length; ++i) {
+  links[i].onclick = function(e) {
+    e.preventDefault();
+    asyncreq("thing.html",null,function(responseText){
+      markdown.innerHTML = responseText;
+    });
+  }
+}
 </script>
-
-
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-
 </body>
 </html>

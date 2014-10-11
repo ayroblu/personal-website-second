@@ -109,11 +109,11 @@ img{
 <div class='dummynav'></div>
 <div class='dummynavfixed'></div>
 <ul class='nav'
-><li><a href="/#econ372"{% if econ372 %} class="active"{% endif %}>ECON 372</a></li
-><li><a href="/#econ321"{% if econ321 %} class="active"{% endif %}>ECON 321</a></li
-><li><a href="/#geotherm785"{% if geotherm785 %} class="active"{% endif %}>GEOTHERM 785</a></li
-><li><a href="/#enggen403"{% if enggen403 %} class="active"{% endif %}>ENGGEN 403</a></li
-><li><a href="/#enggen403busplan"{% if enggen403busplan %} class="active"{% endif %}>ENGGEN 403 A2</a></li
+><li><a href="/econ372"{% if econ372 %} class="active"{% endif %}>ECON 372</a></li
+><li><a href="/econ321"{% if econ321 %} class="active"{% endif %}>ECON 321</a></li
+><li><a href="/geotherm785"{% if geotherm785 %} class="active"{% endif %}>GEOTHERM 785</a></li
+><li><a href="/enggen403"{% if enggen403 %} class="active"{% endif %}>ENGGEN 403</a></li
+><li><a href="/enggen403busplan"{% if enggen403busplan %} class="active"{% endif %}>ENGGEN 403 A2</a></li
 ></ul>
 
 
@@ -152,6 +152,17 @@ function asyncreq(url,progCallback,finishCallback) {
     }
     xhr.open("GET",url,true);
     xhr.send();
+}
+var History = window.History;
+History.Adapter.bind(window,'statechange',function(){ 
+  var State = History.getState(); 
+  History.log(State.data, State.title, State.url);
+});
+function loadpage(url) {
+  History.pushState({data:"any kind of data object"}, "State Title", url); 
+}
+function replacepage(url) {
+  History.replaceState({data:"any kind of data object"}, "State Title", url); 
 }
 </script>
 </body>
