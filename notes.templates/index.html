@@ -52,22 +52,21 @@ img{
        -o-transition: left 0.2s ease-out;
           transition: left 0.2s ease-out;
 }
-#markdown.full,#markdown.full > .nav{
+#markdown.full,#markdown.full > .navcontainer{
   left:0;
 }
 .navcontainer{
   overflow:scroll;
-}
-.nav{
-  margin:0;
-  padding:0;
-  text-align:center;
+  position:fixed;
   box-shadow: 0 0 10px #bbbbbb;
+  text-align:center;
   position:fixed;
   top:0;
   left:250px;
   right:0;
   height:50px;
+}
+.nav{
   min-width:700px;
 }
 .nav li{
