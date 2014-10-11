@@ -172,7 +172,9 @@ var links = body.getElementsByTagName('a');
 for (var i=0; i<links.length; ++i) {
   links[i].onclick = function(e) {
     e.preventDefault();
-    asyncreq("thing.html",null,function(responseText){
+    asyncreq("thing.html",function(responseText){
+      console.log(responseText);
+    },function(responseText){
       markdown.innerHTML = responseText;
     });
   }
