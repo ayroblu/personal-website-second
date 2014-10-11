@@ -47,20 +47,19 @@
   -webkit-overflow-scroll: touch; /* for smooth scrolling on mobile */
 }
 .leftmenu .menuitems{
-  width:250px;
+  width:250px; /* Dependent */
   height:100%;
+  background: #fff;
   overflow:scroll;
 }
 .leftmenu .menuitems > ul{
-  background: #fff;
-  width:250px; /* Dependent */
   min-height: 100%;
   font-size:1.2em;
   /*line-height:50px;*/
   color:#000;
   text-align:left;
 }
-.leftmenu .menulist,.leftmenu .menuitems > ul{
+.leftmenu .menuitems{
   -webkit-box-shadow: 2px 0 10px 0 #aaa;
      -moz-box-shadow: 2px 0 10px 0 #aaa;
           box-shadow: 2px 0 10px 0 #aaa;
@@ -115,7 +114,7 @@
   left: -250px; /* Dependent */
 }
 .leftmenu.hidden .overhang{
-  background: rgba(50,50,50,0.02);
+  background: rgba(80,80,80,0.02);
 }
 .leftmenu.hidden.enabled:hover{
   /*left: 0;*/
@@ -132,7 +131,7 @@
     left: 0;
   }
   .leftmenu .overhang{
-    background: rgba(50,50,50,0.02);
+    background: rgba(80,80,80,0.02);
   }
   .leftmenu #closer{
     display:none;
