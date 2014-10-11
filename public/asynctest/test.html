@@ -1,74 +1,149 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Simple History.js Ajax example by dansalmo</title>
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
-    <script type="text/javascript" src="http://balupton.github.com/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
+<body>
 
-    <style type='text/css'>
-      .hidden {
-        display: none;
-        visibility: hidden;
-      }
-    </style>
-  </head>
-  <body>
-    <a href="/home">Home</a>
-    <a href="/about.html">About</a>
-    <a href="/contact">Contact</a>
-    <a href="/other">Other</a>
+<div ng-controller="MainCtrl" ng-app=app>
 
-    <p>The whole page will not re-load when the content below is updated, yet the URL is clean and the back button works!<p><br />
-    <div id="content">
-      <div id="home">Home Page content</div>
-    </div>
-    <br />
-    <p>The content div will be updated with a selected div fragment from an HTML file hosted on github, however the broswer will see each content update request as a part of the page history so that the back button can be used.</p>
-    <br  />
-    <p>Adding more menu items is as simple as adding the new links and their corresponding html fragments.<p>
-    <div id="hidden_content" class="hidden"></div>
-  </body>
-    <script type='text/javascript'>//<![CDATA[ 
-  $(function(){
-  var History = window.History;
-  if (History.enabled) {
-      State = History.getState();
-      // set initial state to first page that was loaded
-      History.pushState({urlPath: window.location.pathname}, $("title").text(), State.urlPath);
-  } else {
-      return false;
-  }
+<h1>{{page.title()}}</h1>
 
-  var loadAjaxContent = function(target, urlBase, selector) {
-      $(target).load(urlBase + ' ' + selector);
-  };
+<p> <a href="#/home">Home</a> |
+    <a href="#/list">List</a> |
+    <a href="#/settings">Settings</a>
+</p>
 
-  var updateContent = function(State) {
-      var selector = '#' + State.data.urlPath.substring(1);
-    if ($(selector).length) { //content is already in #hidden_content
-        $('#content').children().appendTo('#hidden_content');
-        $(selector).appendTo('#content');
-    } else { 
-        $('#content').children().clone().appendTo('#hidden_content');
-        loadAjaxContent('#content', State.url, selector);
-    }
-  };
+<hr>
+    <ng-view>Loading...</ng-view>
+<hr>
+Footer
 
-  // Content update and back/forward button handler
-  History.Adapter.bind(window, 'statechange', function() {
-      updateContent(History.getState());
-  });
+<!-- Inline Templates (Partials) -->
+    
+<script type=text/ng-template id=home.html>
+    <!-- Home -->
+    <ul>
+        <li><a href="#/list">Show Items</a></li>
+        <li><a href="#/settings">Settings</a></li>
+    </ul>
+</script>
 
-  // navigation link handler
-  $('body').on('click', 'a', function(e) {
-      var urlPath = $(this).attr('href');
-      var title = $(this).text();
-      History.pushState({urlPath: urlPath}, title, urlPath);
-      return false; // prevents default click action of <a ...>
-  });
-  });//]]>  
+<script type=text/ng-template id=list.html>
+    <!-- List -->
+    <p>Choose an Item</p>
+    <ul>
+        <li ng-repeat="item in items"><a href="#/detail/{{item.id}}">{{item.title}}</a></li>
+    </ul>
+</script>
 
-  </script>
+<script type=text/ng-template id=detail.html>
+    <!-- Detail -->
+    <h2>{{item.title}}</h2>
+    <p>{{item.detail}}</p>
+    <hr>
+    <p>{{item.id}}</p>
+</script>
+
+<script type=text/ng-template id=settings.html>
+    <!-- Settings -->
+    <p>Settings go here ...</p>
+</script>
+    
+
+</div>
+
+
+<script>
+angular.module('app', ['appServices'])
+    .config(['$routeProvider', function($routeProvider) {
+        $routeProvider.
+                when('/home', {templateUrl: 'home.html',   controller: HomeCtrl}).
+                when('/list', {templateUrl: 'list.html',   controller: ListCtrl}).
+                when('/detail/:itemId', {templateUrl: 'detail.html',   controller: DetailCtrl}).
+                when('/settings', {templateUrl: 'settings.html',   controller: SettingsCtrl}).
+                otherwise({redirectTo: '/home'});
+}]);
+
+
+/* Controllers */
+
+function MainCtrl($scope, Page) {
+    console.log(Page);
+    $scope.page= Page; 
+}
+
+function HomeCtrl($scope, Page) {
+    Page.setTitle("Welcome");
+}
+
+
+function ListCtrl($scope, Page, Model) {
+    Page.setTitle("Items");
+    $scope.items = Model.notes();
+
+}
+
+function DetailCtrl($scope, Page, Model, $routeParams, $location) {
+    Page.setTitle("Detail");
+    var id = $scope.itemId = $routeParams.itemId;
+    $scope.item = Model.get(id);
+}
+
+function SettingsCtrl($scope, Page) {
+    Page.setTitle("Settings");
+}
+
+/* Services */
+
+angular.module('appServices', [])
+
+        .factory('Page', function($rootScope){
+            var pageTitle = "Untitled";
+            return {
+                title:function(){
+                    return pageTitle;
+                },
+                setTitle:function(newTitle){
+                    pageTitle = newTitle;
+                }
+            }
+        })
+
+        .factory ('Model', function () {
+            var data = [
+                {id:0, title:'Doh', detail:"A dear. A female dear."},
+                {id:1, title:'Re', detail:"A drop of golden sun."},
+                {id:2, title:'Me', detail:"A name I call myself."},
+                {id:3, title:'Fa', detail:"A long, long way to run."},
+                {id:4, title:'So', detail:"A needle pulling thread."},
+                {id:5, title:'La', detail:"A note to follow So."},
+                {id:6, title:'Tee', detail:"A drink with jam and bread."}
+            ];
+            return {
+                notes:function () {
+                    return data;
+                },
+                get:function(id){
+                  return data[id];
+                },
+                add:function (note) {
+                    var currentIndex = data.length;
+                    data.push({
+                        id:currentIndex, title:note.title, detail:note.detail
+                    });
+                },
+                delete:function (id) {
+                    var oldNotes = data;
+                    data = [];
+                    angular.forEach(oldNotes, function (note) {
+                        if (note.id !== id) data.push(note);
+                    });
+                }
+            }
+});
+</script>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+
+</body>
 </html>
