@@ -1,9 +1,9 @@
 // Menu javascript
 var leftmenu = document.getElementById('leftmenu');
-var maincontainer = document.getElementById('maincontainer');
 var closer = document.getElementById('closer');
 var hamburger = document.getElementById('hamburger');
 var mwidth = 250;
+var markdown = document.getElementById('markdown');
 hamburger.onclick = function(){ closemenu() };
 leftmenu.adist = 0;
 leftmenu.open = false;
@@ -20,20 +20,18 @@ function closemenu(){
       leftmenu.open = false;
       movemenu();
     } else {
-      maincontainer.style.marginLeft = "0";
+      markdown.style.left = "0";
     }
     closer.innerHTML = "&gt;&gt;";
-    //setTimeout(function(){ leftmenu.classList.add('enabled'); },200);
   } else {
     if (window.innerWidth < 900) {
       leftmenu.adist = mwidth;
       leftmenu.open = true;
       movemenu();
     } else {
-      setTimeout(function(){maincontainer.style.marginLeft = "250px";},200);
+      setTimeout(function(){markdown.style.left = mwidth+"px";},200);
     }
     closer.innerHTML = "&lt;&lt;";
-    //leftmenu.classList.remove('enabled');
   }
 }
 // --------------------------------------------------------Touch Start

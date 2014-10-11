@@ -5,12 +5,12 @@ var express = require('express')
   , server = require('http').createServer(app)
   , io = require('socket.io').listen(server)
   , pub = __dirname + '/public/notes'                 // Static dir
-  , port = 8787;
+  , port = 8787
+  , toc = require('marked-toc')
+  , pagedown = require("pagedown");
+  , converter = new pagedown.Converter();
+  , safeConverter = pagedown.getSanitizingConverter();
 
-var toc = require('marked-toc');
-var pagedown = require("pagedown");
-var converter = new pagedown.Converter();
-var safeConverter = pagedown.getSanitizingConverter();
 
 classdirs = {
     'econ372': 'notes/econ372notes.md',
