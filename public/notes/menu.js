@@ -17,7 +17,6 @@ function closemenu(){
     if (window.innerWidth < 900){
       leftmenu.adist = 0;
       leftmenu.open = false;
-      movemenu();
     } else {
       markdown.classList.add('full');
     }
@@ -25,7 +24,6 @@ function closemenu(){
     if (window.innerWidth < 900) {
       leftmenu.adist = mwidth;
       leftmenu.open = true;
-      movemenu();
     } else {
       //setTimeout(function(){markdown.style.left = mwidth+"px";},200);
       markdown.classList.remove('full');
