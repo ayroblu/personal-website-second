@@ -91,7 +91,6 @@
 }
 #maincontainer{
   height:inherit;
-  margin-left:250px; /* Dependent */
 }
 .menuselect{
   /*background:#456;*/
@@ -123,6 +122,9 @@
 @media (max-width: 900px) {
   .leftmenu {
     left: -250px; /* Dependent */
+  }
+  .leftmenu.hidden {
+    left: 0;
   }
   .leftmenu .overhang{
     background: rgba(50,50,50,0.02);
