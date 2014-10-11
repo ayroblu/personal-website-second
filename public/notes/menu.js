@@ -50,6 +50,7 @@ leftmenu.addEventListener('touchmove', function(e){
 
     //leftmenu.scheduledAnimationFrame = true;
   }
+  console.log('something...');
   if (Math.abs(dist) < 20) {
     e.preventDefault()
   }
