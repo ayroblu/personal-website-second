@@ -46,6 +46,9 @@
   overflow-x: visible;
   -webkit-overflow-scroll: touch; /* for smooth scrolling on mobile */
 }
+.leftmenu .menuitems{
+  overflow:scroll;
+}
 .leftmenu > ul{
   background: #fff;
   width:250px; /* Dependent */
