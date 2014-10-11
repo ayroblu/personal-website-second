@@ -9,24 +9,27 @@ leftmenu.adist = 0;
 leftmenu.open = false;
 leftmenu.scheduledAnimationFrame = false;
 
-if (window.innerWidth < 900) leftmenu.classList.add('hidden');
-else leftmenu.classList.remove('hidden');
+if (window.innerWidth < 900) {
+  leftmenu.classList.add('hidden');
+  leftmenu.open = true;
+} else leftmenu.classList.remove('hidden');
 
 function closemenu(){
   if (leftmenu.classList.toggle('hidden')){
     if (window.innerWidth < 900){
       leftmenu.adist = 0;
-      leftmenu.open = false;
+      leftmenu.open = true;
     } else {
       markdown.classList.add('full');
+      leftmenu.open = false;
     }
   } else {
     if (window.innerWidth < 900) {
       leftmenu.adist = mwidth;
-      leftmenu.open = true;
+      leftmenu.open = false;
     } else {
-      //setTimeout(function(){markdown.style.left = mwidth+"px";},200);
       markdown.classList.remove('full');
+      leftmenu.open = true;
     }
   }
 }
