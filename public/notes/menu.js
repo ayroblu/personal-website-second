@@ -50,7 +50,6 @@ leftmenu.addEventListener('touchmove', function(e){
 
     //leftmenu.scheduledAnimationFrame = true;
   }
-  console.log('something...');
   if (Math.abs(dist) < 20) {
     e.preventDefault()
   }
@@ -81,4 +80,5 @@ leftmenu.addEventListener('touchend', function(e){
 function movemenu(time){
   leftmenu.style.left = -mwidth + leftmenu.adist + 'px';
   leftmenu.scheduledAnimationFrame = false;
+  console.log('Moving: ' + leftmenu.style.left);
 }
