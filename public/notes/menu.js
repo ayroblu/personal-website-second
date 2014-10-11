@@ -10,8 +10,8 @@ leftmenu.open = false;
 leftmenu.scheduledAnimationFrame = false;
 
 if (window.innerWidth < 900) {
-  leftmenu.classList.add('hidden');
-  leftmenu.open = true;
+  ///leftmenu.classList.add('hidden');
+  ///leftmenu.open = true;
 } else leftmenu.classList.remove('hidden');
 
 function closemenu(){
