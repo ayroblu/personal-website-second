@@ -13,8 +13,7 @@ if (window.innerWidth < 900) leftmenu.classList.add('hidden');
 else leftmenu.classList.remove('hidden');
 
 function closemenu(){
-  leftmenu.classList.toggle('hidden');
-  if (leftmenu.classList.contains('hidden')){
+  if (leftmenu.classList.toggle('hidden')){
     if (window.innerWidth < 900){
       leftmenu.adist = 0;
       leftmenu.open = false;
@@ -22,7 +21,6 @@ function closemenu(){
     } else {
       markdown.style.left = "0";
     }
-    closer.innerHTML = "&gt;&gt;";
   } else {
     if (window.innerWidth < 900) {
       leftmenu.adist = mwidth;
@@ -31,7 +29,6 @@ function closemenu(){
     } else {
       setTimeout(function(){markdown.style.left = mwidth+"px";},200);
     }
-    closer.innerHTML = "&lt;&lt;";
   }
 }
 // --------------------------------------------------------Touch Start

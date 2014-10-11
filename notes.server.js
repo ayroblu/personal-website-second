@@ -43,6 +43,7 @@ function getNotes(homedir) {
   return notes;
 }
 
+// ----------------------------------Views
 function markdownurl(i){
   app.get('/'+classes[i], function (req, res) {
     var notes = getNotes(classdirs[classes[i]]);
@@ -51,13 +52,12 @@ function markdownurl(i){
     res.render('notes.templates/index.html', template_values);
   });
 }
+for (var i = 0; i < classes.length; ++i) {
+  markdownurl(i);
+}
 
-// ----------------------------------Views
 app.get('/', function (req, res) {
   var notes = getNotes(__dirname+'/notes/notes.md');
   template_values = {'toc':notes['toc'],'markdown':notes['markdown']}
   res.render('notes.templates/index.html', template_values);
 });
-for (var i = 0; i < classes.length; ++i) {
-  markdownurl(i);
-}
