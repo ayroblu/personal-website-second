@@ -47,6 +47,8 @@
   -webkit-overflow-scroll: touch; /* for smooth scrolling on mobile */
 }
 .leftmenu .menuitems{
+  width:250px;
+  height:100%;
   overflow:scroll;
 }
 .leftmenu .menuitems > ul{
