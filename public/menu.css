@@ -49,6 +49,7 @@
   line-height:50px;
   color:#ccc;
   text-align:left;
+  padding:0;
 }
 .leftmenu .menulist{
   -webkit-box-shadow: 2px 0 10px 0 #555;
