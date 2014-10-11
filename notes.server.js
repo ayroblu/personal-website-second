@@ -34,6 +34,7 @@ nunjucks.configure('', { //nunjucks: jinja templating
   express: app,
 });
 
+
 //--------------------------------Functions
 var notes = '';
 function getNotes(homedir) {
@@ -42,6 +43,7 @@ function getNotes(homedir) {
   notes = {'toc':md(toc(file)),'markdown':md(file)};
   return notes;
 }
+
 
 // ----------------------------------Views
 function markdownurl(i){
