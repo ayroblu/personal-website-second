@@ -67,12 +67,20 @@ leftmenu.addEventListener('touchend', function(e){
     leftmenu.adist = mwidth;
     leftmenu.open = false;
     leftmenu.style.left = '';
-    leftmenu.classList.remove('hidden');
+    if (window.innerWidth < 900){
+      leftmenu.classList.remove('hidden');
+    } else {
+      leftmenu.classList.add('hidden');
+    }
   } else {
     leftmenu.adist = 0;
     leftmenu.open = true;
     leftmenu.style.left = '';
-    leftmenu.classList.add('hidden');
+    if (window.innerWidth < 900){
+      leftmenu.classList.add('hidden');
+    } else {
+      leftmenu.classList.remove('hidden');
+    }
   }
 }, false)
 
