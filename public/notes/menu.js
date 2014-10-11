@@ -64,11 +64,15 @@ leftmenu.addEventListener('touchend', function(e){
   if (dist > mwidth/2) {
     leftmenu.adist = mwidth;
     leftmenu.open = true;
-    requestAnimationFrame(movemenu);
+    leftmenu.style.left = '';
+    leftmenu.classList.remove('hidden');
+    //requestAnimationFrame(movemenu);
   } else {
     leftmenu.adist = 0;
     leftmenu.open = false;
-    requestAnimationFrame(movemenu);
+    leftmenu.style.left = '';
+    leftmenu.classList.add('hidden');
+    //requestAnimationFrame(movemenu);
   }
   //e.preventDefault()
 }, false)
