@@ -46,7 +46,7 @@ leftmenu.addEventListener('touchmove', function(e){
 
   if (!leftmenu.scheduledAnimationFrame) {
     //requestAnimationFrame(movemenu);
-    movemenu;
+    movemenu();
 
     //leftmenu.scheduledAnimationFrame = true;
   }
