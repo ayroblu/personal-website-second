@@ -7,9 +7,10 @@ var express = require('express')
   , pub = __dirname + '/public/notes'                 // Static dir
   , port = 8787
   , toc = require('marked-toc')
-  , pagedown = require("pagedown");
-  , converter = new pagedown.Converter();
-  , safeConverter = pagedown.getSanitizingConverter();
+  , pagedown = require("pagedown")
+  , converter = new pagedown.Converter()
+  , safeConverter = pagedown.getSanitizingConverter()
+;
 
 
 classdirs = {
