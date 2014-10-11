@@ -49,7 +49,7 @@
 .leftmenu .menuitems{
   overflow:scroll;
 }
-.leftmenu > ul{
+.leftmenu .menuitems > ul{
   background: #fff;
   width:250px; /* Dependent */
   min-height: 100%;
@@ -58,7 +58,7 @@
   color:#000;
   text-align:left;
 }
-.leftmenu .menulist,.leftmenu > ul{
+.leftmenu .menulist,.leftmenu .menuitems > ul{
   -webkit-box-shadow: 2px 0 10px 0 #aaa;
      -moz-box-shadow: 2px 0 10px 0 #aaa;
           box-shadow: 2px 0 10px 0 #aaa;
