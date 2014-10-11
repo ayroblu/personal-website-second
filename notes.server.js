@@ -1,8 +1,6 @@
 var express = require('express')
   , nunjucks = require('nunjucks')
   , fs = require('fs')
-  //, marked = require('marked')
-  //, app = express()
   , app = exports.app = express()
   , server = require('http').createServer(app)
   , io = require('socket.io').listen(server)
@@ -36,25 +34,12 @@ nunjucks.configure('', { //nunjucks: jinja templating
   express: app,
 });
 
-// Default values (don't require these lines)
-//marked.setOptions({
-//  renderer: new marked.Renderer(),
-//  gfm: true,
-//  tables: true,
-//  breaks: false,
-//  pedantic: false,
-//  sanitize: false,
-//  smartLists: true,
-//  smartypants: false
-//});
-
 //--------------------------------Functions
 var notes = '';
 function getNotes(homedir) {
   var file = fs.readFileSync(homedir, 'utf8');
   md = converter.makeHtml;
   notes = {'toc':md(toc(file)),'markdown':md(file)};
-  //notes = {'toc':marked(toc(file)),'markdown':marked(file)};
   return notes;
 }
 
@@ -76,6 +61,3 @@ app.get('/', function (req, res) {
 for (var i = 0; i < classes.length; ++i) {
   markdownurl(i);
 }
-
-//console.log("Server listening on port " + port);
-//server.listen(port);
