@@ -68,18 +68,18 @@ leftmenu.addEventListener('touchend', function(e){
     leftmenu.open = false;
     leftmenu.style.left = '';
     if (window.innerWidth < 900){
-      leftmenu.classList.remove('hidden');
-    } else {
       leftmenu.classList.add('hidden');
+    } else {
+      leftmenu.classList.remove('hidden');
     }
   } else {
     leftmenu.adist = 0;
     leftmenu.open = true;
     leftmenu.style.left = '';
     if (window.innerWidth < 900){
-      leftmenu.classList.add('hidden');
-    } else {
       leftmenu.classList.remove('hidden');
+    } else {
+      leftmenu.classList.add('hidden');
     }
   }
 }, false)
