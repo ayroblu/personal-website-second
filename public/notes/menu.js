@@ -19,7 +19,7 @@ function closemenu(){
       leftmenu.open = false;
       movemenu();
     } else {
-      markdown.style.left = "0";
+      markdown.classList.add('full');
     }
   } else {
     if (window.innerWidth < 900) {
@@ -27,7 +27,8 @@ function closemenu(){
       leftmenu.open = true;
       movemenu();
     } else {
-      setTimeout(function(){markdown.style.left = mwidth+"px";},200);
+      //setTimeout(function(){markdown.style.left = mwidth+"px";},200);
+      markdown.classList.remove('full');
     }
   }
 }
