@@ -136,6 +136,11 @@ img{
 <script src='/static/menu.js'></script>
 <script src="history.js"></script>
 <script>
+var data = {
+  'thing': null,
+};
+
+
 function asyncreq(url,progCallback,finishCallback) {
     var xhr;
     if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -154,6 +159,7 @@ function asyncreq(url,progCallback,finishCallback) {
     xhr.open("GET",url,true);
     xhr.send();
 }
+
 var History = window.History;
 //History.Adapter.bind(window,'statechange',function(){ 
 History.bind(window,'statechange',function(){ 
@@ -172,11 +178,16 @@ var links = body.getElementsByTagName('a');
 for (var i=0; i<links.length; ++i) {
   links[i].onclick = function(e) {
     e.preventDefault();
-    asyncreq("thing.html",function(responseText){
-      console.log(responseText);
-    },function(responseText){
-      markdown.innerHTML = responseText;
-    });
+    if (!data['thing']){
+      asyncreq("thing.html",function(responseText){
+        console.log(responseText);
+      },function(responseText){
+        markdown.innerHTML = responseText;
+        data['thing'] = 'cached: ' + responseText;
+      });
+    } else {
+      markdown.innerHTML = data['thing'];
+    }
   }
 }
 </script>
