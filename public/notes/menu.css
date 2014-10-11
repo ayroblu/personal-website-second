@@ -121,9 +121,6 @@
 }
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 @media (max-width: 900px) {
-  #maincontainer{
-    margin-left:0;
-  }
   .leftmenu {
     left: -250px; /* Dependent */
   }
