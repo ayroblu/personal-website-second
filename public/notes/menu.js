@@ -65,18 +65,15 @@ leftmenu.addEventListener('touchend', function(e){
   var dist = parseInt(touchobj.clientX) - startx + leftmenu.open*mwidth;
   if (dist > mwidth/2) {
     leftmenu.adist = mwidth;
-    leftmenu.open = true;
-    leftmenu.style.left = '';
-    leftmenu.classList.remove('hidden');
-    //requestAnimationFrame(movemenu);
-  } else {
-    leftmenu.adist = 0;
     leftmenu.open = false;
     leftmenu.style.left = '';
+    leftmenu.classList.remove('hidden');
+  } else {
+    leftmenu.adist = 0;
+    leftmenu.open = true;
+    leftmenu.style.left = '';
     leftmenu.classList.add('hidden');
-    //requestAnimationFrame(movemenu);
   }
-  //e.preventDefault()
 }, false)
 
 // --------------------------Move the menu - called by movement normally
