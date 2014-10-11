@@ -44,8 +44,13 @@ img{
 #markdown{
   padding: 0 10% 10px;
   position: absolute;
-  top:0;right:0;left:0;bottom:0;
+  top:0;right:0;left:280px;bottom:0;
   overflow:scroll;
+  -webkit-transition: all 0.2s ease-out;
+     -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+       -o-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
 }
 .nav{
   margin:0;
@@ -65,7 +70,6 @@ img{
 }
 .nav li > a{
   color:#aaaaaa;
-  {# background:#eeeeee; #}
   height:50px;
   line-height:50px;
   display:inline-block;
@@ -110,15 +114,6 @@ img{
 
 
 <body>
-<div class='dummynav'></div>
-<div class='dummynavfixed'></div>
-<ul class='nav'
-><li><a href="/econ372"{% if econ372 %} class="active"{% endif %}>ECON 372</a></li
-><li><a href="/econ321"{% if econ321 %} class="active"{% endif %}>ECON 321</a></li
-><li><a href="/geotherm785"{% if geotherm785 %} class="active"{% endif %}>GEOTHERM 785</a></li
-><li><a href="/enggen403"{% if enggen403 %} class="active"{% endif %}>ENGGEN 403</a></li
-><li><a href="/enggen403busplan"{% if enggen403busplan %} class="active"{% endif %}>ENGGEN 403 A2</a></li
-></ul>
 
 
 <div id="maincontainer">
@@ -128,17 +123,23 @@ img{
     <div></div>
     <div></div>
   </div>
-  {# <ul class="menulist">
-    <li><a class="header" href="/">Home</a>
-  </ul> #}
   {{ toc }}
-  {# <div id="closer" onclick="closemenu()">&lt;&lt;</div> #}
   <div class="overhang"></div>
   </nav>
 
 
   <div id="markdown">
-  {{ markdown }}
+    <div class='dummynav'></div>
+    <div class='dummynavfixed'></div>
+    <ul class='nav'
+    ><li><a href="/econ372"{% if econ372 %} class="active"{% endif %}>ECON 372</a></li
+    ><li><a href="/econ321"{% if econ321 %} class="active"{% endif %}>ECON 321</a></li
+    ><li><a href="/geotherm785"{% if geotherm785 %} class="active"{% endif %}>GEOTHERM 785</a></li
+    ><li><a href="/enggen403"{% if enggen403 %} class="active"{% endif %}>ENGGEN 403</a></li
+    ><li><a href="/enggen403busplan"{% if enggen403busplan %} class="active"{% endif %}>ENGGEN 403 A2</a></li
+    ></ul>
+
+    {{ markdown }}
   </div>
 </div>
 

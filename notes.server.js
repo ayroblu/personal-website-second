@@ -12,7 +12,6 @@ var pagedown = require("pagedown");
 var converter = new pagedown.Converter();
 var safeConverter = pagedown.getSanitizingConverter();
 
-
 classdirs = {
     'econ372': 'notes/econ372notes.md',
     'econ321': 'notes/econ321notes.md',
