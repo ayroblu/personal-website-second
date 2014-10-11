@@ -65,7 +65,7 @@ leftmenu.addEventListener('touchend', function(e){
   var dist = parseInt(touchobj.clientX) - startx + leftmenu.open*mwidth;
   if (dist > mwidth/2) {
     leftmenu.adist = mwidth;
-    leftmenu.open = false;
+    leftmenu.open = true;
     leftmenu.style.left = '';
     if (window.innerWidth < 900){
       leftmenu.classList.add('hidden');
@@ -74,7 +74,7 @@ leftmenu.addEventListener('touchend', function(e){
     }
   } else {
     leftmenu.adist = 0;
-    leftmenu.open = true;
+    leftmenu.open = false;
     leftmenu.style.left = '';
     if (window.innerWidth < 900){
       leftmenu.classList.remove('hidden');
