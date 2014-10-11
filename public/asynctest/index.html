@@ -147,7 +147,7 @@ function asyncreq(url,progCallback,finishCallback) {
     }
     xhr.onreadystatechange=function(){
         if (xhr.readyState==4 && (xhr.status==200 || xhr.status==0)){
-          callback(xhr.responseText);
+          finishCallback(xhr.responseText);
         }
     }
     xhr.open("GET",url,true);
