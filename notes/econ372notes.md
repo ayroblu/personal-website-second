@@ -192,3 +192,28 @@ Rolling Blackouts v less reserves...
 * Adequacy problem
 
 
+Lecture 9
+---------
+Cornot Model
+
+* Prices above marginal price - oligopoly
+* Reduce market power
+  * Forward commitments (tutorial question)
+  * Supply Function equilibria
+
+* NZEB
+* Single state owned enterprise
+* Major reforms 1998
+* Spot market was created
+* Retail off spot market
+* Inherent monoplies, government owned/heavily regulated.
+* Partial privatisation of energy companies
+
+c_f = hours on / total hours
+
+Lecture 10
+----------
+* Mandated pollution control technologies
+* cap and trade or carbon tax
+  * Not a STRICT cap in NZ?
+* Quotas v Taxes - price on carbon

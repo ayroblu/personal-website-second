@@ -397,3 +397,187 @@ Enthalpy
 $$ h = u + Pv \; or \; = u + \frac{ P }{ \rho } $$
 $$ 10^{-6} m s^{-1} $$
 
+
+Geothermal Power Plants: Principles, Applications, Case Studies and Environmental Impact, Third Edition (Google eBook)
+
+Study notes
+===========
+
+Rosalind - Petroleum
+--------------------
+
+### Field Units
+* Length, ft
+* Mass, lb
+* Time, hr
+* Flow rate, STB/d (oil), Mscf/d (gas)
+* Pressure, psi
+* Density, lb/ft<sup>3</sup>
+* Viscosity, cp (pure water = 1 cp) (centerpoise)
+* Permeability, mD (“milliDarcy” = 0.98692 x 10<sup>-15</sup> m<sup>^2</sup>)
+
+#### Conversions
+* 1 stb = 5.615 ft<sup>3</sup>
+* 1 MSCF = 1,000 standard cubic feet of gas
+  * "Standard” implies a reference to standard atmospheric pressure and temperature conditions (1 atm and 60 &deg;F)
+* 1 psi = 6,894.7 Pa
+* 1 atm = 14.7 psi
+
+### Rock Types
+* Igneous – formed by cooling of material that has been molten magma.
+* Sedimentary – formed by weathering, erosion, transport, deposition and cementation.
+  * Characterized by grain size and uniformity of grain size.
+  * Coarse sandstone made up of particles 0.5 to 1.0mm in diameter.
+  * Fine sandstone 0.125 to 0.25mm.
+  * In general larger grain sizes are associated with better permeability.
+* Metamorphic – transformation of other rock types under high pressure and temperature.
+
+### Stratigraphic Principles
+* Background
+  * The study of rock strata
+  * Postulates that strata originate sequentially and create readable record of the earth’s history.
+* Principle of Superposition
+  * Assumes that young strata overlap older strata
+  * Thus spatial to temporal relationships
+* Principle of Original Horizontality 
+  * Assumes that when sedimentary strata came into being that they are horizontal
+  * From the analogy of how solutes are precipitated from a reagent in a vessel.
+* Principle of Lateral Continuity
+  * Assumes that a stratum can not end abruptly within a basin of deposition, but it must feather out, or extend across the width of the basin and terminate against older rocks
+  * Similar to Principle of Original Horizontality - fills basin
+  * Implies erosion of faulting if no lateral continuity of a strata
+
+### Depositional Environments
+* Fluvial
+* Deltaic
+
+### Porosity \\( \phi \\)
+* Fraction of the bulk volume of the rock occupied by pore space.
+* Diagenesis: the physical and chemical changes occurring during the conversion of sediment to sedimentary rock.
+* Sorting coefficient: $$ S_0 = \sqrt{\frac{d_{25}}{{d_{55}}}} $$
+  * Extremely Well Sorted (high porosity) (1.0) -> Poorly Sorted (2.0) -> Very Poorly Sorted (5.7)
+
+### Generation of Oil
+* Oil is generated from accumulations of organic rich sediments, in an anoxic environment
+* Typically only 2% of the organic matter in any accumulation becomes oil or gas
+* The organic matter is slowly buried by other sediments – this increases its pressure and temperature over time
+* Typical numbers:
+  * geothermal gradient of 30&deg;C/1000 m
+  * Oil maturation begins at 50 oC, peaks at 90 oC and ends at 175&deg;C
+  * If material is too deeply buried temperatures are too high for oil generation
+* As oil/gas source beds are buried they are compacted which expels oil/gas from these beds.
+* The oil/gas therefore migrates to other host beds (reservoirs)
+* Source (Shale) -> Reservoir (sandstone) -> Trap (Shale) (Cap on rising fluids)
+
+### Geophysics
+* Propagating disturbances through the earth's crust
+* Disturbance is partially reflected back at boundaries between geological formations with different acoustic properties
+* Scales:
+  * Micro scale – the size of a few pores only
+  * Macro scale – the size of conventional core plugs
+  * Mega scale – the size of grid blocks in full field flow models
+  * Giga scale – the total formation or regional scale
+* Seismic Waves
+  * P Waves
+    * Longitudinal waves
+    * Also called compressional, primary, or pressure waves
+    * Particles displaced in direction parallel to wave propagation direction
+    * Velocity depends on elastic properties and density of the medium
+  * S Waves
+    * Transverse waves
+    * Also called shear or secondary waves
+    * Particles displaced in direction perpendicular to wave propagation direction
+    * Velocity depends on shear modulus and density of the medium
+  * Seismometer: geophone on land, hydrophone in marine area
+* Material Constants
+  * Poisson's ratio \\( v \\)
+    * Ratio of the x direction tensile strain to y or z direction compressive strain
+  * Lame's constant \\( \lambda \\)
+    * $$ \frac{vE}{(1+v)(1-2v)} $$
+    * Effects of dilation on tensile stress
+  * Shear modulus, \\( \mu \\)
+    * Ratio of shear stress to shear strain
+
+#### Wave Propagation
+  * Assume that the medium is homogeneous and isotropic
+  * $$ v_P = \sqrt{ \frac{ \lambda + 2\mu}{ \rho }} $$
+  * $$ v_S = \sqrt{ \frac{\mu}{ \rho }} $$
+  * Impedence \\( Z = \rho_B v_P \\)
+  * Bulk Density \\( \rho_B = (1-\phi) \rho_{rock} + \phi \rho_{fluid}  \\)
+    * \\( The:_{} \rho_{fluid} = \rho_{oil} S_{oil} + \rho_{water} S_{water} + \rho_{gas} S_{gas} \\)
+  * Reflection Coefficient $$ RC = \frac{Z_2 - Z_1}{Z_2 + Z_1} $$
+  * Seismic inversion is determining the distribution of rock properties that would generate the observed seismic wave measurements
+
+### Well Logging
+* Well logs run tools in the wellbore. This is a hostile environment due to it's depth, at high pressure and at high temperature.
+* Logging tools measure temperature, wellbore diameter, electrical current, radioactivity, sonic reflections etc.
+* Near well region:
+  * The region near the well normally contains mud that was inside the wellbore when it was being drilled
+
+#### Direct Measurements
+* Driller's Log
+  * Record of observations made by the driller while drilling the well.
+  * Rate of penetration distinguishes between hard and soft formations.
+* Mud Log
+  * Mud flows through the well to remove drill cuttings and manage pressure in the well.  
+  * Analysis of returned mud may show natural gas content and rock type from drilling cuttings in the mud.
+####  Lithography (Rock Type)
+* Spontaneous Potential (SP) logs record the DC voltage difference between two electrodes (one at a fixed position, one which moves)
+  * Large SP implies the presence of high-salinity fluids 
+  * Small SP typically implies an impermeable formation (such as a shale)
+
+#### Gamma Ray Logs
+* Detect naturally occuring radiation from materials such as potassium, thorium and uranium
+* Shales normally contain more of these materials than any other rock type so a high value on a gamma ray log implies shale.
+
+#### Desnity Log
+* High gamma ray scattering implies a large bulk density (i.e. low gas content).
+* Density logs can be used to infer porosity as a function of depth $$ \phi = \frac{\rho_{ma} + \rho_{b}}{\rho_{ma} - \rho_{f}} $$
+  * ma = dry rock
+  * b = bulk
+  * f= fluid
+
+#### Acoustic Log
+* Used sound waves and measure two travel times for reflections in a similar manner to seismic reflections
+
+#### Neutron Log
+* A neutron logging tool emits neutrons from a radioactive source.  Gamma rays are emitted from the formation as these neutrons are captured.
+* The log response from a neutron tool is sensitive to the concentration of hydrogen in a fluid-filled pore space.
+* Oil and water have a similar concentration of hydrogen, where a low log response implies the presence of gas.
+
+#### Resistivity Log
+* Resisitivity logs can be used to distinguish between zones saturated with brine (i.e. water with dissolved ions) and hydrocarbons
+* Equations...
+
+#### Contouring...
+
+
+### Fluid Flow
+* Conservation of mass
+  * Net mass inflow = Rate of mass accumulation: $$ [ (\rho u)_{x} - (\rho u)_{x+\Delta x} ] = \frac{ (\rho \phi)_{t+\Delta t} -(\rho \phi)_{t}}{ \Delta t} (\Delta x \Delta y \Delta z) $$
+  * 1D continuity: $$ \frac{\partial (\rho u)}{\partial x} = - \frac{\partial (\rho \phi)}{\partial t} $$
+
+#### Diffusivity Equations
+* Continuity equation: $$ \frac{\partial (\rho u)}{\partial x} = - \frac{\partial (\rho \phi)}{\partial t} $$
+* Darcy's Law: $$ u_r = - \frac{k}{\mu} \frac{\partial P}{\partial x} $$
+* Equation of State: $$ \rho = f(p,T) $$
+* Isothermal Compressibility: \\( \renewcommand{\ic}[4]{\frac{1}{#1} \left(\frac{\partial #2}{\partial #3} \right)_{#4} _{} \\)
+  * Fluid: $$ c = -\ic{V}{V}{p}{T} = -\ic{B}{B}{p}{T} = \ic{\rho}{\rho}{p}{m,T} $$
+  * Rock: $$ c_f = \ic{\phi}{\phi}{p}{T} $$
+* Substituting Darcy's law in to the continuity equation assuming a constant k and \\( \mu \\): \\( \renewcommand{\pder}[2]{\frac{\partial #1}{\partial #2} \\)
+\\( \renewcommand{\pdder}[2]{\frac{\partial^2 #1}{\partial #2^2} \\)
+  * $$ \rho \pdder{P}{x} + c \rho \pder{P}{x}\pder{P}{x} = \frac{\mu}{k} \pder{(\phi \rho)}{t} $$
+  * Neglect small nonlinear term as c is small and squared pressure gradient is also small
+  * $$ \pdder{P}{x} = \frac{\mu}{k}\frac{1}{\rho} \pder{(\phi \rho)}{t} $$
+  * Rearrange to be in terms of pressure and introduce compressibility: $$ \pdder{P}{x} = \frac{\phi \mu c_t}{k} \pder{P}{t} $$
+
+
+
+
+
+
+
+
+
+
+

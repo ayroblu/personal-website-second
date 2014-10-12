@@ -1183,3 +1183,131 @@ Quote
 >
 > Management, management and management
 
+
+Lecture 16
+----------
+Group work
+
+* ...
+* Project Meetings
+  * Discriminate the type of meeting
+* Emotional Intelligence (EI or EQ)
+  * 5 key skills of EI
+* TED video on orchestra?
+
+* John Adair
+  * Theory that anyone can become/improve leadership
+  * Action Centred Leadership
+  * Task, team and individual
+    * Most focus almost completely on task
+  * Leadership checklist
+
+    Key actions         Task Team Individual
+    -----------         ---- ---- ----------
+    Define Objectives |
+    Plan              |
+    Brief             |
+    Monitor Support   |
+    Evaluate          |
+
+  * Good because of monitoring
+
+* How is the team feeling
+
+* Seek your team's views
+* Listen
+* Pick the best ideas
+* ..
+
+* Meredith Belbin - Team Building
+  * Plant 
+  * Resource Investigator
+
+
+Group
+-----
+Alex, Nick
+
+
+Lecture 17
+----------
+Law
+
+> You are expected to know all laws (I didn't know is not an excuse) 
+
+### Types
+* Tax
+* Contract Law
+* Anti Trust 
+* Copyright
+* Employment Law
+* National and Local Government Law
+* Health and Safety Law
+  * You are assumed to know all health and safety rules
+* Import and Export Lawe
+* Traffic laws
+
+### International
+* US is based on UK???, European are based on Napoloenic.
+
+### Enforcement
+* Law imposed by the state
+  * Criminality
+  * Prosecution by state
+* Civil Law
+  * Disagreement between private parties
+  * Contracts / payments etc.
+* Types
+  * Sue, injunctions, claims
+
+### Contracts
+* There are different forms of contract
+  * Government
+
+#### Typical Procurements
+* Studies and advice
+* Design
+* ...
+
+#### Forms
+* Cost Plus / Cost Reimbursable
+* Fixed price
+* Firm and fixed price
+* Cost plus incentive fee
+* Painshare ...
+
+#### Content
+* Parties
+* Schedule of Work
+  * Servics
+  * Articles
+  * Outcomes
+* Acceptance
+* Timetable
+* Roles and responsibilities
+* Dependencies
+* Reporting and access to information
+* Payments and Milstones
+
+* Terms and Conditions (see later)
+
+#### Typical Terms and Conditions
+* Ownership?
+* Free on Board (FOB)
+  * Delivery?
+* Agreement on contract changes
+* Concessions
+  * Can't deliver
+* Penalties
+  * Cost of damages
+
+#### Writer...
+* Lawyers + Engineers (lead)
+  * What engineers want and then lawyers clean it out for lawyer speak
+
+### Advice
+* Don't let the other party draft the contract
+* Don't leave things fuzzy because you can't agree precisely, it'll cause problems later
+* Don't rely on small print
+* Trust and relationships
+  * Do we put our reputations on it?
