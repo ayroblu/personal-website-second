@@ -34,12 +34,14 @@ Content ...
 ### Reflections
 #### Situational Leadership
 The One Minute Manager - Ken Blanchard and Spencer Johnson
+
 1. D1: Enthusiastic Beginners - Development Process (low competence) (high enthusiasm)
 2. D2: Disillusioned Learners
 3. D3: Capable but Cautious
 4. D4: High Achiever
 
 ![Behaviour and Directive Graph](/static/1behaviour.png "From The One Minute Manager")
+
 1. Conventional Teaching Approach
 2. 403 Help Desk, Systems Week
 3. Consultative Committee
@@ -129,18 +131,18 @@ The One Minute Manager - Ken Blanchard and Spencer Johnson
  * How will you make the new agency work?
  * Enterprise Architecture
  * Proof of concept examples
-     * An engineering strategy for NZ
-     * A business plan
+   * An engineering strategy for NZ
+   * A business plan
 
 ** "Re Engineering New Zealand Limited" **
 
  * Pushes the envelope
  * Stretches creativity
  * Unique opportunity to think about the explore
-     * National strategy
-     * National investment in teh industry - its protential and its future investment
-     * Executive decision making
-     * Marketing and Selling
+   * National strategy
+   * National investment in teh industry - its protential and its future investment
+   * Executive decision making
+   * Marketing and Selling
  * Shows "Systems Thinking" and Management are transferable skills
 
 ### Marks
@@ -169,7 +171,7 @@ Lecture 2
 #### Investors
 ##### External
 * Banks
-    * Prospectus
+  * Prospectus
 
 #### Internal
 * Board
@@ -182,11 +184,11 @@ Lecture 2
 
 ### Approaches
 * The push approach
-    * Creativity and originallity
+  * Creativity and originallity
 * Pull approach
-    * What would people actually want to buy
-    * What's a problem
-    * Suboptimal
+  * What would people actually want to buy
+  * What's a problem
+  * Suboptimal
 
 #### Ideas
 * World Hunger + Peace (a little extreme)
@@ -200,7 +202,7 @@ Lecture 2
 
 #### Contents
 * Objective
-    * Clear statement
+  * Clear statement
 * Route to Market
 * Financials
 * Risks 
@@ -209,7 +211,7 @@ Lecture 2
 
 ### Prospectus
 * Objective: A clear statement to investors
-    * Legal framework
+  * Legal framework
 * Different from internal (Be transparent)
 
 ### Market Research
@@ -233,7 +235,7 @@ Lecture 2
 
 #### Competitive Analysis
 * Gathering intelligence about the competition
-    * Maclaren snooping on Ferrari
+  * Maclaren snooping on Ferrari
 
 ### System thinking approach
 * Stakeholders
@@ -246,12 +248,12 @@ Lecture 2
 * Prototyping
 * Focus Groups
 * Dry runs - small batch 
-    * Geneva motor show
+  * Geneva motor show
 * Beta
 
 * Independent Qualitification testing
-    * International specification
-        * FDA, FCC, Organic, Waterproof etc.
+  * International specification
+    * FDA, FCC, Organic, Waterproof etc.
 
 ### Operation
 * **Cash Collection**
@@ -392,6 +394,7 @@ Further along this list, it grows exponentially
 
 ### Find out more
 Steve Blank:
+
 * [Why the Lean Startup Changes Everything]()
 * [Online lectures](https://www.udacity.com/course/ep245)
 * Startup Weekends

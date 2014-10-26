@@ -413,7 +413,7 @@ Rosalind - Petroleum
 * Flow rate, STB/d (oil), Mscf/d (gas)
 * Pressure, psi
 * Density, lb/ft<sup>3</sup>
-* Viscosity, cp (pure water = 1 cp) (centerpoise)
+* Viscosity, cp (pure water = 1 cp) (centipoise)
 * Permeability, mD (“milliDarcy” = 0.98692 x 10<sup>-15</sup> m<sup>^2</sup>)
 
 #### Conversions
@@ -504,7 +504,7 @@ Rosalind - Petroleum
   * $$ v_S = \sqrt{ \frac{\mu}{ \rho }} $$
   * Impedence \\( Z = \rho_B v_P \\)
   * Bulk Density \\( \rho_B = (1-\phi) \rho_{rock} + \phi \rho_{fluid}  \\)
-    * \\( The:_{} \rho_{fluid} = \rho_{oil} S_{oil} + \rho_{water} S_{water} + \rho_{gas} S_{gas} \\)
+    * \\( \rho_{fluid} = \rho_{oil} S_{oil} + \rho_{water} S_{water} + \rho_{gas} S_{gas} % _\\)
   * Reflection Coefficient $$ RC = \frac{Z_2 - Z_1}{Z_2 + Z_1} $$
   * Seismic inversion is determining the distribution of rock properties that would generate the observed seismic wave measurements
 
@@ -521,6 +521,7 @@ Rosalind - Petroleum
 * Mud Log
   * Mud flows through the well to remove drill cuttings and manage pressure in the well.  
   * Analysis of returned mud may show natural gas content and rock type from drilling cuttings in the mud.
+
 ####  Lithography (Rock Type)
 * Spontaneous Potential (SP) logs record the DC voltage difference between two electrodes (one at a fixed position, one which moves)
   * Large SP implies the presence of high-salinity fluids 
@@ -530,7 +531,7 @@ Rosalind - Petroleum
 * Detect naturally occuring radiation from materials such as potassium, thorium and uranium
 * Shales normally contain more of these materials than any other rock type so a high value on a gamma ray log implies shale.
 
-#### Desnity Log
+#### Density Log
 * High gamma ray scattering implies a large bulk density (i.e. low gas content).
 * Density logs can be used to infer porosity as a function of depth $$ \phi = \frac{\rho_{ma} + \rho_{b}}{\rho_{ma} - \rho_{f}} $$
   * ma = dry rock
@@ -554,22 +555,1365 @@ Rosalind - Petroleum
 
 ### Fluid Flow
 * Conservation of mass
-  * Net mass inflow = Rate of mass accumulation: $$ [ (\rho u)_{x} - (\rho u)_{x+\Delta x} ] = \frac{ (\rho \phi)_{t+\Delta t} -(\rho \phi)_{t}}{ \Delta t} (\Delta x \Delta y \Delta z) $$
+  * Net mass inflow = Rate of mass accumulation: $$ [ (\rho u)_{x} - (\rho u) _{x + \Delta x} ] = \frac{ (\rho \phi) _{t+\Delta t} -(\rho \phi) _{t}}{ \Delta t} (\Delta x \Delta y \Delta z) $$
   * 1D continuity: $$ \frac{\partial (\rho u)}{\partial x} = - \frac{\partial (\rho \phi)}{\partial t} $$
 
 #### Diffusivity Equations
 * Continuity equation: $$ \frac{\partial (\rho u)}{\partial x} = - \frac{\partial (\rho \phi)}{\partial t} $$
 * Darcy's Law: $$ u_r = - \frac{k}{\mu} \frac{\partial P}{\partial x} $$
 * Equation of State: $$ \rho = f(p,T) $$
-* Isothermal Compressibility: \\( \renewcommand{\ic}[4]{\frac{1}{#1} \left(\frac{\partial #2}{\partial #3} \right)_{#4} _{} \\)
+* Isothermal Compressibility: \\( \newcommand{\ic}[4]{\frac{1}{#1} \left(\frac{\partial #2}{\partial #3} \right)_{#4}} % _ \\)
   * Fluid: $$ c = -\ic{V}{V}{p}{T} = -\ic{B}{B}{p}{T} = \ic{\rho}{\rho}{p}{m,T} $$
   * Rock: $$ c_f = \ic{\phi}{\phi}{p}{T} $$
-* Substituting Darcy's law in to the continuity equation assuming a constant k and \\( \mu \\): \\( \renewcommand{\pder}[2]{\frac{\partial #1}{\partial #2} \\)
-\\( \renewcommand{\pdder}[2]{\frac{\partial^2 #1}{\partial #2^2} \\)
-  * $$ \rho \pdder{P}{x} + c \rho \pder{P}{x}\pder{P}{x} = \frac{\mu}{k} \pder{(\phi \rho)}{t} $$
+* Substituting Darcy's law in to the continuity equation assuming a constant k and \\( \mu \\): \\( \newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}} \\)
+\\( \newcommand{\pdder}[2]{\frac{\partial^2 #1}{\partial #2^2}} \\)
+    $$ \rho \pdder{P}{x} + c \rho \pder{P}{x}\pder{P}{x} = \frac{\mu}{k} \pder{(\phi \rho)}{t} $$
   * Neglect small nonlinear term as c is small and squared pressure gradient is also small
-  * $$ \pdder{P}{x} = \frac{\mu}{k}\frac{1}{\rho} \pder{(\phi \rho)}{t} $$
+    $$ \pdder{P}{x} = \frac{\mu}{k}\frac{1}{\rho} \pder{(\phi \rho)}{t} $$
   * Rearrange to be in terms of pressure and introduce compressibility: $$ \pdder{P}{x} = \frac{\phi \mu c_t}{k} \pder{P}{t} $$
+
+### Radius of Investigation
+* Solutions to PDE show that pressure disturbance propagates in time $$ r_{inv} = 0.0324 \sqrt{\frac{kt}{\phi \mu c_t}} % _ $$
+* \\( k = \\) ?? mD
+* \\( \phi = \\) porosity 
+* \\( \mu = \\) ?? cp
+* \\( c_t = \\) psi<sup>-1</sup>
+
+### Well Test Analysis
+* Appraisal of reservoir permeability
+* Considers the response of the pressure at a well to a sudden change in flow rate
+* Shut-in --build up--> opened --pressure drop-->
+* Solutions to this problem are solutions to the diffusivity equation in radial coordinates
+  $$ \frac{1}{r} \pder{}{r} \left( r \pder{p}{r} \right) = \frac{\phi\mu c_t}{k} \pder{p}{t} $$
+
+#### Ei-Function Solution
+* Pressure 
+  $$ p = p_ i + 70.6 \frac{qB\mu}{kh} Ei \left( - \frac{948 \phi \mu c_t r^2}{kt} \right) % _$$
+  $$ -Ei(-x) \equiv \int\limits^\infty_x \frac{e^{-u}}{u} \; \mathrm{d}u $$
+* Log approximation
+  $$ p \cong p_i + 162.6 \frac{q B \mu}{kh} log_{10}\left(\frac{1688\phi \mu c_t r^2}{kt} \right) % _ $$
+  * Applies when 
+    $$ \frac{948 \phi \mu c_t r^2}{kt} < 0.01 $$
+
+### Characterizing Damage and Stimulation
+* Damage Caused by Drilling Fluid
+  * Mud filtrate invasion in to the area around the wellbore - reduces porosity
+* Damage Caused by Production
+  * \\( p < p_b \\) near the wellbore and \\( p > p_b \\) away from the wellbore.
+* Damage Caused by Injection
+  * Dirty / incompatible water
+* Reservoir Model of Skin Effect
+  * Altered zone near, bulk formation far
+  * ummm?
+* Skin and Pressure Drop
+  $$ s= \frac{ 0.00708 kh}{q B \mu}{\Delta p_s} $$
+  $$ \Delta p_s = \frac{141.2q B \mu}{kh} s $$
+* Geometric Skin
+  * Converging Flow to Perforations
+    * Flow travels up or down in to perforations
+  * Partial Penetration
+  * Well With Hydraulic Fracture
+  * Reservoir Pressure Profile
+    * s = -2 -> Higher pressure near wellbore
+    * s= 5 -> Lower pressure near wellbore
+  * Incorporating Skin into the Ei-Function Solution
+    * \\( r = r_w \\)
+    $$ p = p_ i + 70.6 \frac{qB\mu}{kh} Ei \left( - \frac{948 \phi \mu c_t r_w^2}{kt} - 2s\right) % _$$
+  * Log Approximation to the Ei-Function
+    $$ p_{wf} = p_ i - 162.6 \frac{qB\mu}{kh} \left[ log_{10(t) + log_{10}\left(\frac{k}{\phi \mu c_t r_w^2}\right) - 3.23 + 0.869s \right] % _$$
+  * Estimating Permeability and Skin
+    $$ k = \frac{ 162.6 qB\mu}{mh} $$
+    $$ s = 1.151 \left[ \frac{p_i - p_{1hr}}{m} - log_{10} \left( \frac{k}{\phi \mu c_t r_w^2} \right) + 3.23 \right] $$
+
+### Nomenclature
+* p, pressure, psi
+* p<sub>wf</sub>, well flowing pressure, psi
+* p<sub>i</sub>, intial reservoir pressure
+* r, distance (radially), ft
+* r<sub>w</sub>, wellbore radius, ft
+* t, time, hours
+* q, volume flow rate, STB/day
+* B, formation volume factor, reservoir barrels/stock barrels (RB/STB)
+* m, viscosity, cp
+* k, permeability, mD
+* h, reservoir thickness, ft
+* f, reservoir porosity, fraction
+* c<sub>t</sub>, total compressibility (of rock + oil), psi-1
+* s, skin factor, dimensionless
+
+### Problems with Drawdown Tests
+* It is difficult to produce a well at a strictly constant rate.
+* Even small variations in rate distort the pressure response.
+* There is one rate that is easy to maintain – a flow rate of zero.
+* A buildup test is conducted by shutting in a producing well and measuring the resulting pressure response.
+
+* Draw down build up test?
+
+### Wellbore Storage
+* Fluid Fill Welbore
+  $$ \newcommand{\der}[2]{ \frac{\mathrm{d} #1}{\mathrm{d} #2} } $$
+  $$ \der{p_w}{t} = \frac{ ( q - q_{sf} ) B}{24 V_{wb}c_{wb} } % _ $$
+  * Unloading
+    * Rate near the surface is different to the rate in the bottom hole (0 -> full)
+  * Afterflow
+    * Rate at the bottom peters out, instant at well head, surface.
+  * Wellbore storage time --pressure changes linearly with time--> transitioning to a flow regime where pressure changes according to the log of time
+
+* Pressure changes versus log time
+  * Deflection after interacting with wall boundaries
+
+### Permeability in Series
+* Similar to series resistors in electical circuits:
+  $$ \renewcommand{\sumin}{\sum\limits^n_{i=1}} % _ $$
+  $$ \frac{1}{\bar{k}} = \frac{1}{L} \sum\limits^n_{i=1} \frac{L_i}{k_i} % _ $$
+* \\( \bar{k} = \\) harmonic mean permeability
+* L is the length of that unit
+
+### Permeability in Parallel
+* Arithmetic mean, all fluid flows across its own layer
+  $$ \bar{k} = \sumin \frac{k_i A_i}{A_{tot}} % _ $$
+* A is the area
+
+### Radial Flow
+* Flow in a radial geometry, with Darcy's law
+  $$ Q = (2 \pi r h) \frac{k}{\mu} \der{p}{r} $$
+* edge = e, w = well
+* Steady State, \\( p_e \\) is constant (aquifier influx)
+  $$ Q = \frac{kh ( p_e - p_{wf})}{141.2 \mu B \ln{\left( \frac{r_e}{r_w} + s \right) } } % _ $$
+* Pseudo Steady State - Sealed boundary
+  $$ Q = \frac{kh ( \bar{p} - p_{wf})}{141.2 q \mu B \left( \ln{\left( \frac{r_e}{r_w} \right) } - \frac{3}{4} + s \right) } % _ $$
+  * Average Reservoir Pressure
+    * For production based solely on expansion of rock and fluid as a system is depressurised, i.e. without water or gas injection
+    $$ \bar{p} = p_i - \frac{BN_p}{\phi h \pi(r_e^2-r_w^2)c_t} $$
+    * \\( p_i = \\) initial reservoir pressure, psi
+    * \\( B = \\) formation volume factor, RB / STB
+    * \\( N_p = \\) cumulative production \\(= \int Q \; \mathrm{d} t\\)
+    * \\( \phi = \\) porosity, fraction
+    * \\( h = \\) reservoir thickness, ft
+    * \\( r_e = \\) radius of reservoir, ft
+    * \\( r_w = \\) wellbore radius, ft
+    * \\( c_t = \\) total compressibility, psi<sup>-1</sup>
+  * Combining average reservoir pressure and flowrate,pressure relationship:
+    $$ p_{wf} = p_ i - 141.2 \frac{qB\mu}{kh} \left[ \ln \left( \frac{r_e}{r_w} \right) -\frac{3}{4} + s \right] - 5.615 \frac{qB}{V_Pc_t} t $$
+  * Implications
+    * In a closed system, if the flowing bottom hole pressure (p<sub>wf</sub>) is fixed, and the well flow rate will decline as the average reservoir pressure declines.
+    * These equations give us a way to quantify impact of skin factor (extra near well pressure drop on production).
+    * Permeability can be used as an average permeability to capture geological heterogeneity (e.g. series/parallel issue).
+
+### Dimensionless Variables
+* Rearrange well testing pressure:
+  $$ 
+  \begin{align*} 
+    p &= p_ i + 70.6 \frac{qB\mu}{kh} Ei \left( - \frac{948 \phi \mu c_t r^2}{kt} \right) \\\\ % _
+    \frac{ kh(p_i - p) }{ 141.2 qB \mu } &= - \frac{1}{2} Ei \left( \frac{\left( \frac{r}{r_w} \right)^2}{ 4 \left( \frac{ 0.0002637 kt }{\phi \mu c_t r_w^2} \right)}  \right) \\\\
+    p_D &= -\frac{1}{2} Ei \left( - \frac{r_D^2}{4 t_D} \right) \\\\
+    p_D &= \frac{ kh(p_i - p) }{ 141.2 qB \mu } \\\\
+    r_D &= \frac{r}{r_w} \\\\
+    t_D &= \frac{ 0.0002637 kt }{\phi \mu c_t r_w^2} \\\\
+    s   &= \frac{ kh\Delta p_s }{ 141.2 qB \mu } \\\\
+    C_D &= \frac{ 0.8936 C }{\phi c_t h r_w^2}
+  \end {align*}
+  $$
+
+
+### Type Curves
+* Gringarten Type Curve
+  * Constant rate production
+  * Vertical well
+  * Infinite-acting homogeneous reservoir
+  * Single-phase, slightly compressible liquid
+  * Infinitesimal skin factor
+  * Constant wellbore storage coefficient
+
+![Derivative type curve](/static/derivativetypecurve.png)
+
+![Time regions on the type curve](/static/timeregionsonthetypecurve.png)
+
+![Estimating skin factor](/static/estimatingskinfactor.png)
+
+#### Boundary
+* Linear No Flow:
+  * Superposition of imaginary source
+  * Linear, with kink, derivative flat, then jumps (doubles)
+* Linear Constant Pressure
+  * Aquifier
+  * Linear, then kink to steeper line, derivative is linear then drops to 0
+* Well in a Channel
+  * Linear, then curves up, derivative is flat, then goes linear up
+* Wall Between Intersecting Sealing Faults
+  * Linear, then kinks to much steeper line, derivative flat, then transitions to much higher flat.
+* Closed circular boundary
+  * Similar to Channel
+
+### Sample Questions
+* Why is “infinite acting radial flow” an important part of a well test? How is this flow regime identified?
+* How does the radius of investigation in a well test depend on time?  
+* How would the pressure response in a well test changed if the flow rate was tripled?  Would boundaries be detected earlier?
+* Describe in words how you would construct the pressure response of a well in a reservoir bounded by two faults (at 60o to each other). Sketch the pressure response you expect in terms of the pressure derivative. 
+
+
+### Decline Curves
+* Well Rates versus Time
+* Rate to time has exponential decline appearance
+
+#### Nomenclature
+$$
+\renewcommand{\i}[4]{\int\limits^{#1}_{#2} #3 \; \mathrm{d} #4} % _
+\begin{align*}
+  q &= \text{volume flow rate, STB / day} \\\\
+  q_i &= \text{initial flowrate (t = 0), STB / day} \\\\
+  q_a &= \text{abandonment rate, STB/day} \\\\
+  N_p &= \text{cumulative production, } STB = \i{t}{0}{q}{t} \\\\
+  N_{pa} &= \text{well production at abandonment}   \\\\ % _
+  D_i &= \text{decline rate/day} \\\\
+  b &= \text{decline exponent}
+\end{align*}
+$$
+
+#### Exponential Decline
+* \\( b = 0 \\)
+$$ q(t) = q_i e^{-D_i t} $$
+$$ N_p (t) = \frac{q_i - q(t)}{D_i} $$
+
+#### Harmonic Decline
+* \\( b = 1 \\)
+$$ q(t) = \frac{q_i}{1 + D_i t} $$
+$$ N_p (t) = \frac{q_i}{D_i}\ln \left(\frac{q_i}{q} \right) $$
+
+#### Hyperbolic Decline
+* \\( 0 \leq b \leq 1 \\)
+* \\( b \neq 0 \\)
+$$ q(t) = \frac{q_i}{(1 + bD_i t)^\frac{1}{b}} $$
+* \\( b \neq 1 \\)
+$$ N_p (t) = \frac{q_i^b}{D_i(1-b)}\left(q_i^{1-b} - q^{1-b} \right) $$
+
+#### Abandonment
+* Exponential
+$$ 
+\begin{align*}
+  r &= \frac{q_i}{q_a} \\\\
+  t_a &= \frac{\ln r}{D_i} \\\\
+  N_{pa} &= \frac{q_i - q_a}{D_i} % _
+\end{align*}
+$$
+* Harmonic
+$$ 
+\begin{align*}
+  r &= \frac{q_i}{q_a} \\\\
+  t_a &= \frac{r-1}{D_i} \\\\
+  N_{pa} &= \frac{q_i}{D_i}\ln(r) % _
+\end{align*}
+$$
+* Hyperbolic
+$$ 
+\begin{align*}
+  r &= \frac{q_i}{q_a} \\\\
+  t_a &= \frac{r^b-1}{bD_i} \\\\
+  N_{pa} &= \frac{q_i^b}{D_i(1-b)}(q_i^{1-b} - q_a^{1-b}) % _
+\end{align*}
+$$
+
+#### Questions
+* At the end of lecture 4 for decline curves
+
+
+### Reserves
+* Proved Reserves
+  - P90
+* Unproved Reserves
+  * Probable reserves
+    - P50
+  * Possible reserves
+    - P10
+    - 10% probability that the quantities actually recovered will equal or exceed the sum of estimated proved plus probable plus possible reserves
+* Preserves tended to grow post production
+
+### Uncertainty Evolution
+1. Explored
+2. Appraisal
+3. Developed - development decision
+
+### Unconventional Resources
+* Resource Triangle
+  * Implies that the world has ample hydrocarbon resources
+  * Top is less expensive to develop and produce.
+  * Conventional Resources -down-> Unconventional
+  * High-medium quality -> low perm oil, tight gas sands -> gas shales, heavy oil, coalbed methane -> gas hydrates, oil shale
+  * Increasing pricing and technology ->
+  * Unconventional gas
+    * Gas shale
+      * Major growth area
+      * Low permeability so flow rates and overall gas production per well is lower than conventional systems
+    * Tight Gas
+      * Gas production from very low porosity (10% or less) rock which has low permeability (0.1 milliDarcy or less)
+      * These sandstone (or sometimes carbonate) formations are produced in a similar manner to gas shale
+    * Coalbed Methane
+      * Gas occurs naturally in coal seams and can cause explosions in coal mines
+      * Gas absorbs to surface of coal and will desorb if pressure is lowered by pumping water out of the system
+      * De-watering -> Two-phase Gas-water Production -> Decline Production (decreasing water rate, increasing gas rate, then decline
+    * Methane Hydrates
+      * May contain many times more gas than the volumes stored in conventional reservoirs
+      * Deposits are at 300 to 500m deep (i.e. shallow) and must be depressurised to be produced.
+      * This is an endothermic process?
+* Commercial Issues
+  * Well flow rates are typically low.
+  * Heating may be required.
+  * Reserves may be in permafrost regions – environmental damage must be avoided.
+  * Recovery could be enhanced by injecting CO2 into deposits (carbon credits?)
+  * Japan aiming for commerical extraction by the year 2016, China spending $1 million US on hydrates research
+* Heavy Oils
+  * Heavy oil is very viscous oil that is typically high in sulphur and heavy metals.
+  * Common in Canada and Venezuala.
+  * Heavy oil is considered to be 3 to 4 times more expensive to produce than conventional oil.
+  * Produced by injecting steam into a horizontal wells that heats the oil so it can flow to a nearby horizontal production well.
+    * Meaning: heat and mass in one well pushes in to other well
+* Tar Sands
+  * Also known as oil sands / bitumen sands
+  * Extremely viscous oil that will not flow by any enhanced recovery mechanism
+  * These deposits are *open put* mined and then upgraded in a high temperature process
+* Oil Shale
+  * Fine grained sedimentary rocks where oil forms
+  * Like tar sands however they need to be heated (to 650&deg;F!) to recover the oil
+  * Price sensitive process
+  * Freeze walls, remove water, drill heating and recovery wells. 
+  * 1 unit of energy in, 3-4 out.
+* Peak Oil
+  * Maximum rate of global petroleum extraction is reached
+  * Occured in the 1970s for USA - now imports dominate
+  * Hubbert Curve
+    * Accurately predicted the timing of the peak of US oil production
+      $$ \begin{align*} 
+        \pder{Q}{t} &= P = K Q \left( 1 - \frac{Q}{PRR} \right) \\\\
+        P &= \text{Production rate} \\\\
+        Q &= \text{Cumulative production} \\\\
+        URR &= \text{Ultimate recoverable resource} \\\\
+        K &= ????
+      $$
+    * Hubbert linearisation???
+  * Currently 86 mbd
+  * Forcasting mostly within the next 50 years, with worst case, all oil gone by next century
+* Reserves additions
+  * Low chance of lots of cheap oil, probably going to be expensive
+  * Production exceeds discovery now
+* Hirsch Report 
+  * Predicts Peak oil between 2005 and 2015, shell at 2025+
+  * Mitigation
+    * Fuel efficient transportation
+    * Heavy oil/Oil sands
+    * Coal liquefaction
+    * Enhanced oil recovery
+    * Gas-to-liquids
+  * Conclusions
+    * World oil peaking is going to happen, and will likely be abrupt. 
+      - Will peak, abrupt
+    * Oil peaking will adversely affect global economies, particularly the U.S. Over the past century the U.S. economy has been shaped by the availability of low-cost oil.
+      - Peak = bad
+    * Oil peaking presents a unique challenge. 
+      - Peak = Challenge
+    * The problem is liquid fuels for transportation. 
+      - Problem area = transportation
+      - Best point!
+    * Mitigation efforts will require substantial time
+      - Need time
+    * Both supply and demand will require attention. 
+      - Look at -> Supply + demand
+    * It is a matter of risk management. 
+      - Risk management
+    * Government intervention will be required. 
+      - Governments
+    * Economic upheaval is not inevitable. 
+      - Doesn't have to be economic upheaval
+    * More information is needed. 
+      - Need more information
+### CO2 Sequestration
+* Capture CO2 at large point sources and store underground
+* Well known as oil industry uses it for EOR
+* Weyburn - Biggest
+  * 320 km pipeline from Dakota USA to Saskatchewan Canada
+  * 30 million tonnes of CO2 stored, 155 million barrels of **incremental** oil
+  * USA emissions were 5.8 billion tonnes in 2007
+* Maping rock formations suitable for sequestration
+* Leakage
+  * Confidence of no leakage pathways back to the surface
+  * Old wells
+  * Faults
+* Injection
+  * Underground in super critical phase
+  * CO2 highly corrosive, careful with casing and cement
+  * In depleted oil fields, this alters phase behaviour (consider compositional effects in reservoir models)
+* Properties of geo-fluids
+  * Rocks in the crust, contains fluids
+  * Transport depending on density, viscosity, solubility, miscibility
+* Density
+  * Increases with depth
+* Viscosity
+  * Similar to density
+* Solubility
+  * Decreases as salinity increases
+  * Usually decreases with temperature, though not for excessive pressures
+* Trapping forms in aquifiers
+  * Increasing storage security with time down this list
+  * Physical Trapping
+    * Dense supercritical CO2 phase - >31&deg;C at 73 bar
+  * Chemical Trapping
+    * CO2 compounds
+    * Solubility trapping
+      * CO2, ...HCO3...
+    * Mineral trapping
+      * calcite, siderite, dawsonite
+* Monitoring
+  * Must undertake extensive monitoring
+  * Sleipner - since 1996
+    * Sandstone formation - has stayed in place
+    * 13 years, 10 million metric tonnes, 3 square kilometers
+    * Seismic imaging
+    
+
+
+
+
+Eylem
+-----
+
+> **Steam Tables**
+
+### Basics
+* Celsius = (Farenheight - 32)/1.8
+* Kelvin = Celsius + 273.15
+* 10,000 Pa = 1 bar = 14.5... psi
+* Bar absolute = gauge + pressure atmosphere 1 bar
+* Internal Energy + Potential Energy + Kinetic Energy
+  $$ u_1 + g z_1 + \frac{1}{2} v_1^2 = u_2 + g z_2 + \frac{1}{2} v_2^2 + \Delta e $$
+* Types of Energy
+  * Thermal Energy - Steam and hot water from underground
+  * Potential energy - water flows downhill from high to low elevations
+  * Kinetic energy – a steam turbine spinning and driving an electricity generator
+  * Electrical energy flowing through the supply network to end users
+* Thermal Energy
+  * Steam tables use the reference specific energy u (kJ/kg) at the triple point for water (0.01&deg;C, 0.006112 bar)
+* Specific Energy
+  * Specific energy for water u<sub>f</sub> (kJ/kg)
+  * Specific energy for steam u<sub>g</sub> (kJ/kg)
+  * Specific energy is approximately a linear function of temperature over small temperature ranges
+  * \\( u_2 - u_1 \approx c_p(T_2 - T_1) \\)
+  * \\( c_p \\) is the specifc heat (kJ / kg K)
+    * constant pressure, \\( c_v \\) for constant volume
+* Moving fluid adds energy, thus specific energy goes to enthalpy
+  * \\( h = u + p / \rho \\)
+  * Use internal energy for static, enthalpy for moving fluid
+* Specific volumes v<sub>f</sub>, v<sub>g</sub> (m<sup>3</sup>/kg)
+  * reciprocal of density
+* Subscripts for liquid: f, l, w
+* Subscripts for steam: g, v, s
+
+### Example 1 – separation of steam and water
+### Example 2 – Energy in a reservoir
+
+### Saturation and dryness
+* Amount of steam measured in a boiling mixture of water and steam
+* Saturation
+  * Liquid saturation S<sub>l</sub> = volume fraction of water 
+  * Vapour saturation S<sub>v</sub> = volume fraction of steam 
+  * S<sub>l</sub> +S<sub>v</sub> = 1
+* Dryness
+  * Mechanical engineers use mass fraction or dryness
+  * Dryness 
+  $$
+  \begin{align*}
+    X &= \frac{ m_s }{ m_s+m_w } \\\\
+      &= \frac{ \rho_s S_v }{ \rho_s S_v+ \rho_w S_l }
+  \end{align*}
+  $$
+* Fractions
+  $$
+  \begin{align*}
+    X   &= \frac{ h_m - h_f }{ h_{fg} } \\\\
+    h_{fg} &= h_g - h_f \\\\
+    h_m &= (1-X) h_f + Xh_g \\\\
+    v_m &= (1-X) v_f + Xv_g \\\\
+    s_m &= (1-X) s_f + X s_g \\\\
+    u_m &= (1-X) u_f + X u_g
+  \end{align*}
+  $$
+
+
+> **Fluid Properties**
+
+### Chemical Composition
+* Hydrocarbons
+  * Aromatics (Arenes)
+  * Aliphatics
+    * Alkanes
+      * Single Bonds
+    * Alkenes
+      * Double Bonds
+    * Alkynes
+      * Triple Bonds
+    * Cyclic Aliphatics
+
+### Bubble Point Pressure
+* Standing
+  * Standing's Correlation (1947)
+    $$ 
+    \begin{align*} 
+      p_b &= f (R_S, ρ_g, ^\circ API, T)  \\\\
+          &= 18.2 [(R_s/\gamma_g)^(0.83) (10)^a ‐ 1.4] \\\\
+      a   &= 0.00091 (T ‐ 460) ‐ 0.0125 (^\circ API) \\\\
+      p_b &= \text{bubble‐point pressure, psia}  \\\\
+      T   &= system temperature, ^\circ R
+    \end{align*}
+    $$
+* Vasquez and Beggs
+* Glaso
+* Marhoun
+* Petrosky and Farshad
+
+### Phase behaviour of two-component mixtures
+* The critical pressures of mixtures are considerably higher than the critical pressures of the components of the mixtures. In fact, a larger difference in molecular size of the components causes the mixtures to have very large critical pressures.
+* Look at some phase envelopes (pressure against temperature...) - phase diagrams
+
+### Definitions
+* Standard conditions
+  * 60&deg;F, 14.7 psia (1atm?)
+* GOR = Volume of gas/Volume of oil [SCF/STB]
+  * Gas oil ratio
+* Specific gravity of oil
+  $$ \gamma_o = \frac{ \rho_o }{ \rho_w } $$
+  * Oil to water density ratio
+* Specific Gravity of Gas
+  $$ \gamma_g = \frac{ \rho_g }{ \rho_{air} } % _ $$
+* API => light oil -> 30 -> Oil -> 22 -> Heavy oil -> 10 -> Extra heavy oil
+  $$ ^\circ API = \frac{141.5}{\gamma_o} - 131.5 $$
+
+### Oil Properties used in Reservoir Engineering
+* Viscosity, \\( \mu_o \\) <small>‐(Egbogah‐Beggs‐Robinson and Vasquez‐Beggs correlations)</small>
+* Formation Volume Factor of oil, B<sub>o</sub> <small>‐ (Standing correlation) </small>
+* Total Formation Volume Factor of oil, B<sub>t</sub>
+* Solution Gas oil Ratio, R<sub>s</sub> <small>‐ (Standing correlation)</small>
+* Coefficient of Isothermal Compressibility, C<sub>o</sub> <small>‐(Villena‐Lanzi and Vasquez‐Beggs correlations)</small>
+
+### Formation volume factor
+$$ B_o = \frac{ \text{Volume of Oil + Dissolved Gas at Reservoir) Pres & Tres }}{ \text{ Volume of Oil Entering Stock Tank at Tsc, Psc }} $$
+$$ B_{o,g,w} = \frac{ \text{Fluid Volume at reservoir P & T }}{ \text{ Fluid Volume at standard conditions }} % _ $$
+$$ B_g = \frac{ \text{Volume of an arbitrary amount of gas at reservoir T & P}}{ \text{ Volume of SAME amount at standard T & P}} $$
+
+### Solution Gas Oil Ratio ( \\( R_s \\) )
+* Reservoir Pressure > Bubble Point Pressure
+  * Oil (stb) + solution gas (scf)
+* Reservoir Pressure < Bubble Point Pressure
+  * Oil (stb) + solution gas (scf) + free gas (scf)
+
+### Total Formation Volume Factor, B<sub>t</sub>
+* bbl/STB + bbl/SCF *(SCF/STB)
+  $$ B_t = B_0 + B_g(R_{sb} - R_s ) % _ $$
+
+### Compressibility
+* Volume change as a result of pressure changes
+  $$ C = - \frac{1}{V} \left[ \pder{V}{p} \right]_T % _ $$
+* p > p<sub>p</sub>
+  $$ C_o = - \frac{1}{B_o} \left[ \pder{B_o}{p} \right]_T % _ $$
+* p < p<sub>p</sub>
+  $$ C_o = - \frac{1}{B_o} \left[ \pder{B_o}{p} \right]_T - \frac{B_g}{B_o} \left[ \pder{R_S}{p} \right]_T $$
+* Oil gas and water
+  $$ C_o = - \frac{1}{B_o} \pder{B_o}{p} - \frac{B_g}{B_o} \pder{R_{So}}{p} % _ $$
+  $$ C_g = - \frac{1}{B_g} \pder{B_g}{p} $$
+  $$ C_w = - \frac{1}{B_w} \pder{B_w}{p} - \frac{B_g}{B_o} \pder{R_{Sw}}{p} % _ $$
+
+### Behaviour of Gases
+* Equation of State
+  * Gas deviation factor, compressibility factor, z-factor
+    $$ 
+    \begin{align*}
+      PV &= znRT  \\\\
+      z  &= \frac{V_{actual}}{V_{ideal}}
+    \end{align*}
+    $$
+  * Compressibility factor of Natural gas Gases
+
+
+
+
+### Reserve Estimation
+
+### EOR 
+
+### Geothermal Well Tests Tutorial
+
+
+
+Sadiq
+-----
+
+### Wordlwide Geothermal Development / Types of Geothermal Systems
+* World pattern of plates, oceanic ridges, oceanic trenches, subduction zones, and conventional geothermal fields
+* Plate Tectonics
+* Conversional Geothermal Systems
+  - Rain to well???
+* Geothermal Natural Features
+* Sinter Deposits
+* Steaming Ground
+* Acid pools
+* Sulphur deposits
+* A Simple Geothermal Reservoir
+  - Materials, temperatures, flows
+* Drilling Geothermal Wells
+  * Geothermal wells are larger than any other wells
+  * Depth > 3000m
+  * Specialised Drilling
+  * Risk of blowout
+  * Need mud cooling
+  * High cost
+* Well Testing (Vertical Discharge)
+* Geothermal Energy Applications 2010
+  * Power Generation
+    * 10,715 MWe
+    * 24 Countires
+  * Direct Use
+    * 50,583 MWt
+    * 78 Countries
+  - Power Production of 105,830MWt
+  - MWt, MWe
+* Direct Use of Geothermal Energy
+  * Use of the heat in geothermal fluid to provide energy for any end use except electricity generation:
+    * World-wide capacity - 50,583 MWt(2010)
+    * 78 Countires (438,071 TJ/year)
+    * equivalent to - 11.3 million tonnes oil/year
+  * Includes traditional uses common in many countries:
+    * Bathing (by far the most popular use world wide)
+    * Cooking ( including industrial processes)
+    * heating (and cooling)
+    * agriculture (greenhouses and drying)
+    * extraction of minerals
+* Mineral Extraction
+* Cooking
+* Geothermal Cooking (Steam Ovens)
+* Healing and Medical Use (Balneology)
+* Bathing (Iceland)
+* Space Heating
+* Direcct Use Wells
+* Agriculture (Mokai)
+* Fish Farming (china)
+* Prawn Farm (Wairakei)
+* Timber Drying (Tuahara)
+* World Geothermal Power Generation
+  - Massive spike now?
+  - Bunch of numbers...
+* Geothermal Power Production Systems
+  * Dry Steam Units
+  * Single Flash Units
+  * Double Flash Units
+  * Triple Flash Units
+  * Binary Units
+  * Hybrid Steam-Binary
+  * Total flow Machines
+* Dry Steam Units
+  - Machine Diagram
+* Single Flash
+  - Machine Diagram
+* Double Flash
+  - Machine Diagram
+* Binary Plants
+  - Machine Diagram
+* Kalina Geothermal Power Plant
+  - Machine Diagram
+* Hybrid Steam-Binary
+  - Machine Diagram
+* Thermal Power Plants Conversion Efficiency
+  - 11%, alot less than others around 35%
+* Total flow Machines (Systems)
+* Types of Geothermal Systems
+  - Warm water, hot water, two phase
+* Mass Produced per MWe Generated
+  - Plot of existing wells
+* Other Types of Geothermal Reservoirs
+  * Hot Dry Rock (HDR) or Engineered Geothermal System (EGS)
+* Hot Dry Rock - Engineered Geothermal Systems
+  * Huge Volumes of hot rock exist worldwide
+  * Often permeability is low
+  * No natural convection, no fluid movement
+  * No fluid (Dry)
+  * Idea:
+    * Drill two wells
+    * Use hydraulic-fracturing to create a permeable zone connecting the wells
+    * Pump cold water down one well and produce hot water from the other
+    * Many problems, no-one has got it working well
+  * List of places...
+  - Data slide - should try reading and understanding
+* Sedimentary Basins
+  - stuff...
+* Deep Geothermal (Deep Volcanic)
+  * IDDP - the Iceland Deep Drilling Project (Reykjanes)
+  * Wells 4-5 km deep.
+  * Temperature: 400 - 600&deg;C (super critical)
+  * Power Potential: 50 - 70 MWe/Well
+  * Difficulties with drilling
+* Geopressured systems
+  * Geopressured systems containing thermal fluid and natural gas
+  * Can be found in large sedimentary basins (e.g. Gulf of Mexico, USA)
+  * Depths of 3-7 km(highly pressurised)
+  * Reservoirs consist of permeable sedimentary rocks
+  * Investigated extensively, but no industrial exploitation yet.
+* Hot Fractured Rock
+  * Australia (e.g. Cooper Basin)
+  * Depths of 4 - 5 km (highly pressurized)
+  * Reservoirs consist of fractured igneous (volcanic) rocks
+  * Temperatures 200&deg;C to 280&deg;C
+  * Highly mineralized (NaCl) water 100 to 200 ppt (hyper brine)
+* Geothermal and Mining
+
+
+### Geothermal Resource Estimation
+* Reservoir engineering parameters - porosity
+  * Porosity \phi is defined as the ratio of volume of pore space (i.e. the volume that can be occupied by the fluid) to the total volume of the system
+  * Porosities are of the order 5-30% in the production zone of a geothermal reservoir
+  * However in the tighter surrounding rock porosity may be 1% or lower
+* Porosity
+* Other reservoir engineering parameters
+  * Specific heat of rock, c_r \approx 1000 J/kg K
+  * Density of rock, \rho_r \approx 2200-3000 kg/m^3
+  * Thermal conductivity K, 2-2.5 W/m K
+  * Thermal conductivity of a saturated medium, K = (1-\rho)K_r + \rho K_f
+* Heat and mass underground
+  * *Mass*. The amount of water and steam underground, per unit volume of the reservoir, is given by
+    $$ A_m = \phi (\rho_lS_l + \rho_v S_v)
+  * Here \phi is the porosity, \rho_l and \rho_v are the densities of the liquid and vapour (or gas) phases respectively and S_l, S_v are liquid and vapour saturations respectively
+* Saturations
+  * The saturations S_l, S_v are the volume fractions of liquid and vapour
+  * They are commonly used in reservoir engineering to measure the proportions of water and steam
+  * Whereas for surface equipment engineering "dryness" is usually used
+    $$ S_l + S_v = 1 $$
+* Heat and mass underground
+  * Similarly the energy content is given by
+    $$ A_e = (1-\phi) \rho_r c_r T + \phi(\rho_lu_lS_l + \rho_v u_v S_v) $$
+  * Here \rho_r c_r are the rock density and rock specific heat respectively and u_l, u_v are the specific internal energies for liquid and vapour. Note that this can be written in terms of enthalpy:
+    $$ A_e = (1-\phi) \rho_r c_r T + \phi(\rho_l h_l S_l + \rho_v h_v S_v - p) $$
+* Rock Specific Heat Capacity
+  - Properties are a function of Temperature
+* Thermal Capacity
+  - Differences are small - within error roughly
+  - save drilling - above rock analysis
+* Prevailing Cut Off temperatures used Worldwide
+  - Table of numbers
+* Example of an energy calculation
+  * A cubic metre of a reservoir is originally at 250&deg;C and a steam saturation of 0.1
+  * After a long period of production the pressure has fallen to 180&deg;C and the reservoir is just about to boil
+  * Find the amount of energy that has been removed (break it down into fluid and rock contributions)
+* Reservoir parameters
+  * Porosity = 0.1
+  * Density of rock = 2500 kg/m^3
+  * Specific heat of rock c_r = 1000 J/kg K
+* Initial reservoir parameters
+  - ...
+* Initial Energy Calculation
+  * Initial energy in rock
+    - ...
+  * Initial energy in fluid
+    - ...
+* Final reservoir parameters
+* Final Energy Calculation
+  * Final energy in rock
+    - ...
+  * Final energy in fluid
+    - ...
+* Summary
+  * Most of the energy in the geothermal reservoir is in the rock
+  * Most of the energy extracted comes from the rock (90%)
+* Area and Volume
+  - Inferred Resource -> Probable Resource -> Proven Reserve
+* Stored heat calculations
+  * A simple method for calculating the production potential of a geothermal reservoir is to carry out a stored heat calculation
+  * The basic idea is to divide the reservoir into a number of sub-regions with volumes V_1, V_2, ..., V_N each of which is in an approximately uniform thermodynamic state. The initial stored heat is then given by 
+    $$ H_i = \sum^N_{j=1} A_{ej}^{(i)} V_j $$
+  * The final state of the reservoir is then assumed to be when the cold water has completely "swept" the heat out of the heat out of the reservoir. Then the final heat content of the reservoir is
+    $$ H_f $$
+  * The theoretical maximum quantity of useful heat, H_{th}, which is available for exploitation is given by H_{th} = H_f - H_i
+  * The actual or design quantity of useful heat, H_{de}, is obtained by multiplying H_{th} by a reovery factor R_f: H_{de} = R_f H_{th}
+  * The problem is that the magnitude of hte recovery factor is unknown
+  * Values in the range 0.1-0.5 have been suggested by various authors but no really convincing reasons have been given for the choice
+  * Some workers have suggested that the calculation of the final energy should not be based on a final state of the reservoir containing cold water, because the reservoir will cease useful production when the final temperature is at some higher value, say 180&deg;C for electricity production
+* Distribution of recovery factor used in stored heat calculations of 74 geothermal field assessment
+  - Sadiq recommends 20%
+* Power potential in MWe
+  $$ W_e = ... $$
+  - ...
+* Conversion Efficiency function of Temperature
+* Conversion Efficiency function of Enthalpy
+* Conversion Efficiency
+* Power plan factor (F)
+  * The power plant factor combines (the prodct of):
+    * Plant availability factor, which is the percentage of time in the year that the plant is available for generation (excluding shut down for maintenance etc.)
+    * Plant capacity factor, which is the ratio of the actual output of the power plant over a period of time and its potential output provided that it had operated at full design capacity during the entire time/year
+    * For New Zealand and US geothermal plants F is reportedly high (0.95 to 0.98). Use 0.9 unless justified.
+* Heat vs Mass
+  * Most geothermal reservoirs will run out of heat before they run out of mass and the stored heat calculation can ignore mass considerations
+  * But for vapour-dominated systems recharge is so small that they may run out of mass first
+* Example
+  - ...
+* Reservoir parameters
+* Steam Table data for 250&deg;C
+* Calculation of internal energies
+  - ...
+* Calculation of mass of fluid
+  - ...
+* Energy produced from all the mass
+  - ...
+* Initial Energy
+  - ...
+* Final Energy
+  - ...
+* Final energy at vairous temperatures
+  - ...
+* Summary
+  * The reservoir will run out of water and steam after about 10 years
+  * At that time the temperature in the reservoir will have dropped from 250&deg;C down to about 232&deg;C
+  * Plenty of heat is left and injection of extra water will help maintain production
+* Example
+  * A reservoir made of magmatic rock...
+  - ...
+* Reservoir Parameters
+* Steam Table data for 250&deg;C
+* Calculation of internal energies
+* Initial Energy
+* Final Energy
+* Recoverable Energy
+* Areal Method (analogy with other fields)
+  * power density (MW/km^2) based on field area
+  * Suggested minimum value of 10 for convential geothermal projects
+  * Suggested maximum value of 25; where there is high enthalpy/permeability
+* USGS
+* Utilisation Efficiency
+* Probabilistic Methods
+  * Used to refine overall assessment methods
+  * Monte Carlo Simulation is most often used
+    * Based on "probability ranges" for parameters rather than point values
+    * Model generates values for stored heat parameters
+    * Calculations repeated many times (2,000 - 10,000) until probability distribution for field output obtained
+  * Monte Carlo Simulation is readily applied to static methods such as stored heat which are numerically simple
+* Stored Heat Spreadsheet
+  * Options on input parameters
+    * Recovery Factors
+    * Conversion Efficinecies
+    * Rock specific heat capacities
+  * @RISK output curves integrated in the Excel spreadsheet (Total stored heat, Total plan capacity)
+  * @RISK output includes:
+    * the mean stored heat per block
+    * mean total stored heat
+    * percentage distribution of stored heat and plant capacity of each block
+    * power density (MWe/km^2)
+* Stored heat typical input data
+* Stored heat output results
+* Output Results: Cumulative distribution
+* Need to keep revising assessment
+  * Resource assessment is not a static process
+  * A series of resource assessments should be made at the following stages:
+    * exploration
+    * Development
+    * exploitation
+  * Maintain and refine conceptual hydrological model
+  * Construct and calibrate numerical simulation model
+
+
+### Steam Field Equipment, Geothermal Power Cycles
+* Steam Field Equipment
+  * There is no universal description for this system which can go by various names depending on personal preferences
+  * Resource Production Facility (RPF)
+  * Fluid Collection and Distribution System (FCDS)
+  * Steam Gathering System (SGS)
+  * System Above Ground (SAG)
+* Main Equipment
+  * Geothermal wells
+  * The wellhead with valves
+  * The separator (for wet fields), a flash valve or orifice is included for a two-pressure system
+  * Silencer, muffler and vent hose
+  * Geothermal pipelines
+  * Waste water disposal/reinjection system
+* Well Heads
+* Wellhead Separator and Silencer
+* Pipe Lines
+* Expansion Loop
+* Rotating Anchor
+* Sliding Anchor
+* Constant Load
+* Fixed Anchor
+* Pipeline Insulation and Cladding
+* Challenges
+* Corrosion
+* Scaling
+* Bottom Outlet Cyclone Separator (BOC)
+* Horizontal Separator
+* Cyclone Silencer
+* Single tower atmospheric flash tank
+* Separated Water Drains
+* Steam Vent (Ohaaki)
+* Rock Muffler (Tauhara)
+* Drain Pots and Steam Traps
+* Geothermal Power Stations
+* Geothermal Power Cycles
+  * Direct Dry Steam
+  * Single flash
+  * Double flash
+  * Multi flash
+  * Binary
+  * Hybrid Steam and Binary
+  * Hybrid Fossil - Geothermal
+  * Total Flow Machines
+* Dry Steam
+* Direct Dry Steam
+* Isentropic efficiencies of steady-flow turbine
+* Baumann Rule
+* Separated Steam (SS) Single flash (Single Pressure)
+* Single flash
+* Flash System
+* Single Flash / Single Pressure
+* Double Flash Steam - Separated Steam Single Flash (SSSF) (two pressure)
+* Power Output
+* Double Flash
+* Multi Flash (Three or more pressures)
+* Triple flash system
+* Binary Cycle
+* Binary Plants
+* Binary Fluid System
+* Kalina Geothermal Power Plant
+* Hybrid Steam-Binary
+* Hybrid Fossil & Geothermal System
+* Geothermal Preheat System
+* Turbine
+* Condensing Turbine
+* Pass in Turbine
+* Double Flow Turbine
+* Turbine Blading Types
+  * Impulse turbines - The impulse blading principle results in a turbine which is compact and heavily constructed with a small number of stages. It is particularly suitable for geothermal applications because its rugged and compact nature makes it transportable.
+  * Reaction turbines - This turbine is of lighter construction and has many more stages of blading than the impulse type.
+  * Most modern turbines are a combination of these two types. The usual construction will involve a pure impulse first stage followed by several combination impulse/reaction blading stages.
+* Double flow turbine
+* Wairakei power station double flow/pass in turbines
+* Steam Quality
+  - If not 100% dry, this results in missing blades
+  - 1.5 million for base maintenance
+  - Dimples from water droplets
+* Steam Purity
+  - Acit/low PH
+  - Resin at base of blades
+* Condesners
+* Common Types of Condensers
+  * Counter Current
+  * Cross Current
+  * Surface Condenser
+* Counter Current Low Level
+  - Counter flow; water up, then steam down
+* Cross Current Barometric Leg
+  - Vacuum at the top, open to atmosphere at the bottom.
+* Surface Condenser
+  - By law only use surface?
+  - Contains lots of dead fish and seaweed
+  - Difficult to find and fix problems - 1000s of pipes
+  * Double Pass Tubular Condenser
+* Non Condensable Gases (NCG) Gas Extractors
+  * Liquid Ring Vacuum Pump - 40% efficient
+  * Steam Ejectors - 5% efficient
+  * Centrifugal Compressors - 80% efficient
+* Liquid Ring Vacuum Pump
+  - Based on the venturi/bernoulli principle
+* Steam Ejectors
+  - NCG + Steam => Mixture out?
+* Two Stage Ejector System
+  - ...?
+* Centrifugal Compressors
+* Cooling Towers
+* Mechanical Draft Cooling Tower
+  - Cooling fan, passing through grate...
+  * Advantages
+    * Reasonably cheap to build
+    * Offers a flexible system. Fan speeds may be altered to adjust for ambient conditions and number of turbines in load
+    * Low profile
+  * Disadvantages
+    * Power consumption of fans
+    * High maintenance costs
+    * Can cause low level fogging
+* Natural Draught Cooling Towers
+  * Cross Flow
+  * Counter Flow
+* Total Flow System
+  - Non commercial
+  - Barometric Condenser after Turbine?
+* Total Flow Machines
+  * Sprankle double helix expander
+  * Robertson Engine
+  * Keller Rotor Oscillating Vane machine
+* Exergy
+  * Overall performance for a cyclic plant would be based on thermal efficienty (\nu) = \frac{Wnet}{Qs}
+  * However, Geothermal plant is not cyclic
+  * Use a utilisation efficiency (\nu_u) which compares plant output to maximum theoretically obtainable output.
+    $$ \nu_u = \frac{Wnet}{Exergy} = \frac{Wnet}{e} $$
+  * e = specific exergy (availability) = b
+  * e = (h_1 - h_0) - T_0 (s_1 - s_0) = b_1 - b_0
+  * 0 is sink condition at pressure p_0 and temperature T_0 (Geysers \nu_u = 55%)
+  - For reference at current condition
+* Back Pressure
+* Condensing Steam Turbine
+* Double Flash / Two Pressure
+* Binary (Organic Rankine Cycle) Palnts: Basic Concepts
+* Brine ORC Units
+* New Zeaalnd's first binary cycle plant (TG1 at Kawerau)
+* Kalina Cycle
+  * Husavik Kalina Plant (2MW), Iceland
+* Binary Plant on Separated Brine
+* Single Flash 110 MWe IP Power Plant with Binary Cycle
+* Australia Birdsvill, 80Kwe net ORC plant
+* Silica (SiO2) Solubility (Thermodynamic)
+  * Quartz Solubility (20-330&deg;C)
+    - ...
+    - T...
+  * Amorphous Silica Solubility (0 - 250&deg;C)
+    - ...
+    - Log S = ...
+* Silica Saturation index (SSI)
+  * Is the ratio of measured silica concentration in solution to the equilibriium solubility of Amorphous Silica at the same (Ph and temperature)
+  * SSI < 1 Under-saturation (No silica deposition)
+  * SSI = 1 Saturation
+  * SSI > 1 Over-saturation (possible depsoition)
+  - From experience, single flash tolerance up to 1.15, double flash up to 1.3, also add acid, though risks
+* Silica Solubility
+* Silica Saturation Index (SSI)
+  - Quartz...?
+  - Not much time for silica to deposit
+* Weighted average values of CO2 emissions from different electricity sources
+* NCG effect on power output
+  * W - Wo [1-0.0059C]
+* Power decline analysis
+  * W = \frac{W_i}{1 + D_i\Delta t} (harmonic decline)
+  * W - W_i e^{-D\Delta t} (exponential decline)
+  - Self dischargine with time
+  - Can only decline - always need to drill more wells
+  - make sure its operating at full capacity - 2 wells + 1 reinjection well
+* Power potential of wet well
+  - Second pressure - 2D contour plot
+  - Power against well head pressure
+
+
+### Drilling engineering / Stimulation
+* Drilling Programme
+  * Objectives
+  * Well Data
+  * Stratigraphy, Lithology and Drilling Conditions
+  * Targets and Zones of Potential Permeability
+  * Temperature, pressure and chemical conditions
+  * Geology, and Measurements During Drilling
+  * Well testing Programme
+* Primary Objectives
+  * Obtain geothermal production from targets:
+    * Permeable formations, fractured formations and contact zones
+    * Shallow deep and basement faults
+    * Assess likely future well productivity, performance
+* Secondary Objectives
+  * To provide geological and reservoir data to contribute to assessment of the geothermal potential of the area and to contribute to future well sitting and management of the reservoir. Key information to be obtained will include:
+    * Geological stratigraphy
+    * Temperature and pressure distribution
+    * Evidence of any recnet change in reservoir temperautre of chemistry conditions
+    * Identification of any stratigraphic permeability suitable for production or injection
+    * Identification of faults in the area
+    * Determination of depth to basement
+  - Greywacke - deep old rock - sedimentary
+* Conceptual model
+* Integrated resource studies
+* Geochemistry
+* Geophysics
+  - High resistivity means water flowed
+* Resistivity Boundary
+* Faults
+* Reservoir Models
+* Basic Well Data
+  - ....
+* Targets and Anticipated Temperatures 
+* Directional Drilling
+* Targeting Faults
+* Geology, and Measurements During Drilling
+  * Start with best possible prediction of the field's geology
+  * Collect cuttings and cores
+  * Measure water losses during drilling (mud logging)
+  * Update and improve out understanding of Lithology
+* Bore Hole Image (BHI)
+  - Dark is permeable
+  - Sudden fast movement, diagram....?
+* Drilling parameter vs BHI
+* Core & BHI comparison
+* Clay/Alteration Mineralogy
+* Drilling Time & Costs
+  - Depth and time - missing last core -time constraints
+* Rotary Drilling Rig
+  - Used to use chisel like drill
+  - Tri cone drill, all force on 1 tooth
+  - torque, crane height mump (water) remove crushed rock
+* Shale Shaker
+* Sand Separatores
+* Chemicals
+  - mud - bentonite
+* Mixing Chemicals
+* Mud/Water Cooling Tower
+  - Hot environment 
+  - chemicals can't tolerate
+  - chemicals brought up, cooled before reuse
+* Mud Viscosity
+* Compressors (Air Drilling)
+  - Mud can clog fractures -> permeability
+  - Well kicks -> close BOP -> production (emergency valve)
+* Drill collars and drill pipes
+  - alot damaged, can't be reused
+* Liners
+  - hole size depends on "viscosity", how sloppy...?
+* Typical Well Designs
+  - ...
+* Drilling Site Preparations
+  - Primary, secondary and tertiary holes
+  - Holes around well, cellar around well and standpipes around well, cemented to diverge buildup allowing people to packup and leave
+* Consolidation drilling at Wairakei in the early 1950s
+* Site Preparation
+* Drilling Pit
+* Common Casing Sizes
+
+  Casing String | Hole Size | Casing Diameter
+  -------------------------------------------
+  Surface       | 24"       | 20"             
+  Anchor        | 17.5"     | 13.375"         
+  Production    | 12.25"    | 9.625"          
+  Liner         | 8.5"      | 7-7.625"        
+  
+  - Following a standard
+* Typical Well Designs
+* WK607 is the largest diameter geothermal well in the world
+  - 30 in precollar...
+  - 404 metres
+* Typical Drilling Wellhead
+  - Petroleum - cut drop and run
+  - Blow Up Prevention (BUP)
+  - Geothermal - pump in cold water to control
+* Rotary Drilling & Percussion (cable tool) Drilling
+* Drilling a Slim Hole (Cold Ground)
+  - Confirmation well
+* Drilling a Geothermal Slim Hole
+* Geotechnical Drilling
+  * Research/testing cores
+* Coring Bit
+  - Swapping take 2 days + heaps of cost
+* Weirline Coring
+  - Huntly - 1700 small wells
+  - Petroleum - rock mass
+  - Wairaki - 300 wells - geo heat
+* Cores
+* Noise Control
+  - Double glazed glass building...
+  - hay bails
+* Chain Gang Cementing Job on WK24 in March 1955
+  - If the cement doesn't go all the way up, residual water can crush when heated up
+* Cementing Truck
+* Cement Spread
+* Wiper Plug
+  - Push with water
+  - pushes cement
+  - drill through it once done
+* Cementing heads
+* Typical Permanent Wellhead
+  * Master Valve, side valve, expansion spool
+* Venting of Casing Annuli
+  - tubes around will
+* Mast failure while trying to recover the stuck drill string
+  - Doesn't budge ->dynamite -> ditch -> divert
+  - Stuck in mud, used to pump diesel, KFC organic oil
+* Rock Melt Drilling System
+  * Costs alot and doesn't work, 2m ish
+* Well discharge Stimulation
+  * Some geothermal wells can be left open and even though the reservoir is hot they will not discharge by themselves (spontaneously), they have to be started. This is called discharge stimulation
+* Geothermal Wells not discharging
+  * The cause of the wells not discharging spontaneously is either a low water level or cold formations lying over the hot reservoir. It is possible that hte well would discharge by itself if it was left long enought, buyt it could take several years, much too long for a development to wait.
+  - Low water level -> expansion not enough to cover ground.
+* The effect of cold ground
+  * In principle cold water standing over hot is unstable, and will turn over - convection will begin. But a well is va very long narrow passage for flow, and too much work would have to be done against friction for convection to start along the length of the well. The only means of vertical heat transfer is thermal conduction or the rise of steam or gas bubbles, if they are present. So a two phase reservoir with cold ground lying over it intersected by a well may not discharge spontaneously. However if, the upwards flow of heat may heat up the casing and the cold water in the well. The water will then expand and may reach the top of the well - if it does, then the well will begin to flow with warm water and eventually will produce at the formation enthalpy. This may take a very long time.
+* The effect of a low water level
+  * The water in the well has to expand and overflow the top of the well for natural dischaege to occur. It may be that the thermal expansion of water is not sufficient to bring the water level to the top, for example in a well where the water level is 600m below surface and the production zone 1200m below surface. The expansion would have to be a factor of two.
+* Discharge Stimulation Methods
+  * Airlifting
+  * Air compression - Push water down
+  * Steam heating of the casing (boiler)
+  * Injection from a discharging well - neighbour
+  * Liquid Nitrogen injection at depth
+* Airlifting
+* Air compression
+* Steam heating of the casing using boiler
+  - Need clean water
+* Injection from a discharging well
+  * Well to well stimulation line setup
+* Injection from a discharging well
+  * 10 inch diameter set-up
+* Liquid Nitrogen injection
+* Stimulation (improving permeability)
+  * The word stimulation is also sometimes used meaning fracturing or acidising wells to improve their permeability
+  - hydrofracking - stimulation
+  - hydrofluoric acid -> doesn't wash with water, alcohol
+  - Arsenic -> doesn't corrode steel
+* Enhanced Geothermal Systems (EGS)
+
+
+### Direct use / Heat Exchangers
+* Mineral Extraction
+* Geothermal Cooking (Steam Ovens)
+* Silica-cement bricks
+* Healing and Medical use (Balneology)
+* Bathing New Zealand
+* Domestic Space Heating NZ
+* Simple Direct Use System
+* Gravity feed from a surface spring
+* Hot Water Pumped from Surface Springs
+* Public and Private Pools
+  * The New Zealand Health Regulations:
+  * Water in Public and private pools should be changed every 4 hours.
+  * Pumping capacity q = V/4 ( volumetric flow rate/hour)
+  * Mineral water pools: Water is disposed of
+  * Heat water pools: Water is reused
+  * Mineral Water Pools (T=40 to 42&deg;C) and all the heat and fluid is lost once discharged
+  * Heat Water Pools(T ~ 25&deg;C) only some of the heat is lost and most of the fluid is filtered, heated, chemically treated and reused
+* Open Public Pools
+* Swimming Pools Covers
+  * Pool Covers can save 30 to 50% of energy
+* Geothermal (mineral water) Pools
+* Geothermal (mineral water) Acid Pools (pH 4.5)
+* Heat loss from open air pools
+  * Sum of heat in equals sum of heat out
+  * In: Solar radiation + add
+  * Out: evaporation, back radiation, Rain, conduction
+  - ...
+* Example
+  - ...
+* Heat losses from open pools
+  * Heat losses from pools at about 40&deg;C varies from about 500 to over 3,000 watts per square metre
+  * Heat loss increases with pool water temperature
+* Green houses
+  - growth curves for crops
+* Example
+  - ... math...
+* Calculating Length of Piping
+  * The length of finned 25 mm pip required to provide the 615 kW heating load can e calculated. The heat transfer coefficient of 25 mm diameter steel pipe fitted with aluminium fins is 0.0121 kW/m^2i&deg;C
+  - ...
+* Prawn Farm (Wairakei)
+* Timber Drying (Kiln)
+  - ...
+  * High Temperature Schedule
+    * The High Temperature (HT) drying takes between 15 to 24 hours for 50 mm thick lumber requiring an initial maximum thermal heat energy input of 3 MW andan average heat input over the whole drying cycle, of around 1.9 MW for a kiln having a drying chamber capacity of 55 m^3. Heating the drying air to 120&deg;C requires geothermal water t obe supplied to the kiln heating elements at a temperature of at least 140&deg;C, to exit the heater at around 90&deg;C
+  * Accelerated Conventional Temperature Schedule
+    * ...
+  * Low Temperature Schedule
+    * ...
+* Timber Drying Example
+  * HT Schedule ...
+    $$ F_{geothermal} = \frac{\text{heating(KW)}}{\Delta h_f} = x kg/sec $$
+    $$ F_{geothermal} = \frac{3000}}{589-376.9} = 14.1 kg/sec $$
+  * ACT Schedule
+* Cloth Drying
+* Combined Use / Cascaded Use of Energy
+* Geothermal Refrigeration
+* Heat Exchangers
+  * Shell and Tube Heat Exchanger
+  * Plate Heat Exchanger
+* Problems 
+* Sizing a Plate Heat Exchanger
+  - A lot of important equations...
+* Direct use system
+* Classification of geothermal wells
+  * Self discharge wells
+  * Down-hole Pump (DHP) Well
+  * Air-lefts discharge wells
+  * Down-hole Heat Exchanger wells
+  * Reinjection wells
+  * Spring take and discharge
+* Downhole Heat Exchangers (DHE)
+* Types of Direct Use Wells
+  * Casing and wellhead details ofa pressurised well
+  * A non-pressurised well
+* Air lifting
+* Improving DHE Performance with air lift
+* Direct Use Wells
+* Drilling
+  * Pressured well
+    * Depth around 400m
+    * Well diameter 100mm
+    * Cost around $150,000
+  * Non-pressurised well
+    * Depth of around 80m
+    * Well diameter 100mm
+    * Cost around $25,000
+* Typical well casing sizes for a deep production well
+  * Surface casing 250 mm diameter by 10 m length
+  * Anchor casing 150 mm diamter by 30 to 40m length
+  * Production casing 100 mm diameter by 50 to 120m length
+  * Open hole or slotted liner length approximately 5 to 10 m
+* Closed Loop Ground Source Heat Pumps (GSHP)
+* Advantages of Using Heat Pumps
+  * Consume less electricity
+  * Have a stable energy source
+  * Use less refrigerant
+  * Have a simpler design
+  * Have a lower environmental impact
+  * Have lower annual operating costs
+* The most cost effective locations for geothermal heat pumps are:
+  * New construction
+  * Climates with high daily temperature variations, or where winters are cold and/or summers hot
+  * Areas where electricity costs are over $0.12/kWh
+  * Areas where natural gas is unavailable
+
+
+### Completion tests / Well test applications
+* The Reservoir Engineer Needs to know
+  * The temperature of the undisturbed reservoir
+  * The pressure distribution in the reservoir
+  * The flow rate and specific enthalpy of the fluid that the well will discharge
+  * The depths that the fluid is produced from
+  * For reinjection wells, the depths at which the fluid goes into the formation
+  * The permeability of the reservoir
+  * Chemistry of the reservoir fluid (gas and water)
+* Downhole Measurements
+  * Casing condition
+  * Temperature with depth
+  * Pressure with depth
+  * Flow rate across the well (spinner)
+  * Cementing job quality
+  * Water sampling
+* Go Devil Runs 
+  - Brass or aluminium
+  - go gauge - measure ball bearing, will go, no go
+  - Is the well go or no go
+  - corrodes, not steel
+* Check for blockage
+  * Go-Devil, Clear depth
+* Wellhead setup
+* Setting up the lubricator pipe
+* Pressure Temperature Spinner (PTS) Run
+* Removing the Tool
+  - Download data
+* Pressure Temperature Spinner (PTS) Run
+* Pressure Temperature Spinner (PTS) Tool
+* PTS Measurements
+* High Temperature Casing Caliper (HTCC) Tool
+* Geothermal Casing Caliper
+  - Magnetically  thickness, temp of metal
+* Mechanical Multiple Arm Caliper
+  * The caliper tool can be used to check for the integrity of a well's production casing
+  * The caliper can measure the casing's roughness as well as the minimum and maximum remaining wall thickness
+  - average diameter of hole + roughness etc, varies with depth
+* Three Arm Caliper
+* Measurements During Drilling
+  * Stage Testing (testing the well at different stages of drilling) to measure reservoir properties of the formations being drilled (very expensive)
+  * Static Formation Temperature Test (SFTT) Measure the reservoir temperature while the rig is on the well to estimate formation temperature and make a decision on the well completion (expensive but common)
+* Static Formations Temperature Test
+* SFTT with correction for formations temperature
+* 
+  
+
+
+
+
+### Scaling corrosion
+
+### Geothermal flow measurements
+
 
 
 
