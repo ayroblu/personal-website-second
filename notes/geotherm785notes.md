@@ -271,7 +271,7 @@ Lecture 4
 ---------
 
 Permeability - porosity
-$$ \pdd{p}{x} $$
+$$ \pdder{p}{x} $$
 
 ### Radius of Investigation
 
@@ -888,6 +888,7 @@ $$
         Q &= \text{Cumulative production} \\\\
         URR &= \text{Ultimate recoverable resource} \\\\
         K &= ????
+        \end{align*}
       $$
     * Hubbert linearisation???
   * Currently 86 mbd
@@ -925,6 +926,7 @@ $$
       - Doesn't have to be economic upheaval
     * More information is needed. 
       - Need more information
+
 ### CO2 Sequestration
 * Capture CO2 at large point sources and store underground
 * Well known as oil industry uses it for EOR
@@ -1672,7 +1674,7 @@ Sadiq
 * Common Casing Sizes
 
   Casing String | Hole Size | Casing Diameter
-  -------------------------------------------
+  --------------|-----------|----------------
   Surface       | 24"       | 20"             
   Anchor        | 17.5"     | 13.375"         
   Production    | 12.25"    | 9.625"          
@@ -1805,7 +1807,7 @@ Sadiq
 * Timber Drying Example
   * HT Schedule ...
     $$ F_{geothermal} = \frac{\text{heating(KW)}}{\Delta h_f} = x kg/sec $$
-    $$ F_{geothermal} = \frac{3000}}{589-376.9} = 14.1 kg/sec $$
+    $$ F_{geothermal} = \frac{3000}{589-376.9} = 14.1 kg/sec $$
   * ACT Schedule
 * Cloth Drying
 * Combined Use / Cascaded Use of Energy
