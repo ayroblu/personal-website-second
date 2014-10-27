@@ -1062,7 +1062,7 @@ Eylem
           &= 18.2 [(R_s/\gamma_g)^(0.83) (10)^a ‐ 1.4] \\\\
       a   &= 0.00091 (T ‐ 460) ‐ 0.0125 (^\circ API) \\\\
       p_b &= \text{bubble‐point pressure, psia}  \\\\
-      T   &= system temperature, ^\circ R
+      T   &= \text{system temperature,} ^\circ R
     \end{align*}
     $$
 * Vasquez and Beggs
@@ -1905,16 +1905,503 @@ Sadiq
   * Stage Testing (testing the well at different stages of drilling) to measure reservoir properties of the formations being drilled (very expensive)
   * Static Formation Temperature Test (SFTT) Measure the reservoir temperature while the rig is on the well to estimate formation temperature and make a decision on the well completion (expensive but common)
 * Static Formations Temperature Test
+  * Completion tests and downhole measurements
+  * Horner time = (T + dt)/dt
 * SFTT with correction for formations temperature
-* 
-  
+  $$ \begin{align*}
+    T &= T_{ws} + m\times t_{db}(t_{pd}) \\\\
+    t_{pd} &= \left[ \frac{K}{C_p} \rho r_w^2 \right] \times t_c \\\\
+    t_c &= \text{circulation time (decimal hours)} \\\\
+    \phi &= \text{Horner time straight time range} \\\\
+    T_{ws} &= \text{at Horner time = 1} \\\\
+    m &= \text{the Horner slope} \\\\
+    r_w &= \text{well bore diameter}
+  \end{align*} $$
+* Completion testing
+  * Water loss surveys
+  * Injection/falloff test (measure injectivity and permeability thickness ratio)
+  * Shut in PT surveys (pressure and temperature warm up curves)
+  * Discharge test (output test)
+* Temperature and pressure profiles measured during cold water injection
+  * A = Deep out
+    * Temperature cool until discharge
+  * B = Shallow out, deep out
+    * Temperature warming with depth
+  * C = Shallow in, deep out
+    * Temperature hot from shallow point.
+* Development of the pressure pivot during warm-up
+  * Pivot around weighted sum of pivot points, i.e. closer to major feedzone
+* Temperature and pressure profiles measured during a three-rate cold water injection test
+  * high -> lower temperature, lower gradient pivot
+  * All have lower gradient than reservoir pressure
+* Spinner
+  * ??? - negatives??? - what is this, no picture?
+  * Main feedzone causes fluid velocity to go to 0
+  * Casing liner overlap
+* Injectivity Test
+  * Injection at various rates, at each rate, it peaters out to steady state pressure
+  * Followed by Pressure Falloff (PFO) test
+  * Objectives
+    * Injectivity index
+    * Relative permeability of the well
+  * PFO objectives
+    * Permeability
+    * Transmitivity (permeability thickness...)
+    * Storativity
+    * Reservoir Boundary
+    * etc...
+  * Constant injectivity usually quoted with flow range
+    * Due to effects of high flow/time such as fracturing, thermal expansion/contraction, solid deposition/dissolution.
+  * Injectivity = d Flow / dP
+* Estimate Production Capacity
+  * Measure injectivity
+  * Variation of pressure with changing injection rate
+    $$ J = \frac{\Delta Q}{\Delta p} t/h/bar $$
+    * J < 5 = Useless
+    * J 10-20 small
+    * J > 50 excellent
+* Step Down Test
+  * ???
+  * Suction flow meter
+  * Pump Strokes
+  * WHP
+* Injectivity
+  * Example, injectivity increases drastically above WHP of 450 psi, due to fracture pressure.
+  * Gaps normally close up with removal of pressure, sand gel used in petroleum to prop open gaps (can't in geothermal)
+* Semilog plot
+  * Theis solution approximated with log
+  * Darcy D = 10<sup>-12</sup> m<sup>2</sup>
+  * kh = 0-10 Dm -> low
+  * kh = 10-30 Dm -> medium
+  * kh = 30-80 Dm -> high
+  * "Pressure derivative method"
+* Output test through the silencer
+  * 150 db
+  * enthalpy and mass flow rate
+* Well Testing (Output testing)
+  * Vertical Discharge
+  * Silica -> upon impact turns white
+  * Initially discharges rock, which is picked up by geologists
+* Russel James Formula
+  $$ \frac{(m/A)h^{1.102}}{P_c^{0.96}} = 22106 $$
+  * m = Mass flow rate (kg/s)
+  * h = Specific enthalpy of the discharged fluid
+  * A = lip pressure pipe cross sectional area (m^2)
+  * Pc = Lip pressure (kPa abs)
+  $$ m = \frac{5.198805 \times P^{0.96} \times d^2}{H^{1.102} $$
+  * m = two phase mass flow rate (t/h)
+  * H = same specific enthalpy?
+  * d = Lip pressure pipe diameter (mm)
+  * P = Lip pressure (bar abs)
+* Vertical Discharge Test
+  * Output curves for varying well head pressures, for mass flow rate (one goes up, other goes down
+* Horizontal Discharge Test
+  * Into a silencer
+  $$ \begin{align*}
+    Y &= \frac{\dot{m}_{w(atm)}}{A\times P_c^0.96} \\\\
+    h &= \frac{2675 + 925Y}{1 + 7.85 Y} \\\\
+    \dot{m}_t &= \frac{2258\times \dot{m}_{w(atm)}}{2675 - h}
+  \end{align*} $$
 
 
+### Scaling and Corrosion in Geothermal Development
+* Scaling
+  * Reservoir, Well and Pipeline Plugging
+  * Reduced Steam / Brine Flow
+  * Equipment Repair or Replacement
+  * Power Production Losses
+* Typical locations of scale deposits
+  * Calcite in well, silica elsewhere including reinjection
+* Common Types of Scales in Wells
+  * Production Wells
+    * Calcite Scaling - CaCO3A - calcium carbonate
+    * Anhydrite Scaling - CaSO4
+    * Silica Scaling (some dry wells)
+  * Reinjection Wells
+    * Silica Scaling
+    * Calcite Scaling (rare)
+* Calcite Scaling
+  * Relies on CO2, if there is no CO2, you have no problem
+  * Calcite has a retrograde solubility (solubility decreases with an increase in temperature)
+  * Solubility increases with an increase in CO2 partial pressure
+  * Solubility also increases with an increase in salinity (NaCl)
+  * Scaling takes place at the flash point (when brine first boils) due to loss of gas (CO2)
+  * Scaling is localised and can be rapid (major constriction)
+  * Calcite cannot dissolve in high temperature water - common in kettles
+* Calcite scale deposition
+  * on a layer of liner above slotted line
+  * on the overlap of two liners - above slotted liner
+  * inside and outside slotted liner
+* Caclite Scaling TH6
+  * Lots, then acidised.
+  * Geologists carry hydrochloric acid -> determine rock type
+* Prediction of scaling
+  * Production wells: Calcite scalign is common in less saline, alkaline-bicarbonate reservoirs, with relatively low temperatures < 220&deg;C and high gas (CO_2) contents.
+  * Reinjection wells: when reinjected water is heated in the well
+* Calcite Scaling Control
+  * Injection of antiscalant (using: dosing pump, sinker bar and tubing)
+  * Remove mechanically using a workover rig (periodically), (pull liner "not common")
+  * Injection acid (HCI and/or HCI+HF) from the surface. (Acidisation).
+    * HF for silica typically, not necessary for calcite
+  * Hydroblasting and acid cleaning with the coiled tubing unit
+    * Hang from counter weight from polymer, injecting antiscalant
+* Pulling the slotted liner
+  * Pull out -> water blash -> put it back +1000m,
+  * About $1 m
+* Anhydrite Scaling (CaSO4)
+  * The presence of Acid SO4-- water and Ca++
+  * Retrograde solubility
+  * Can form when the well is shut
+    * Internal flow...
+  * The solubility is pH independent
+  * like gipsum
+* Silica (SiO2) Scaling
+  * A common problem in geothermal steam field equipment
+  * Reinjection wells (common)
+  * Production wells: when teh geothermal fluid is totally dry within the casing
+  - Eventually gets better
+* Silica Scaling (Reinjection line)
+* Silica (SiO2) Scaling
+  * "Baby pine trees"
+* Silica Scaling in Surface Equipment
+  * Silica scaling at the inlet of a separator
+  * Silica scaling in steam turbine inlet nozzles
+    * Not 100% dry
+* Silica (SiO2) Solubility (Thermodynamic)
+  * Quartz solubility (20-330&deg;C)
+    $$ t = -42.198 + 0.28831 S - 3.6686\times 10^{-4} S^2 + 3.1664\times10^{-7} S^3 + 77.034 \times \log S $$
+  * Amorphous Silica Solubility (0-250&deg;C)
+    $$ Log S = -\frac{731}{T + 273.15} + 4.52 $$
+* SSI
+  * The ratio of measured silica concentration in solution to the equilibrium solubility of amorphous silica at the same (pH and temperature)
+  * SSI <= 1 -> Small manageable scaling
+* Amorphous Silica Deposition
+  * Degree of super saturation (SSI 1.2 - 1.9)
+  * pH
+  * Temperature
+  * Flow regime
+  * Aeration - more oxygen/air -> more deposition
+  * Other ions in the solution
+  * Other unknown effects
+* Removing AS Silica from the drains at Wairakei
+  * To Waikato river
+  * high boron content, cows died
+  * Dual channel, cleaning one while the other flows
+* Silica Deposition in Binary Plant Heat Exchanger Tubing
+  * Monomeric silica
+  * No gaps - like amophous
+  * Shark skin scaling, 1-1.5 mm thick, harder than glass
+* Scanning electron microscope micrograph
+  * Less thermal conductivity than steel -> bad for heat exchanger
+  - Truck carrying waste -> get certificate, however, if truck spills, still your liability
+  - Arsenic + Hydrofluoric -> doesn't attack steel
+  * High density vitreous silica scale
+* Silica Deposition
+  * Silica deposits as AS not Quartz in steam field equipment (e.g. pipelines and separators) and reinjection wells
+  * The difference in solubility between AS and Quartz allows production without scaling
+* Scaling Detection
+  * Directly
+    * Go devil runs & downhole caliper (mechanical) surveys
+      * cheapest
+    * Scale sampling (scraper)
+      * Lead impression block
+        * Drop lead - molds like glue
+    * Downhole camera
+      * Very common now
+  * Indirectly
+    * Decline in well output/injectivity
+    * Production chemistry
+* Silica Scaling in Reinjection Wells
+  * Blocking perforations
+  * Cement to outside
+  * pH < 4.5, pH > 9.9 stops all scaling
+    * Requilibrilate over time, be quick
+* Scaling Due to Mixing in Surface Equipment
+  * Scaling can be observed at the mixing point of low enthalpyand high enthalpy wells
+  * Geothermal Fluid with Different Chemistry
+  * Lumpy iron oxide scaling...
+* Scale composition
+  * Tongonan, The Philippines
+  * 75% hematite, 15% iron sulphides, 10% clay minerals
+    * hermatite is a type of iron oxide
+* Aragonite Scaling in Surface Pipelines
+  * Type of calcite -> only deposits at surface, difficult structure
+* Go Devil Runs
+* Downhole Measurements
+* Geothermal Casing Caliper
+* Casing Integrity of Geothermal Wells
+  * Damaged production wells would require:
+    * Expensive repairs
+    * Expensive abandonment
+      * 3+ million before doing anything
+      * inject cement from bottom to surface, drill through all scaling -> binding better with steel
+    * Drilling of replacement wells
+    * Substantial decrease in power generation
+    * Risk of a blow-out
+* Possible Casing Damage
+  * Poor cement behind casing (imploding)
+    * Cement contains water which expands with heating
+  * Casing or liner break (parting)
+  * Thermal stress (Buckling)
+    * Extension of thrust frame due to thermal expansion
+  * Mechanical wear (erosion) - rubbing against walls
+    * tool joints in a deviated well
+  * Casing shear (subsidence, earthquakes)
+    * Example of well coming up 20m in subsidence in US
+    * Plastic buckling
+  * Corrosion (external or internal)
+    * Welding if above ground
+    * What about below???
+* Solutions to casing implosion damage
+  * Tapered chisel dropped repeatedly to straighted out the hump
+  * Mill (machine) the hump and run and cement a smaller (patch) production casing (loss in well productivity)
+    * Drill + patch = 4-5 million
+  * Abandon the well and drill a new well (if there are multiple implosions (after risk and cost analysis))
+* External Casing Corrosion (ECC)
+  * In the upper 60 m of wells ECC is mainly caused when oxygen can reach the steel casing. Oxidation is enhanced by the high chloride, sulphate and NaCl concentration in the ground waters
+  * For 60m and below, ECC is associated with:
+    1. CO2-rich water (carbonic acide) solutions (reported in most of the New Zealand geothermal systems)
+    2. Acid-sulphate rich waters 
+* ECC near the surface
+  * Dig a hole and excavated the first join where there was a leak
+  * Replace the top-most casing
+* Steam Leak (Thief) Zone
+  * Geothermal gradient?
+  * Less temperature past leak zone - out of well, at level
+* ECC prevention
+  * Corrosion resistant cement
+    * no such thing -> thermal movement results in cracking
+  * Multiple lining (casings throug hte acid zone 
+    * Foam?
+  * Corrosion resistant casing material
+    * titanium -> 50x cost
+  * Cathodic protection
+    * No success -> heat effects
+* ECC mitigation
+  * Well is sleeved with a smaller liner to an appropriate depth and cemented up to the surface (CHF)
+  * If the well cannot be sleeved and the casing damage is close to the surfac, (risk of blow-out). the well should be properly abandoned (cemented)
+  * A relief (killer) well might be needed if there is a risk of blow-out (worst case)
+* Internal Casing Corrosion (ICC)
+  * CO2 - rich water attack the casing at the water level inside the production casing
+  * Acid-sulphate waters (< 5 pH in young volcanic (sulphur-rich) areas (e.g. Tiwi; Philippines, Matsukawa; Japan and Tatun, Taiwan)
+  * Dissimilar casing material (galvanic corrosion) assisted by fluid flow
+    * Check materials are/aren't? self corroding with each other
+    * "closed" -> bleed -> small amount out -> keep hot casing -> move up and down to stop corrosion
+* ICC prevention
+  * Corrosion resistant casing material (e.g. Titanium, Salton sea)
+    * Non titanium allows..
+  * Casutic soda injection to increase the pH (25&deg;C) above 5 (e.g. Tiwi, Phillipines)
+* Corrosion in Geothermal Heat Exchangers
+  * Leak internally
+* Corrosion in geothermal heat exchangers due to sulphur deposition
+  - throw away -> new heat exchanger
 
 
-### Scaling corrosion
+### Geothermal Flow Measurements
+* Flow Measurements
+  * Measure the output of geothermal wells
+  * Measure steam and brine flow rate in steam field pipelines
+  * Measurements are used for power production and monitoring
+  * Also used for environmental monitoring and consents
+* Single Phase Orifice
+  * Tab handle
+  * Orifice plate
+  * Measuring orifice
+    * Upstream has flat, downstream has beveled edge
+    * nodifference in direction?
+  * Drain orifice
+* Application of orifice plates
+  $$ \dot{m} = \frac{CYF_a A}{\sqrt{1-\beta^4}} \sqrt{2\Delta p \rho} $$
+  * C - orifice discharge coefficient
+  * Y - compressibility coefficient
+  * F_a - orifice thermal expansion factor
+  * A - Orifice flow area - \\( \pi (d/2)^2 \\)
+  * \\(\beta \\) - ratio of the orifice diameter to the internal pipe diameter d/D
+  * \\( \Delta p \\) - differential pressure across the orifice plate
+  * \\(\rho \\) - fluid density
+    $$ \dot{m} = K \sqrt{\frac{\Delta P}{\nu_{cal}}} $$
+    $$ q_m = q_m \sqrt{\frac{\nu_{cal}}{\nu_{actual}}} $$
+* Practical Details
+  * Clean off Burrs
+  * Need to straight pipe upstream or flow straightener
+  * Edges of the orifice plate
+  * d > 12.5 mm
+  * \\( 0.2 \geq \beta (d/D) \geq 0.75 \\)
+  * corner tapping
+    * pressure right before after plate
+  * Flange tapping
+    * pressure 1 inch up and downstream of plate, usually in special flange
+    * Bottles trap the heat so it doesn't transfer to the transducer
+  * D, D/2 tapping
+    * D and D/2 upstream and downstream respectively for pressure - welding
+* Nozzles
+  * Lip into pipe like area
+  * Machining from block of metal - more expensive
+* Venturi tube
+  * Transition - Less pressure drop
+  * Less wear, sharp edges, costs 100x orifice
+  * more accurate counter
+* Analysis of Venturi
+  * By continuity
+    $$ A_1 u_1 = A_2 u_2 $$
+  * By Bernoulli
+    $$ \frac{p_1}{\rho} + \frac{u_1^2}{\rho} = \frac{p_2}{\rho} + \frac{u_2^2}{\rho} $$
+  * Rearrange for u_1
+* Venturi Nozzles
+  * Taper outwards into pipe
+* Annubars
+  * Setup
+    1. Drill hole in pipe
+    2. Weld Mounting Hardware
+    3. Insert Annubar sensor
+  * Doesn't cause continuous pressure drop - lowered temporarily
+* Pitot tube
+  * The inner tube measures total pressure and the outer tube measures static pressure
+  * By connecting the two across a manometers as indicated in the slide above we can measure the dynamci pressure directy. Bernoulli's equation gives
+  $$ p_2 = p_1 + \frac{1}{2}\rho u_1^2 $$
+  $$ u_1 = \sqrt{\frac{2(p_2-p_1)}{\rho}} $$
+* Elbow flow meter
+  * Tapping not used due to rocks etc. correction for gravity etc.
+  * Q = CA ...
+* V-Cone
+  * mass flow...
+  * Why...?
+* Ratometer
+  * Taper upwards with upwards flow, Bob bobs based on flow, experimental
+  * Where it bobs dictates flow rate
+* Weir Box
+  * V notch with angle 90&deg;
+* Actual Weir Flow
+* Water flow using Thin Plate Weir
+  * Rectangular Weir
+    $$ m_w = 6000 \times b \times h^{1.5} $$
+  * 90&deg; - V notch weir
+    $$ m_w = 4720 \times h^{2.5} $$
+    * Smaller v for smaller flow rate
+  * Suppressed Weir
+    $$ m_w = 6290 \times b \times h^{1.5} $$
+    * Trapezoidal wider at top
+  * b = width
+  * h = height
+* Practical Problem
+  * Not to the standard
+  * Not vertical
+  * Not clean
+  * Water dribble
+  * Density correction
+    $$ h_{weirbox} = h_{measured}\times \frac{\rho_{measured}}{\rho_{weirbox}} $$
+* A non-standard Weir Box
+  * Wider, debris, tilted
+* Two-Phase Flow Measurement
+  * Total Flow Calorimeter
+  * Lip Pressure Pipe
+  * Separator Method
+  * Tracer Dilution Method - chemical
+  * Two-Phase Orifice Plate
+* Total Flow Calorimeter
+  * Diagram???
+  * Used in Rotorua for low enthalpy well output measurements
+  * Output curve for enthalpy, flowrate
+  * Disadvantages
+    * Heat may be lost from teh sides of the tank to the air
+    * The tank has to be transportable usually by the truck, so cannot be very large. Thus the time of the discharge may be short and the process may not be very precise.
+    * Water may splash out of the tank because of the flow
+    * Steam may be lost from the tank
+    * The size of piping from the well to the Calorimeter may affect flow rate
+* Lip Pressure Pipe
+  * Pressure gauge on top of pipe at the lip
+  * Russell James
+  * Enthalpy from silencer, vertical discharge needs enthalpy
+* Vertical Discharge
+* Russell James
+  $$ \frac{(m/A)h^{1.102}}{P_c^{0.96}} = 22106 $$
+  * constant enthalpy despite decreasing output - source of error
+  * graph of reservoir temp and enthalpy
+* Silencer Method Horizontal discharge
+* Single flash (silencer) with lip pressure pipe
+  * Same Y = ...
+  * Portable silencer
+* Example
+  * whp = 13.63 bar g
+  * ...
+* Atmospheric Separator Method
+  * Two phase
+  * Steam + orifice + weir,
+  * Separate steam from water
+  * Most accurate
+  * Remove safety glasses due to steam
+* Single Flash (Silencer) without lip pressure pipe
+  * Similar???
+  * Double + triple flash
+* Separator Silencer Method
+* Tracer Dilution Method
+  * sodium benzoate
+  * isopropanol
+  * Developed in the mid 90 inject tracer near the well head. at a short distance measure concentration, based on how much in
+* Sampling
+  * small generation + 3 people + truck, 5000 mass flow rate + enthalpy
+* Tracer Dilution
+  * Coil + bucket + ice
+  * Calculations...
+  * Table of results
+* Practical Considerations
+  * Distance from injection point to sampling points can be less than 10m, but normally it is about 25-30m or (100D)
+  * Injection pump - 144 strokes/min
+  * 3-4 kV Generator
+* Accuracy
+  * Error table -> 10-50kJ/kg enthalpy, 2-10% mass
+* Why 2phase - flow measurements
+  * Control operating processes
+  * Adjust steam field production to poewr station demand
+  * Central separation systems fed by several wells
+  * Detect problems and failures of individual wells fast
+  * Monitoring of hte long term behaviour of the wells, the steam field, and the reservoir
+    * Requirement for a technique which enables measurements online, permanent, in real-time, and at low cost
+    * Several wells linked to same separator
+* 2 phase - flow measurement Techniques
+  * Table of trade offs
+  * Sharp-edged orifice plate typically
+* Application of orifice plates
+  * Models for 2 phase flow through orifice plates
+    * Separate flow model
+      * The two phases flow separately
+      * No exchange of momentum between the phases
+      * No exchange of mass between the phases
+    * Homogeneous flow model
+      * Evenly distributed fluid mixture
+      * The phases travel at equal speed - no water travels slow at the bottom and steam travels quickly at the top
+      * Pressure-temperature equilibrium between the phases
+      * Homogeneous density of the fluid
+  * Developed 2 phase flow correlations:
+    * Problems
+      * Not always suitable for geothermal applications
+      * Have to be calibrated case by case
+        * A universal correlation for geothermal application is desirable
+* Derivation of a new correlation
+  * Assumptions:
+    1. Separate flow model
+    2. The steam phase flows constantly through the orifice plate
+    3. The liquid phase flows discretely through the orifice plate
+    4. During the passing time \\( \tau \\) of the liquid phase 100% of the liquid and 5 % of the steam of each cycle perido T flows through the orifice plate
+      * Equations?
+  * Steps
+    * Impeded
+    * Accumulated
+    * Forced through
+  * Slug flow?
+* Results
+  * Actual has significant deviation from calculated mass flow
+  * ... TH?
+* Conclusion
+  * Different approach by assuming time discrete flow fo the liquid phase
+  * Calibration of the new correlation by determining correction factors depending on
+    * The dryness fraction X
+    * The upstream pressure p_1
+    * The pipe diameter D
+    * The differential pressure \\( \Delta p_{2\phi} % _  \\)
+  * Successfully applied in ..., achieving accuracy of +- 8%
 
-### Geothermal flow measurements
+
 
 
 
