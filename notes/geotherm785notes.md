@@ -1361,6 +1361,11 @@ $$ B_g = \frac{ \text{Volume of an arbitrary amount of gas at reservoir T & P}}{
         * The frontal region in a horizontal flow system is unstable and will break up into fingers if M > 1
 * Darcy's law
     $$ q = -\frac{\kappa}{\mu}(\nabla p - \rho g) $$
+* Fractional Flow Equation
+  * Fractional flow of water
+    $$ f_w = \frac{q_w}{q_o + q_w} $$
+  * Horizontal flow with negative capillary pressure
+    $$ f_w = \frac{1}{\left( 1 + \frac{\mu_w}{k_w} \frac{k_o}{\mu_o}} $$
 * Buckley Leverett - 1D displacement
     * \\( \bar{S_w} \\) = average Saturation at breakthrough
     * f<sub>w</sub> = 1 gives the average saturation behind the front 
@@ -1464,6 +1469,88 @@ $$ B_g = \frac{ \text{Volume of an arbitrary amount of gas at reservoir T & P}}{
 
 
 ### Reinjection in Geothermal Fields
+* Reinjection
+    * Involves returning some (or all) of the water produced back into the geothermal system after energy extraction
+* Environmental Effects of Geothermal Waste Water
+    * Separated geothermal water is typically close to boiling temperature, and is produced in large quantities
+    * Thermal and chemical pollution can be damaging to river to marine life
+    * Geothermal brines can have between 1000 and 360,000 ppm of total dissolved solids (sea water, ~35,000 ppm)
+    * Significant amounts of boron and arsenic, and sometimes mercury
+* The benefits of reinjection
+    1. Waste water disposal / environmental constraints
+    2. Improve energy recovery
+    3. Reduce/prevent ground subsidence
+* Disadvantages of Reinjection
+    * Thermal breakthrough
+    * Chemical breakthrough
+    * Ground inflation
+    * Groundwater contamination
+    * Induced seismic activity
+    * Affecting existing natural features
+    * Cost
+* Thermal and chemical fronts
+    * When chloride level increases, reinjection is noticed
+    * Chemical front in front of thermal
+* Reinjection problems/obstacles
+    * Difficulty and expense of siting suitable reinjection wells
+    * Dealing with large reinjection pressures
+    * Cooling of production wells, often because of "short-circuiting" along direct flow-paths such as open fractures
+    * Silica scaling in surface pipelines and reinjection wells
+    * Other types of scaling and corrosion
+    * *Scaling and Corrosion*
+        * Silica scaling can be solved by "hot injection, deposition ponds, scale inhibitors or dilution with steam condensate
+        * Carbonate precipitation can be decreased by operating production/reinjection system at high pressures or by scale inhibitors (usually injected into production wells at depth)
+        * Corrosion can also be controlled by inhibitors
+        * High temp can reduce permeability -> expanding rocks
+* Historical Background
+    * ...
+* Reinjection Plan
+    * Fields should have an appropriate injection plan from very beginning of their development in order to 
+        * Prevent surface discharge
+        * decide an optimum way supporting reservoir pressure and improve energy recovery
+        * prevent reinjection damage arising from wrong reinjection plan
+        * avoid ground inflation and surface water contamination caused by reinjection
+    * It can cause premature invasion of cold water into production zones. This limits the application of reinjection
+* Monitoring
+    * Mass balance of gravity change after 4 years of production/injection
+* Location of injection wells
+    * In field
+        * Inside reservoir
+    * Edge field
+        * Pushing effects
+    * Out field
+        * Non contributor
+* Classification of Geothermal Systems
+    * Generic differences
+        * Thermodynamic state
+        * Geological structure
+        * Hydrologic characteristics
+    * Two-phase vapour dominated
+* Background on Injection
+    * Two-phase vapour dominated
+    * Two-phase high-enthalpy
+    * Two-phase medium-enthalpy
+    * Two-phase low-enthalpy
+    * Hotwater
+* Information available
+* Summary of Reinjection Experience
+    * Two-phase, vapour-dominated reservoirs
+        * Usually infield reinjection is used
+    * Two-phase high-enthalpy reservoirs
+    * Two-phase medium-enthalpy reservoirs
+    * Two-phase low-enthalpy reservoirs
+    * Hotwater reservoirs
+    * Infield reinjection is a cheap but often a temporary solution to waste fluid disposal
+        * It is normally undertaken to reduce costs during early stages of field development
+        * Or as a first stem in a full scale reinjection strategy in existing developments
+    * Shallow reinjection can affect existing natural features by increasing flux of fluid to the surface and may help create new features fed directly or indirectly from the injected fluid
+    * In some fields shallow reinjection resulted in ground inflation
+    * Experience has shown that reinjection should be planned as early as possible in the field development
+    * The optimum total reinjection strategy for liquid-dominated reservoirs is to have mix of infield and outfield reinjection
+    * Infield reinjection shceme requires a careful monitoring program to prevent reservoir cooling. Cooling can be reversed if mitigation measures are taken promptly
+* Hot-water systems
+    * Injection Scenarios
+    * 
 
 
 
@@ -2659,7 +2746,11 @@ Sadiq
     * Most accurate
     * Remove safety glasses due to steam
 * Single Flash (Silencer) without lip pressure pipe
-    * Similar???
+    $$ \begin{align*}
+      Y &= \frac{\dot{M}_w(atm)}{A\times P_c^{0.96}} \\\\
+      h &= \frac{ 2675 + 925Y}{1 + 7.85 Y} \\\\
+      \dot{m}_t &= \frac{2258\times \dot{m}_{w(atm)}}{2675 -h}
+    \end{align*} $$
     * Double + triple flash
 * Separator Silencer Method
 * Tracer Dilution Method
