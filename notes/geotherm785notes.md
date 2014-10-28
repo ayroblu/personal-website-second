@@ -2749,7 +2749,7 @@ Sadiq
     $$ \begin{align*}
       Y &= \frac{\dot{M}_w(atm)}{A\times P_c^{0.96}} \\\\
       h &= \frac{ 2675 + 925Y}{1 + 7.85 Y} \\\\
-      \dot{m}_t &= \frac{2258\times \dot{m}_{w(atm)}}{2675 -h}
+      \dot{m} _t &= \frac{2258\times \dot{m} _{w(atm)}}{2675 -h}
     \end{align*} $$
     * Double + triple flash
 * Separator Silencer Method
