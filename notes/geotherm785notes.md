@@ -1100,6 +1100,7 @@ $$ B_{o,g,w} = \frac{ \text{Fluid Volume at reservoir P & T }}{ \text{ Fluid Vol
 $$ B_g = \frac{ \text{Volume of an arbitrary amount of gas at reservoir T & P}}{ \text{ Volume of SAME amount at standard T & P}} $$
 
 ### Solution Gas Oil Ratio ( \\( R_s \\) )
+* Gas dissolved in Oil in reservoir
 * Reservoir Pressure > Bubble Point Pressure
   * Oil (stb) + solution gas (scf)
 * Reservoir Pressure < Bubble Point Pressure
@@ -1130,14 +1131,340 @@ $$ B_g = \frac{ \text{Volume of an arbitrary amount of gas at reservoir T & P}}{
       z  &= \frac{V_{actual}}{V_{ideal}}
     \end{align*}
     $$
-  * Compressibility factor of Natural gas Gases
+* Behaviour of Real gases
+  * Law of corresponding states
+    * "All pure gases have the same z‐factor at the same values of reduced pressure (pr) and reduced temperature (Tr)."
+  * Reduced parameters
+    $$ \begin{align*}
+      T_r &= \frac{T}{T_c} \\\\
+      P_r &= \frac{P}{P_c}
+    \end{align*} $$
+  * For multicomponent gases, pseudo critical properties are used, with which are the weighted sum of the critical properties (by mass / mole fraction)
 
 
+> *Reserve Estimation*
+
+### Reserve Estimation methods
+1. Volumeric Method
+  * Early stage of reservoir development
+  * Geology, geophysics, rock and fluid properties • Recovery Factor (RF) assigned arbitrarily
+  * No time dependency, no production data
+2. Material Balance
+  * Later stage of development (after 20% of initial oil/gas is produced, or 10% of initial reservoir pressure has declined)
+  * Geological data, rock and fluid properties, production data 
+  * RF is calculated
+  * Time dependent
+3. Decline Curve
+  * Later stage of development, when production rate undergoes natural decline
+  * Mostly production data
+  * RF is calculated
+  * Time dependent
+4. Reservoir Simulation
+  * Can be applied at any stage but more useful and reliable for matured reservoirs
+  * Geological data, rock and fluid properties, production data 
+  * More useful as reservoir management tool
+  * Uncertainties associated with each method
+  * More than one method should be used when applicable
 
 
-### Reserve Estimation
+### Volumetric methods
+1. Estimating Reservoir Bulk Volume 
+  * Calculation of hydrocarbon volumes
+    $$ OIP = Ah\phi (1-S_{wc}) $$
+    * A = Area of reservoir
+    * h = payzone thickness
+    * \\( \phi \\) = Porosity
+    * S<sub>wc</sub>  = the connate or irreducible water saturation
+    * STOIIP = Stock Tank Oil Initially In Place = OIP / B<sub>gi</sub>
+  * Volumetric Estimate of Gas Reserves
+    $$ GIIP = Ah\phi (1-S_{wc}) / B_{gi} $$
+    * S<sub>wc</sub> = S<sub>wi</sub> + S<sub>o,g</sub>
+    * S<sub>rg</sub> = Residual gas saturation after water displacement
+    * GIP after water invasion
+      $$ GIIP = Ah\phi S_{rg} / B_g $$
+2. Isopach maps
+  * Volumes calculated using Trapezoidal/Simpson's rule
+  * Average pressure over a reservoir:
+    1. Well pressure over n wells - averaged over wells
+    2. Areal pressure over n sub-areas - averaged by area
+    3. Volumetric pressure over n sub-volumes - averaged by volume
+      * best
+  
+### Drive mechanisms
+* Recovery
+  * Primary Recovery
+    * The recovery of hydrocarbons from the reservoir using the natural energy of the reservoir as a drive
+  * Secondary Recovery
+    * The recovery aided or driven by the injection of water or gas from the surface
+  * Tertiary Recovery (Enhanced Oil Recovery)
+    * EOR methods to improve recovery (see EOR)
+* Primary Recovery Mechanisms
+  * Rock and liquid expansion drive 
+    * Crude oil, connate water, and rock are the only materials present
+    * This driving mechanism is considered the least efficient driving force and usually results in the recovery of only a small percentage of the total oil in place.
+    * pressure above boiling point
+  * Depletion drive (Solution Gas Drive)
+    * No free gas cap, water drive
+    * Gas Oil Ratio jumps up after pressure drop, 5 - 30% recovery
+    * The low recovery from this type of reservoirs suggests that large quantities of oil remain in the reservoir and, therefore, depletion- drive reservoirs are considered the best candidates for secondary recovery applications
+  * Gas cap drive
+    * Gas cap, no water drive
+    * 25-40% ultimate oil recovery
+      * Depends on:
+        * Size of the gas cap 
+        * Vertical permeability 
+        * Oil viscosity
+        * Conservation of gas 
+        * Oil production rate
+        * Dip angle
+    * Gas cap builds up and pushes down
+  * Water drive
+    * Water pushes against reservoir
+    * Bottom-water drive
+      * Pushing against the bottom of the reservoir cap
+    * Edge-water drive
+      * Aquifer pushes against one leg of reservoir
+    * Very gradual pressure decline
+    * High ultimate recovery (35-75%)
+  * Gravity drainage drive 
+    * Low production rate, high ultimate recovery
+    * In reservoirs with high structural dip 
+    * Low viscosity oils
+    * Good vertical and horizontal permeability
+    * Seems similar to gas cap drive...
+  * Combination drive
+    * Most common drive
+    * Depletion drive (with a small gas cap) and a weak water drive.
 
-### EOR 
+### Material Balance Method
+* Material balance for understanding reservoir (simulation imposes personal will)
+* Does not use spatial information - assumes uniform tank
+* Requires inflows/outflows/generators, average reservoir pressure profile, material properties
+* Oil Material Balance Relations
+  * Equation
+    * Underground water withdrawal = 
+    * Oil Expansion
+    * Gas Cap Expansion
+    * HCPV Reduction
+    * Water Influx
+  * Linear form...
+    * Equations ...
+      1. oil reservoirs P > P<sub>bp</sub> negligible water influx
+      2. oil reservoirs P > P<sub>bp</sub> with water drive
+      3. oil reservoirs P < P<sub>bp</sub> negligible water influx
+      4. oil reservoirs P < P<sub>bp</sub> with water drive
+* Gas Material banace
+  * Withdrawal = Gas expansion + water expansion & pore compaction + water influx
+  * Dry gas case
+  * High aquifer permeability causes higher p/z
+
+### Conclusions for Reserve estimation
+* A reservoir can have a predominant drive mechanism, or can have a combination of mechanisms.
+* Identifying the drive mechanism is important for development strategy and ultimate recovery.
+* Volumetric method is applied at early stage of a reservoir, with mostly geological and fluid properties data. As production continues, other methods become applicable.
+* Material balance can be applied when about 20% of the initial estimated reserve is produced, or when 10% of initial reservoir pressure has declined.
+* MBE is a powerful tool that helps determine the reserves, recovery factor, and drive mechanism. - MBE can be applied to a variety of reservoirs, either with or without water influx.
+* Unlike volumetric method, RF can actually be calculated by MBE.
+* Volumetric method generally gives the absolute, theoretically maximum possible hydrocarbon in place. MBE gives an indication about the volumes that will actually flow.
+
+
+> *EOR*
+
+### Recovery Methods 
+* Recovery
+  * Primary
+    * Natural Flow
+    * Artificial lift
+  * Secondary
+    * Waterflooding
+    * Pressure Maintenance
+  * Tertiary - Targets immobile oil
+    * Thermal - Steam Hot Water Combustion
+    * Gas Injection - CO2 Hydrocarbon Nitrogen/Flue
+    * Chemical - Alkali, Surfactant, Polymer
+    * Other - Microbial
+
+### EOR
+* Gas Injection
+  Nitrogen and flue gas: provides gas drive, generates miscibility by vaporizing the lighter part of the oil, enhances gravity drainage.
+  LPG, Methane + ethane + propane, CO2 (miscible or immiscible). Recovery by reduction in IFT and generating miscibility. Decrease oil viscosity by swelling.
+* Chemical Injection
+  Surfactant and alkaline (caustic) reduces IFT. Polymer increases water viscosity and decreases the relative permeability to water phase. Wettability alteration.
+* Thermal Methods
+  Increase the recovery by reducing the viscosity of oil and thermal expansion of oil. Steam supplies pressure to drive oil to the production well.
+
+### Reasons of Low Oil Production
+* Reservoir / rock properties (low k, heterogeneity, fractures, pressure etc.) 
+* Properties of oil (high viscosity, low API gravity)
+* Pore scale displacement : how much of the oil has been pushed out from any of the rock accessed by injected fluids
+* Sweep : how much reservoir rock has been reached out by injected fluid
+* Drainage : extent to which the wells can access all the separate segments of the reservoir
+* Commercial cut off : the limits of economic production
+
+### Displacement in oil-wet and water-wet media
+* Water-wet = water on rocks, oil in pore spaces
+* Oil-wet = oil on rocks, water in pore spaces
+* What is S<sub>or</sub> (swept zone)?
+  * If the capillary forces are greater than the force of driving fluid, trapping occurs
+  * Swept = no trapping?
+* Relative permeability
+  * At irreducible water saturation
+    * k<sub>ro</sub> at S<sub>wi</sub>
+    * No water permeability - still has water
+  * At residual oil saturation
+    * k<suB>rw</sub> at S<sub>or</sub>
+    * No oil permeability, - still has some oil remaining
+* Mobilise remaining oil
+  * Reducing InterFacial Tension (IFT): Surfactant, alkaline, HC gases, CO2 injection.
+  * Reducing oil viscosity: Thermal methods, HC gases, CO2 injection. 
+  * Increasing the viscosity of injected fluid: Polymer injection.
+* Finding Oil
+  * Swept
+    * Unrecovered oil can be in pores swept (residual oil)
+  * Unswept
+    * Unrecovered oil can be in pores, never swept (not residual oil)
+  * Viscous fingering or capillary trapping - non uniform sweep causing 
+  * Mobility ratio or channelling or heterogeneity
+  * Breakthrough -> injection fluid reaches production well
+
+
+### Recovery of Residual Oil
+* Darcy's law
+  $$ p_1 = \Delta p = \frac{q\mu_w L}{k} $$
+* Young-Laplace
+  $$ p_2 = p_{nw} - p_w = p_c = \frac{2\gamma(\cos \theta)}{r} % _ $$
+* For mobilization of oil blob
+  * p<sub>1</sub> > p<sub>2</sub>
+    $$ \frac{q\mu_w L}{k} > \frac{2\gamma(\cos \theta)}{r} $$
+    $$ k \approx r^2 $$
+    $$ q > \frac{2\gamma(\cos \theta)r}{\mu_w L} $$
+    * q = injection rate
+    * \\( \mu_w \\) = water viscosity
+    * \\( \gamma \\) = interfacial tension
+    * \\( \theta \\) = contact angle
+    * k = permeability
+    * r = pore size
+    * L = pore length
+* Mobilisation factors
+  * Capillary number
+    * Velocity * water viscosity / IFT
+    * Viscous pressure drop = $ \frac{v\mu L}{k} $
+    * Pressure difference across a pore of radius r = 2 * IFT / r
+  * Mobility ratio
+    $$ \begin{align*}
+      M &= \frac{\lambda_{displacing}}{\lambda_{displaced}} \\\\
+      \lambda_w &= \frac{k k_{rw}}{\mu_w} \\\\
+      lambda_o &= \frac{k k_{ro}}{\mu_o} \\\\
+      M &= \frac{k_{rw} \mu_o}{k_{ro} \mu_w}
+    \end{align*} $$
+    * The frontal region in a horizontal flow system is unstable and will break up into fingers if M > 1
+* Darcy's law
+  $$ q = -\frac{\kappa}{\mu}(\nabla p - \rho g) $$
+* Buckley Leverett - 1D displacement
+  * \\( \bar{S_w} \\) = average Saturation at breakthrough
+  * f<sub>w</sub> = 1 gives the average saturation behind the front 
+* Oil recovery calculations
+  * Oil Recovery PV
+    $$ N_{P_d} = (\bar{S_w} - S_{wi}) = (S_{we} - S_{wi}) + (1 - f_{we}) W_{id} $$
+    $$ \bar{S_w} = S_{we} + (1 - f_{we}) W_{id} $$
+  * Amount of oil produced as PV and bbl at water breakthrough.
+  * Breakthrough time for both cases.
+  * Compare the results. What could be the reason(s) of the difference.
+* Waterflooding
+  * Mechanisms That Improve Recovery Efficiency
+  * Water drive
+  * Increased pressure
+  * Limitations
+    * High oil viscosities result in higher M. 
+    * Extensive fractures.
+  * Challenges
+    * Poor compatibility between the injected water 
+    * formation damage. 
+    * Subsurface fluid control to divert injected water and to shut off undesirable produced fluids.
+* Gas injection ‐ miscible displacement
+  * If two fluids can be mixed at all ratios and create only one phase, these two fluids are referred to as MISCIBLE.
+  * Gasoline‐kerosene, water‐milk etc. No interface exists.
+  * FIRST CONTACT MISCIBILITY (FCM): Fluid injected is mixed with reservoir oil directly at first contact.
+  * MULTIPLE CONTACT MISCIBILITY (MCM): If there is two phases at first contact (if two phases create a two‐phase with a mass transfer between them). CO2 is not FCM. It requires certain pressure and temperature for miscibility.
+* Miscible Gas Flooding ‐ Hydrocarbon Injection
+  * light hydrocarbons
+  * Mechanisms
+    * Viscosity reduction
+    * Oil swelling
+  * Challenges
+    * Viscous fingering
+    * Large quantities of expensive products 
+    * Solvent may be trapped and not recovered
+* Miscible CO2 ‐ EOR
+  * Inject dense liquid CO2
+  * Swells oil and reduces viscosity
+  * Applicable to light oil reservoir (miscible)
+  * Estimated incremental recovery: 5‐20%
+* Miscible Gas Flooding ‐ CO2 Injection
+  * Large quantities of CO2 (15% or more hydrocarbon pore volumes)
+  * Mechanisms
+    * CO2 extracts the light‐to‐ intermediate components from the oil
+    * If the pressure is high enough, develops miscibility
+    * Viscosity reduction / oil swelling 
+    * Gravity segregation
+  * Limitations
+    * Very low viscosity of CO2/ poor M
+  * Challenges
+    * Early breakthrough of CO2
+    * Corrosion in producing wells.
+    * Reaction with carbonates
+    * Repressuring of CO2 for recycling. 
+    * A large requirement of CO2
+* Nitrogen / Flue Gas Flooding
+  * Flue gas ‐ (87 % N2, 13 % CO2)
+  * Mechanisms
+    * Vaporizes the lighter components of the crude oil and generates miscibility @ p
+    * If the pressure is high enough, develops miscibility
+    * Provides a gas drive
+  * Limitations
+    * Miscibility only at deep reservoirs 
+    * A steeply dipping reservoir
+  * Challenges
+    * Viscous fingering
+    * Flue gas injection can cause corrosion 
+    * Non‐hydrocarbon gases must be separated from saleable gas.
+* Chemical methods
+  * Chemical methods target either:
+    * to increase the viscosity of displacing phase (water) : Polymer
+    * reducing the IFT between oil and injected fluid (water): Surfactant and alkaline (NaOH)
+  * Chemical methods ‐ Polymer Injection
+    * High vertical and areal sweep efficiency
+    * Polymers are nontoxic and noncorrosive
+    * Reduces WOR
+* Surfactant / Polymer Flooding
+  * Mechanisms
+    * IFT reduction , mobility control
+  * Limitations
+    * Relatively homogeneous formation
+    * High amounts of anhydrite, gypsum, or clays are undesirable
+  * Challenges
+    * Complex and expensive system
+    * Interactions between surfactant and polymer
+    * Degradation of chemicals at high temperature
+* Alkaline (caustic) / Polymer Flooding
+  * The alkaline chemical (i.e sodium carbonate, NaOH) reacts with certain types of oils, forming surfactants inside the reservoir.
+  * Advantages
+    * Improves M
+    * The flow of liquids through more permeable channels is reduced by the polymer solution
+    * Relatively inexpensive
+    * Applicable to wide range of crude oils
+  * Disadvantages
+    * Corrosion
+    * Not well suited for carbonates
+    * Performance prediction is poor due to mixing and dispersion of slug.
+* Thermal methods ‐ Steamflooding
+* Thermal methods – In‐Situ Combustion
+* Thermal methods – Cyclic steam stimulation
+
+
+### Reinjection in Geothermal Fields
+
+
 
 ### Geothermal Well Tests Tutorial
 
@@ -1988,7 +2315,7 @@ Sadiq
   * h = Specific enthalpy of the discharged fluid
   * A = lip pressure pipe cross sectional area (m^2)
   * Pc = Lip pressure (kPa abs)
-  $$ m = \frac{5.198805 \times P^{0.96} \times d^2}{H^{1.102} $$
+  $$ m = \frac{5.198805 \times P^{0.96} \times d^2}{H^{1.102}} $$
   * m = two phase mass flow rate (t/h)
   * H = same specific enthalpy?
   * d = Lip pressure pipe diameter (mm)
@@ -1997,11 +2324,11 @@ Sadiq
   * Output curves for varying well head pressures, for mass flow rate (one goes up, other goes down
 * Horizontal Discharge Test
   * Into a silencer
-  $$ \begin{align*}
-    Y &= \frac{\dot{m}_{w(atm)}}{A\times P_c^0.96} \\\\
-    h &= \frac{2675 + 925Y}{1 + 7.85 Y} \\\\
-    \dot{m}_t &= \frac{2258\times \dot{m}_{w(atm)}}{2675 - h}
-  \end{align*} $$
+    $$ \begin{align*}
+      Y &= \frac{\dot{m}_{w(atm)}}{A\times P_c^0.96} \\\\
+      h &= \frac{2675 + 925Y}{1 + 7.85 Y} \\\\
+      \dot{m} _t &= \frac{2258 \times \dot{m}_{w(atm)}}{2675 - h}
+    \end{align*} $$
 
 
 ### Scaling and Corrosion in Geothermal Development
