@@ -46,7 +46,7 @@ The One Minute Manager - Ken Blanchard and Spencer Johnson
 2. 403 Help Desk, Systems Week
 3. Consultative Committee
 4. Systems Thinking "learning by doing" approach, system scenarios
-    * Fast Forward to industrial experience and experience directors
+        * Fast Forward to industrial experience and experience directors
 
 #### Convential Teaching
  * 90% forgotten
@@ -113,7 +113,7 @@ The One Minute Manager - Ken Blanchard and Spencer Johnson
 
  * Where to spend limited investment funds to achieve the best results
  * How to organise the investment pipeline
-     * How to keep people engaged in the business, in offices
+         * How to keep people engaged in the business, in offices
 
 #### National Investment Plan
 > Civil Servants aren't necessarily good investors
@@ -131,18 +131,18 @@ The One Minute Manager - Ken Blanchard and Spencer Johnson
  * How will you make the new agency work?
  * Enterprise Architecture
  * Proof of concept examples
-   * An engineering strategy for NZ
-   * A business plan
+     * An engineering strategy for NZ
+     * A business plan
 
 ** "Re Engineering New Zealand Limited" **
 
  * Pushes the envelope
  * Stretches creativity
  * Unique opportunity to think about the explore
-   * National strategy
-   * National investment in teh industry - its protential and its future investment
-   * Executive decision making
-   * Marketing and Selling
+     * National strategy
+     * National investment in teh industry - its protential and its future investment
+     * Executive decision making
+     * Marketing and Selling
  * Shows "Systems Thinking" and Management are transferable skills
 
 ### Marks
@@ -171,7 +171,7 @@ Lecture 2
 #### Investors
 ##### External
 * Banks
-  * Prospectus
+    * Prospectus
 
 #### Internal
 * Board
@@ -184,11 +184,11 @@ Lecture 2
 
 ### Approaches
 * The push approach
-  * Creativity and originallity
+    * Creativity and originallity
 * Pull approach
-  * What would people actually want to buy
-  * What's a problem
-  * Suboptimal
+    * What would people actually want to buy
+    * What's a problem
+    * Suboptimal
 
 #### Ideas
 * World Hunger + Peace (a little extreme)
@@ -202,7 +202,7 @@ Lecture 2
 
 #### Contents
 * Objective
-  * Clear statement
+    * Clear statement
 * Route to Market
 * Financials
 * Risks 
@@ -211,7 +211,7 @@ Lecture 2
 
 ### Prospectus
 * Objective: A clear statement to investors
-  * Legal framework
+    * Legal framework
 * Different from internal (Be transparent)
 
 ### Market Research
@@ -235,7 +235,7 @@ Lecture 2
 
 #### Competitive Analysis
 * Gathering intelligence about the competition
-  * Maclaren snooping on Ferrari
+    * Maclaren snooping on Ferrari
 
 ### System thinking approach
 * Stakeholders
@@ -248,12 +248,12 @@ Lecture 2
 * Prototyping
 * Focus Groups
 * Dry runs - small batch 
-  * Geneva motor show
+    * Geneva motor show
 * Beta
 
 * Independent Qualitification testing
-  * International specification
-    * FDA, FCC, Organic, Waterproof etc.
+    * International specification
+        * FDA, FCC, Organic, Waterproof etc.
 
 ### Operation
 * **Cash Collection**
@@ -292,7 +292,7 @@ Whos helping
 
 ### Opportunities
 * Pipeline
-    * Expand an existing pipeline
+        * Expand an existing pipeline
 * Investment strategies - Capture plans
 
 *Missed slide...?*
@@ -330,22 +330,22 @@ A Startup Investor's Perspective
 ### David Russell - Guest Lecture
 * Worked big in Silicon Valley companies a few years after graduating
 * [**Due Diligence??**](http://en.wikipedia.org/wiki/Due_diligence)
-  * Investigation to get best idea
+    * Investigation to get best idea
 
 ### Summary
 * Issues with Startups
-  * Idea/Technology versus Business Model
-  * No or limited customer validation
-  * No team
+    * Idea/Technology versus Business Model
+    * No or limited customer validation
+    * No team
 
 ### The Lean Canvas
 ![Lean Canvas](/static/4lcanvas.png)
 
 ### Startup
 * You're trying to find out what your business model is
-  * Repeatable
-  * Scalable
-    * BECA - needs more engineers to get more work - not scalable
+    * Repeatable
+    * Scalable
+        * BECA - needs more engineers to get more work - not scalable
 * Mature businesses already know what their business model is
 
 ### Customer Validation & Development
@@ -360,8 +360,8 @@ A Startup Investor's Perspective
 ### Market Validation
 * Identify the riskiest elements
 * Create experiments
-  * Don't just talk to them
-  * See what their life style is.
+    * Don't just talk to them
+    * See what their life style is.
 * Is there a market?
 
 ### The Lean Startup
@@ -406,7 +406,7 @@ Lecture 5
 ---------
 
 * What makes a "good" business
-  * Reputation and getting the job done
+    * Reputation and getting the job done
 
 ### Ethics and Integrity
 * Description: Being honest, open and trsuted
@@ -417,70 +417,70 @@ Lecture 5
 
 ### Brand
 * Description
-  * Identity
-  * Recognition
-  * Logo
-  * Strap line
+    * Identity
+    * Recognition
+    * Logo
+    * Strap line
 * Principle
-  * Relevant to its customer group
-  * Primary tool
+    * Relevant to its customer group
+    * Primary tool
 * Key Questions
-  * Express the identity in less than 60 words
+    * Express the identity in less than 60 words
 * Confidence to buy?
 * What happens when things go wrong...?
 
 ### Quality
 * Description
-  * Ability to meet demand and exceed the needs of customers
+    * Ability to meet demand and exceed the needs of customers
 * Principle
-  * Culture
-  * Attitudes of employees
+    * Culture
+    * Attitudes of employees
 * Quality systems are important but its about people
 
 ### Marketing
 * Description
-  * Inform
+    * Inform
 * Principle
-  * Devote resources
-  * Developing Awareness in its marketplace
+    * Devote resources
+    * Developing Awareness in its marketplace
 
 ### Sales
 * Description
-  * Convert equiries to orders
-  * based on personal relationships
-  * People don't buy from people they distrust
+    * Convert equiries to orders
+    * based on personal relationships
+    * People don't buy from people they distrust
 * Principle
-  * Self evident...
+    * Self evident...
 * Key Questions
-  * Proportion of enquiries to orders?
-  * Repeat business?
-  * Value customers place on relationship
-  * Good will value of your company
+    * Proportion of enquiries to orders?
+    * Repeat business?
+    * Value customers place on relationship
+    * Good will value of your company
 
 ### Fulfilment
 * Description
-  * Post Sale
-  * Manufacture, supply, installation, service and so on
-  * Customer purchase
+    * Post Sale
+    * Manufacture, supply, installation, service and so on
+    * Customer purchase
 * Principle
-  * Product quality is key
+    * Product quality is key
 
 ### Orgnaisation
 * Description
-  * Structure and flow charts through job description
+    * Structure and flow charts through job description
 * Principle
-  * Who does what and how work flows through the organisation
+    * Who does what and how work flows through the organisation
 * Do workers know what they are supposed to do and how their role fits into the overall process?
 
 ### Financial Management
 * Description
-  * Cash Flow and Profitability
+    * Cash Flow and Profitability
 * Principle
-  * Money is the ultimiate enabler
+    * Money is the ultimiate enabler
 * Is there sufficient money in the bank?
 * Efficient?
 * [Lord Weinstock](http://www.telegraph.co.uk/news/obituaries/1402296/Lord-Weinstock.html)
-  * Extremely tight with money
+    * Extremely tight with money
 
 ### Truisms
 ...
@@ -491,9 +491,9 @@ Lecture 6
 
 ### Next Week
 * Jordi Garcia
-  * Financial aspects of the business plan
+    * Financial aspects of the business plan
 * David Russell, Logan Wait, Hengjie Wang
-  * Personal insights into starting up a business
+    * Personal insights into starting up a business
 
 ### Lecture
 * What would the person reading your * want to see?
@@ -521,8 +521,8 @@ Speaker: Jordi Garcia
 * Numbers show business grow - quickly - exit plan (payback period)
 * P/E ratio: around 15 - same earnings for the next 15 years
 * Angel Investor v venture capitalist
-  * Venture - short term
-  * Angel - longer term 10 - 15 years
+    * Venture - short term
+    * Angel - longer term 10 - 15 years
 
 ### Lender interest
 * Pay the interest on time
@@ -543,7 +543,7 @@ Speaker: Jordi Garcia
 ### Income Statement
 * Revenue / Sales
 * *Less* Operating Cost of Sales
-  * Manufacturing
+    * Manufacturing
 * Gross Margin
 * *Less* Operating expenses
 * Selling expenses
@@ -560,7 +560,7 @@ Speaker: Jordi Garcia
 * Break them down in to fixed and variable costs
 * Consultants + Legal Expenses - Usually forgotten
 * Amortisation of initial development costs
-  * Write off of expenses
+    * Write off of expenses
 
 ### Cash Flow Statement
 * Timing of incoming and outgoing payments
@@ -582,8 +582,8 @@ Note the segregation of capital costs...
 #### Equity / Capital
 * Equity = Assets - Liabilities
 * Capital contributed by the owners
-  * Retained Earnings (profits - dividends)
-  * Revaluations
+    * Retained Earnings (profits - dividends)
+    * Revaluations
 
 #### Cost of Money
 Weighted Average Cost of Capital
@@ -593,9 +593,9 @@ Weighted Average Cost of Capital
 
 ### Profit
 * Quality of Earnings
-  * How continuous is it
+    * How continuous is it
 * Sustainability of earnings
-  * Product dependency
+    * Product dependency
 
 ### Ratios
 * Return on Capital
@@ -619,23 +619,23 @@ Help Desk
 > Marriage Proposals
 
 * Rights to any images
-  * Should be alright - make it clear it is online etc.
+    * Should be alright - make it clear it is online etc.
 * Talk about yourself
-  * As long as it only augments your deliverable
+    * As long as it only augments your deliverable
 * Referencing
-  * Put it in where you used it
+    * Put it in where you used it
 * Team
-  * Absolutely
+    * Absolutely
 * Peer Marking
-  1. Marked by team of markers
-  2. Peer assessment marked by markers (assessment of our assessment)
+    1. Marked by team of markers
+    2. Peer assessment marked by markers (assessment of our assessment)
 * Plan
-  * It is critical what are the next steps
-  * Also critical what subsequent steps will be (final steps)
+    * It is critical what are the next steps
+    * Also critical what subsequent steps will be (final steps)
 * How can you acquire IP - value - acquisition cost
-  * Show that you have value from which you can use that IP
-  * Not going to reduce the value of IP
-  * Similar without contravening patent
+    * Show that you have value from which you can use that IP
+    * Not going to reduce the value of IP
+    * Similar without contravening patent
 
 Lecture 10
 ----------
@@ -644,10 +644,10 @@ Strategy and Managing Enterprise Change
 > Learning Outcomes from slides are related to Systems scenario?
 
 * Stratagy v Mission v Vision Statements
-  * Mission and Vision:
-    * Intent
-  * Strategy:
-    * How
+    * Mission and Vision:
+        * Intent
+    * Strategy:
+        * How
 
 ### Key Themes
 * Where we NEED to be
@@ -681,18 +681,18 @@ Strategy and Managing Enterprise Change
 
 ### Triggers for Change
 * Survival
-  * The Burning Platform Syndrome
+    * The Burning Platform Syndrome
 
 ### Getting Top People Interested
 * Create a burning platform
-  * Bring them to the precipice
-  
+    * Bring them to the precipice
+    
 * Xerox
-  * Video of fake plot to overthrough Xerox
+    * Video of fake plot to overthrough Xerox
 * Health and Safety 
-  * Hired a Barrister
-    * Cross examined the board
-    * Chinks in process
+    * Hired a Barrister
+        * Cross examined the board
+        * Chinks in process
 
 ### Moving
 
@@ -709,25 +709,25 @@ Energy and Impact
 * Structure
 * Support Systems - incentives
 * Culture 
-  * Destroy symbols
-  * Incentives - recognition - rewards
+    * Destroy symbols
+    * Incentives - recognition - rewards
 
 * Case Study: Spark
 
 * Case Study: Printing industry
-  * Per person was 800 pounds a week in 1980s
-  * Opportunity:
-    * Print works in Warrington - Today - Sharp?
-    * 10000 pound startup
-    * Computers, faster distribution
-    * Thatcher reduces union power as causing damage
-  * Rupert Murdoch
-    * No negotiation
-    * Duplicate business
-    * Total Secrecy
-    * Fully proven
-    * Defeated the Unions
-    * No day was lost in production
+    * Per person was 800 pounds a week in 1980s
+    * Opportunity:
+        * Print works in Warrington - Today - Sharp?
+        * 10000 pound startup
+        * Computers, faster distribution
+        * Thatcher reduces union power as causing damage
+    * Rupert Murdoch
+        * No negotiation
+        * Duplicate business
+        * Total Secrecy
+        * Fully proven
+        * Defeated the Unions
+        * No day was lost in production
 
 ### The Prayer of Serenity
 > God grant me the serenity to accept hte things I cannot change; courage to change the things I can; and wisdom to know the difference
@@ -742,7 +742,7 @@ Fonterra executive
 
 Edward Louis Bernays
 * The engineering of consent
-  * Uncle was Freud
+    * Uncle was Freud
 * Persuading smokers with pictures of fashion celebs smoking
 
 ### Objective 
@@ -751,47 +751,47 @@ Edward Louis Bernays
 ### Customers
 * Communicate to outside
 * Communications internally
-  * Good, bad, rewards - plan
-  * Engagement, enthusiasm
+    * Good, bad, rewards - plan
+    * Engagement, enthusiasm
 
 ### Communication Plan
 * Stakeholders
-  * Power and Interest
-    1. Manage Closely
-    2. Keep Informed
-    3. Monitor
-  * Impact of Change v Energy of Response
-    * Convert Traditionalists and Resistors
+    * Power and Interest
+        1. Manage Closely
+        2. Keep Informed
+        3. Monitor
+    * Impact of Change v Energy of Response
+        * Convert Traditionalists and Resistors
 
 #### Line Item
 * Line
-  * Stakeholder
-    1. Issue
-    2. Agenda
-    3. Where would you like to be
-    4. Strategy
-  * Considerations
-    * Impact
-    * Measures
-    * Time Line
-    * Action Owner
+    * Stakeholder
+        1. Issue
+        2. Agenda
+        3. Where would you like to be
+        4. Strategy
+    * Considerations
+        * Impact
+        * Measures
+        * Time Line
+        * Action Owner
 * Communicate:
-  * Has to be personal
-    * Else Hostile reaction
-  * Try to be helpful
-  * Trying to defuse situation
-  * Sense of community
+    * Has to be personal
+        * Else Hostile reaction
+    * Try to be helpful
+    * Trying to defuse situation
+    * Sense of community
 
 ### Styles
 * Dr Albert Mehrabian's research 
-  * 7% of meaning in words
-  * 55% in facial expressions
+    * 7% of meaning in words
+    * 55% in facial expressions
 
 ### Team Briefing
 * Prevent rumour and the grapevine
 
 * Alistair Campbell v Tony Blair? Who was in charge?
-  * Director of Communications and Strategy
+    * Director of Communications and Strategy
 
 
 Lecture 12
@@ -805,20 +805,20 @@ Lecture 12
 
 ### Public Sector Economics
 * Focus on Policy
-  * In terms of efficiency
-  * Fairness? Unanswerable in economics
+    * In terms of efficiency
+    * Fairness? Unanswerable in economics
 
 ### Mixed Economy
 * Private market
-  * Result of society - contracts etc with each other
+    * Result of society - contracts etc with each other
 * Public sector
-  * Affects trading
+    * Affects trading
 
 ### Gross Domestic Product (GDP)
 * Gross - market price of good
 * No market price? (health, education... )
-  * Based on expenditure
-  * Not value - benefit from these services
+    * Based on expenditure
+    * Not value - benefit from these services
 
 * GDP = Consuption + Government Expenditure + Investment + Net Exports
 * GDP = C + I + G + NX
@@ -838,7 +838,7 @@ Efficiency
 
 #### Overview
 * Accounting stance
-  * socio-economic analysis and not financial analysis
+    * socio-economic analysis and not financial analysis
 
 #### Value
 * Individual preferences are equal
@@ -847,12 +847,12 @@ Efficiency
 #### CBA based on compensation test
 * Efficiency line
 * Which is best? 
-  * Trade off based on government etc
+    * Trade off based on government etc
 
 #### Hicks-Kaldor Compensation
 * A Potential Pareto Improvement (PPI) 
-  * Pareto efficient?
-  * Change where the gainers can fully compensate the losers and remain better off
+    * Pareto efficient?
+    * Change where the gainers can fully compensate the losers and remain better off
 * B-C > 0
 * Hypothetical
 
@@ -880,7 +880,7 @@ $$ NPV(r) = \frac{ B - C }{ l } $$
 
 #### CBA
 * note
-  * ...
+    * ...
 
 ### Other Approaches
 * Multi objective
@@ -888,10 +888,10 @@ $$ NPV(r) = \frac{ B - C }{ l } $$
 ### Public Goods
 * Non rival, non excludable
 * Pure PGs?:
-  * Radio spectrum
-  * View of Rangitoto
-  * Use of bridge
-  * Judge's Bay water 
+    * Radio spectrum
+    * View of Rangitoto
+    * Use of bridge
+    * Judge's Bay water 
 
 ### Auckland Council
 * ...
@@ -903,7 +903,7 @@ $$ NPV(r) = \frac{ B - C }{ l } $$
 ### Externalities
 * Unintended impacts
 * Non-market values
-  * Noise reduction of roading project
+    * Noise reduction of roading project
 * Hedonic model? - crime on house price
 
 ### Benefits Transfer
@@ -911,7 +911,7 @@ $$ NPV(r) = \frac{ B - C }{ l } $$
 
 ### Approaches
 * Point Estimate
-  * point is representative
+    * point is representative
 * ...
 * Meta
 
@@ -923,8 +923,8 @@ Some context (systems scenario):
 
 * National Investment Strategy
 * New agency combining public and private sector
-  * Top down strategic approach
-  * Bottom up innovation and entrepreneurialism
+    * Top down strategic approach
+    * Bottom up innovation and entrepreneurialism
 * Demonstrate you can win
 * Perennial challenge for any business
 
@@ -1065,17 +1065,17 @@ Kerryn Downey
 
 ### Insolvency Terms
 1. Informal Financial Restructuring
-  * Getting consultants
-  * Assess the business
-    * What's gone wrong
-    * How fixable is it
+    * Getting consultants
+    * Assess the business
+        * What's gone wrong
+        * How fixable is it
 2. Voluntary administration
 3. Receivership
 4. Liquidation
-  * Acting in the interest of all creditors
+    * Acting in the interest of all creditors
 5. Statutory management
-  * Peculiarity of New Zealand
-  * Public interest
+    * Peculiarity of New Zealand
+    * Public interest
 
 ### Insolvency stats
 * 5 to 10 times the liquidations are restructuring
@@ -1086,72 +1086,72 @@ Kerryn Downey
 ### Prediction
 * John Argenti
 * 3 stages
-  1. Defects (weak management, poor business plan)
-    * Only seeing the result do management change
-  2. Mistakes (decisions)
-  3. Symptoms (mounting losses)
+    1. Defects (weak management, poor business plan)
+        * Only seeing the result do management change
+    2. Mistakes (decisions)
+    3. Symptoms (mounting losses)
 
 ### Reasons
 * Weak management
-  * Dominant chief executive
-    * Failure to listen
-  * Incompetent CEO
-  * Fraudulent conduct
-  * Lack of depth
-    * People behind the scenes
-  * No succession plan
-    * Family business: no bright child to take over
-  * Inflexible management style
-  * Sudden exodus of key personnel
-    * South Canturbury Finance - held together to sell key bits of business for debts
-  * Nepotism
-  * Disconnect with the Board
-  * Complancency
-  * Absentee management
-  * Disputes - family / non family personnel
+    * Dominant chief executive
+        * Failure to listen
+    * Incompetent CEO
+    * Fraudulent conduct
+    * Lack of depth
+        * People behind the scenes
+    * No succession plan
+        * Family business: no bright child to take over
+    * Inflexible management style
+    * Sudden exodus of key personnel
+        * South Canturbury Finance - held together to sell key bits of business for debts
+    * Nepotism
+    * Disconnect with the Board
+    * Complancency
+    * Absentee management
+    * Disputes - family / non family personnel
 * Poor corporate governance
-  * Board dominated by famiily members
-  * Lack of competent independent board members
-  * CEO / Chairman of Board dual role
-  * Board composition inappropriate for business
-  * No formal review/rotation of board members
-  * Board compensation inadequate to attract the right candidates
-  * Incompetent board members
-  * Failure by board to act in best interest of company
-  * Failure by board to focus on strategy
-  * Board too large
-    * 5 is good, 10 is excessive
+    * Board dominated by famiily members
+    * Lack of competent independent board members
+    * CEO / Chairman of Board dual role
+    * Board composition inappropriate for business
+    * No formal review/rotation of board members
+    * Board compensation inadequate to attract the right candidates
+    * Incompetent board members
+    * Failure by board to act in best interest of company
+    * Failure by board to focus on strategy
+    * Board too large
+        * 5 is good, 10 is excessive
 * External factors
-  * Legislative change
-  * Government policy change
-  * Natural disaster, e.g., Canterbury earthquakes
-  * Instability of main trading partners
-  * Recession/economic trends worldwide
-  * Foreign currency movement
-  * Interest rates
-  * Trends in majro ommodity prices
-  * Emergence of "green" technologies and sustainability
-  * Demographics and trends
-  * Competition, actions and competitors
-  * Consumer fashion / preference changes
-  * Import substitution
-  * Environmental
+    * Legislative change
+    * Government policy change
+    * Natural disaster, e.g., Canterbury earthquakes
+    * Instability of main trading partners
+    * Recession/economic trends worldwide
+    * Foreign currency movement
+    * Interest rates
+    * Trends in majro ommodity prices
+    * Emergence of "green" technologies and sustainability
+    * Demographics and trends
+    * Competition, actions and competitors
+    * Consumer fashion / preference changes
+    * Import substitution
+    * Environmental
 * Internal factors
-  * Unsatisfactory financial reporting
-  * No business plan / financial forecasts
-  * Deteriorating financial results
-  * The big project - "eggs in one basket"
-  * Inadequate capital base
-  * Breach of loan terms - convenants and security margins
-  * Quality control problems
-  * Weak cash management / decline in liquidity
-  * Shareholder withdrawals
-  * Window dresssing
-  * Inventory problems
-  * Reliance on major customer
-    * Super market restrictions on suppliers
-  * Dependence on key supplier
-  * Failure to protect IP 
+    * Unsatisfactory financial reporting
+    * No business plan / financial forecasts
+    * Deteriorating financial results
+    * The big project - "eggs in one basket"
+    * Inadequate capital base
+    * Breach of loan terms - convenants and security margins
+    * Quality control problems
+    * Weak cash management / decline in liquidity
+    * Shareholder withdrawals
+    * Window dresssing
+    * Inventory problems
+    * Reliance on major customer
+        * Super market restrictions on suppliers
+    * Dependence on key supplier
+    * Failure to protect IP 
 
 ### Success factors - NZ examples
 * Xero - accounting software (Rod Drury)
@@ -1161,17 +1161,17 @@ Kerryn Downey
 * Rynman homes 
 
 * People
-  * Capable directors and senior management
-  * Motivated, committed workforce
+    * Capable directors and senior management
+    * Motivated, committed workforce
 * Strategy
-  * Sound business plan / strategic focus
+    * Sound business plan / strategic focus
 * Operations
-  * Effective and efficient operations
+    * Effective and efficient operations
 * Financial
-  * Capital
+    * Capital
 * Marketing
-  * Clear brand definition
-  * Customer loyalty
+    * Clear brand definition
+    * Customer loyalty
 
 Comic
 > What if our new business model fails?:
@@ -1193,27 +1193,27 @@ Group work
 
 * ...
 * Project Meetings
-  * Discriminate the type of meeting
+    * Discriminate the type of meeting
 * Emotional Intelligence (EI or EQ)
-  * 5 key skills of EI
+    * 5 key skills of EI
 * TED video on orchestra?
 
 * John Adair
-  * Theory that anyone can become/improve leadership
-  * Action Centred Leadership
-  * Task, team and individual
-    * Most focus almost completely on task
-  * Leadership checklist
+    * Theory that anyone can become/improve leadership
+    * Action Centred Leadership
+    * Task, team and individual
+        * Most focus almost completely on task
+    * Leadership checklist
 
-    Key actions         Task Team Individual
-    -----------         ---- ---- ----------
-    Define Objectives |
-    Plan              |
-    Brief             |
-    Monitor Support   |
-    Evaluate          |
+        Key actions                 Task Team Individual
+        -----------                 ---- ---- ----------
+        Define Objectives |
+        Plan                            |
+        Brief                         |
+        Monitor Support     |
+        Evaluate                    |
 
-  * Good because of monitoring
+    * Good because of monitoring
 
 * How is the team feeling
 
@@ -1223,8 +1223,8 @@ Group work
 * ..
 
 * Meredith Belbin - Team Building
-  * Plant 
-  * Resource Investigator
+    * Plant 
+    * Resource Investigator
 
 
 Group
@@ -1246,7 +1246,7 @@ Law
 * Employment Law
 * National and Local Government Law
 * Health and Safety Law
-  * You are assumed to know all health and safety rules
+    * You are assumed to know all health and safety rules
 * Import and Export Lawe
 * Traffic laws
 
@@ -1255,17 +1255,17 @@ Law
 
 ### Enforcement
 * Law imposed by the state
-  * Criminality
-  * Prosecution by state
+    * Criminality
+    * Prosecution by state
 * Civil Law
-  * Disagreement between private parties
-  * Contracts / payments etc.
+    * Disagreement between private parties
+    * Contracts / payments etc.
 * Types
-  * Sue, injunctions, claims
+    * Sue, injunctions, claims
 
 ### Contracts
 * There are different forms of contract
-  * Government
+    * Government
 
 #### Typical Procurements
 * Studies and advice
@@ -1282,9 +1282,9 @@ Law
 #### Content
 * Parties
 * Schedule of Work
-  * Servics
-  * Articles
-  * Outcomes
+    * Servics
+    * Articles
+    * Outcomes
 * Acceptance
 * Timetable
 * Roles and responsibilities
@@ -1297,20 +1297,216 @@ Law
 #### Typical Terms and Conditions
 * Ownership?
 * Free on Board (FOB)
-  * Delivery?
+    * Delivery?
 * Agreement on contract changes
 * Concessions
-  * Can't deliver
+    * Can't deliver
 * Penalties
-  * Cost of damages
+    * Cost of damages
 
 #### Writer...
 * Lawyers + Engineers (lead)
-  * What engineers want and then lawyers clean it out for lawyer speak
+    * What engineers want and then lawyers clean it out for lawyer speak
 
 ### Advice
 * Don't let the other party draft the contract
 * Don't leave things fuzzy because you can't agree precisely, it'll cause problems later
 * Don't rely on small print
 * Trust and relationships
-  * Do we put our reputations on it?
+    * Do we put our reputations on it?
+
+
+Lecture 18
+----------
+
+### Governance
+
+* Corporate governance: broadly refers to the mechanisms, processes and relations by which corporations are controlled and directed (wiki)
+* governance: a method or system of government
+
+### Rob
+* Dispute with siblings: fist fight - ratted on by loser, take it to parents
+* Two senior managers to boss: Resolve dispute: who ever's side that the boss takes, the other will be unhappy, thus is fired.
+* one over one principle: Someone is always above us - to ask for help
+    * Don't ask for guidance, give recommendations and ask for whether its a good plan
+* Underlings: what options were rejected, what cost benefit has been performed
+* CEO can't manage day to day: fire them
+* Board doesn't manage, they just fire CEO
+* CEO recommends future strategy and options
+* Executive Directors: conflict of interestish
+* Board should probably be independent
+* Fiduciary duty = confidence or trust to protect money = duty of care
+* If you're the only technically competent person - you are responsible for all health and safety for board - go to jail
+* Pike river: low capital: early production: should have said cannot operate - fiduciary duty
+* Fiduciary: Solvency: declare insolvent early as you can
+
+### Purpose
+* Where governance begins and where management begins
+* Governance - if you have responsibility, team, officer, then you are responsibility for governance
+    * Employees have responsibility for health and safety
+    * Doing the right things and doing things right
+
+### Stakeholders
+* Stakeholders
+    * Owners
+        * Investors
+        * Shareholders
+    * Group board
+        * Chairman
+            * Independent non executive - dispassionate when making decision
+        * Directors
+            * Commonly line managers - carry executive responsibility
+        * Non Executive Directors
+            * Investors, community, particular interests, specialist knowledge, independent
+    * CEO
+        * Executive
+        * Reports to board
+        * Not performing - board has right/job to fire managing director
+* Views
+    * Ten year horizon
+        * Keith hates "further down in organisation"
+        * Higher ups look further head, managers may only look 2 years ahead
+    * Long term Strategic Leadership
+        * Governance is leadership - by influence - conversation
+        * Collegiate, cabinet responsibility
+
+### Governance - General Aims
+* Long term strategic leadership of the business
+* "Oversight"
+    * Performance Monitoring
+    * Enterprise risk
+    * Business Practice and Ethics
+    * Legal and Regulatory Compliance
+    * Key Appointments
+* Additional Responsibilities
+    * Challenging the Executive Team
+        * Worst thing a board can do is rubber stamp
+        * Ask questions, scrutinise, push back
+    * Advice and guidance
+    * Mentoring and coaching
+    * External affairs
+        * Know people, networks - long term strategic view
+    * Independent Sub - committees
+        * Investment
+            * Investments have been scrutinised by those who don't have an interest in the profitability, outcome of the business - separation between executive and board
+        * Audit
+            * Books - accountants, audit schedule
+        * Risk
+            * Enterprise risk
+            * Increasing
+            * Mitigation plans for expected risks
+        * Ethics and professional conduct
+            * IPENZ
+            * Complaints of behaviour
+        * Remuneration (esp Directors)
+            * How much bonus for Directors, independent
+
+### Legal Duties
+* Directors (company officers) have legal responsibilities
+    * Solvency
+    * Health and Safety
+    * Legal and regulatory compliance
+    * Conflict of Interest (e.g. Insider Trading)
+    * Just a few
+* External and Non Exec directors represent
+    * Investors,
+    * Sometimes stakeholders, employees, community
+* Personally held liable for negligence
+    * If employee misbehaves, you may end up on court
+    * Importance of oversight, governance
+
+### Mechanisms
+* Reports (lecture on principles of business)
+    * Heads of departments, reporting + oversight, feedback
+* Audits
+    * "I'm here from corporate accounting and I'm here to help you"
+    * Scrutinise what you've been up to
+    * Compliance with processes
+    * Recommendations on corrective actions
+* Surveys,- customer, cuppliers and employee
+    * Are we looking after you? Treating you with respect (course surveys)
+    * Filters to board to make decisions
+* Enterprise Risk Management (ERM)
+    * Long term risks of company, people, political, commercial
+    * Mechanisms to keep the company from getting in trouble
+* Compliance "training"
+    * Foreign and Corrupt Practices Act (FCPA)
+        * Accounting transparency and bribery
+    * Everyone knows what the company expects from them
+    * License can depend on that training
+* Education and Training
+* Key performance indicators (KPIs)
+* Balanced score card
+    * Methods of measuring things other than money
+    * Earned value
+    * Red amber green charts
+* Walk the job and meet people in the business
+    * Queen - aristocracy - knowledge of the people
+
+### Practice
+* Undisciplined
+    * Boards are bad at managing people
+    * Role and purpose confusion
+        * business model - how it should be managed
+    * Appointments/suitability 
+        * who adds value
+    * Tools and techniques 
+        * are they well understood and well applied
+    * Level of effort
+        * Get 200p report the previous day and expected to be expert next day
+        * Not sensible on providing expert knowledge
+    * Level of access and independence
+        * Insights in to business to make sensible decisions
+
+### Poor Governance
+* Poor practice
+    * Often surprised by events
+        * Nick Leeson - rogue trader
+            * Bearings bank
+            * Bigger bets on continuing failing investments
+            * No one noticed
+            * Brought down the oldest bank in England
+        * Enron
+            * Defrauding investors
+            * Conspiracy to commit securities and wire fraud
+        * Lehman
+            * Spending money they don't have
+            * Crooked governance
+            * Insolvent for months/years
+            * Mortage processes created collapsed
+    * Dominated by Financial reporting
+    * Double checking the Exec team
+    * Rear view mirror (out of date information)
+    * Focused on Investors
+    * Spasmodic performance
+    * Terminal decline
+
+### Good Governance
+* Being wise before the event - no surprises
+* Future sensing
+    * New Markets
+    * Trends and Disruptors
+    * Move in to new spaces
+* Holistic continuous review of the whole business
+    * Customers, strategies, tacticals pipelines, sales marketing
+    * People and culture
+        * Major asset
+    * Community and stakeholders
+    * Managing media
+* Reliable and consistent Performance
+
+### Finally
+* Good governance
+* Doing the right thing and doing things right
+* Good governance
+
+
+
+
+
+
+
+
+
+
+

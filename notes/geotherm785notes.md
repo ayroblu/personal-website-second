@@ -2747,7 +2747,7 @@ Sadiq
     * Remove safety glasses due to steam
 * Single Flash (Silencer) without lip pressure pipe
     $$ \begin{align*}
-      Y &= \frac{\dot{M}_w(atm)}{A\times P_c^{0.96}} \\\\
+      Y &= \frac{\dot{m}_{w(atm)}}{A\times P_c^{0.96}} \\\\
       h &= \frac{ 2675 + 925Y}{1 + 7.85 Y} \\\\
       \dot{m} _t &= \frac{2258\times \dot{m} _{w(atm)}}{2675 -h}
     \end{align*} $$
