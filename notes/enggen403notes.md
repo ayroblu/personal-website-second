@@ -152,8 +152,8 @@ The One Minute Manager - Ken Blanchard and Spencer Johnson
 Systems thinking project (based on peer assessment) -- 40%
 Exam -- (40%)
 
-Lecture 2
----------
+Lecture 2 - Business Planning
+-----------------------------
 
 ### Purpose
 * A proposal
@@ -310,8 +310,8 @@ Whos helping
 * etc.
 * Over optimistic
 
-Lecture 3
----------
+Help Desk 1
+-----------
 
 Help Desk
 
@@ -322,7 +322,7 @@ Help Desk
 * Assignment Tracking Cover Sheet
 * Single submission
 
-Lecture 4
+Lecture 3
 ---------
 
 A Startup Investor's Perspective
@@ -402,8 +402,8 @@ Steve Blank:
 * Angelic Dropins - Thursdays 4-6pm at [BizDojo](http://www.flyingkiwis.biz/angelic-dropin.html)
 
 
-Lecture 5
----------
+Lecture 4 - Principles of Business
+----------------------------------
 
 * What makes a "good" business
     * Reputation and getting the job done
@@ -486,8 +486,8 @@ Lecture 5
 ...
 
 
-Lecture 6
----------
+Help Desk 2
+-----------
 
 ### Next Week
 * Jordi Garcia
@@ -503,8 +503,8 @@ Lecture 6
 * Make a plan for market validation
 
 
-Lecture 7
----------
+Lecture 5 - Financial Section
+-----------------------------
 
 Financial Section of a Business Plan
 
@@ -604,7 +604,7 @@ Weighted Average Cost of Capital
 * Times Interest Earning 3x?
 
 
-Lecture 8
+Lecture 6
 ---------
 
 ### ecoPortal
@@ -612,8 +612,16 @@ Simple solutions to complex sustainability issues
 
 > [template business reports](http://www.score.org/resources/business-planning-financial-statements-template-gallery)
 
-Lecture 9
+Lecture 7
 ---------
+The Notable Story
+
+* Hengjie Wang
+* CEO & Co-founder
+
+
+Help Desk 3
+-----------
 Help Desk
 
 > Marriage Proposals
@@ -637,9 +645,8 @@ Help Desk
     * Not going to reduce the value of IP
     * Similar without contravening patent
 
-Lecture 10
-----------
-Strategy and Managing Enterprise Change
+Lecture 8 - Strategy and Managing Enterprise Change
+---------------------------------------------------
 
 > Learning Outcomes from slides are related to Systems scenario?
 
@@ -736,8 +743,8 @@ Energy and Impact
 * Like to change?
 * Going to change?
 
-Lecture 11
-----------
+Help Desk 4
+-----------
 Fonterra executive
 
 Edward Louis Bernays
@@ -794,8 +801,8 @@ Edward Louis Bernays
     * Director of Communications and Strategy
 
 
-Lecture 12
-----------
+Lecture 9 - Cost Benefit Analysis
+---------------------------------
 
 * Normative Questions: What should be done?
 * Positive Questions: 
@@ -916,8 +923,8 @@ $$ NPV(r) = \frac{ B - C }{ l } $$
 * Meta
 
 
-Lecture 13
-----------
+Lecture 10 - Business Operations
+--------------------------------
 
 Some context (systems scenario): 
 
@@ -1048,16 +1055,16 @@ Some context (systems scenario):
 * DRA business model
 
 
-Lecture 14
-----------
+Lecture 11 - Compliance
+-----------------------
 Harvey Weake, SVP Manufacturing, Methanex Corporation
 
 * Methanex occupies around 18% of the market, most competition is from governments
 * If you have poor complience, you're likely to fail, if you have good compliance, its not certain that you will succeed
 
 
-Lecture 15
-----------
+Lecture 12 - Business Failure
+-----------------------------
 Kerryn Downey
 
 * Receivership - Coming in, taking over your business, you no longer may be employed.
@@ -1187,8 +1194,8 @@ Quote
 > Management, management and management
 
 
-Lecture 16
-----------
+Lecture 13 - Leadership and Teamwork
+------------------------------------
 Group work
 
 * ...
@@ -1232,8 +1239,8 @@ Group
 Alex, Nick
 
 
-Lecture 17
-----------
+Lecture 14 - Engineering and the Law
+------------------------------------
 Law
 
 > You are expected to know all laws (I didn't know is not an excuse) 
@@ -1316,8 +1323,8 @@ Law
     * Do we put our reputations on it?
 
 
-Lecture 18
-----------
+Lecture 15 - Governance
+-----------------------
 
 ### Governance
 
