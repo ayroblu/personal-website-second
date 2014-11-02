@@ -804,6 +804,18 @@ Edward Louis Bernays
 Lecture 9 - Cost Benefit Analysis
 ---------------------------------
 
+### Outline
+* Normative question: what level of resilience should be provided?
+    * Project evaluation 
+    * Regulatory design
+* Cost benefit analysis (CBA or BCA)
+    * Aim is to identify potential welfare gains – or, simply, maximum net benefits
+* Cost-effectiveness analysis
+    * Achieve a goal at least cost
+* Other considerations
+    * Incidence of benefits and cost
+* CBA provides information into the decisions policy makers must make
+
 * Normative Questions: What should be done?
 * Positive Questions: 
 
@@ -831,6 +843,18 @@ Lecture 9 - Cost Benefit Analysis
 * GDP = C + I + G + NX
 
 * Services are the biggest sector of the economy - 75% of GDP
+* Manufacturing represents 13% of GDP, construction 4%
+* Agriculture, fishing, forestry and mining, 8%
+
+### Opportunity Cost
+* There are two dimensions to government investment that are of direct relevance for cost-benefit analysis
+    * First, government investment has to be financed. Taxation has accounted for about 80% of central government investment in the past (deadweight loss)
+    * Second, funds available for investment must be allocated among a set of competing alternatives (scarcity & opportunity cost)
+* Questions we might ask
+    * Is the allocation between alternatives in any sense optimal? 
+    * What are the trade-offs involved?
+    * What are the social costs and social benefits of reallocating resources away from government programme X to enhancing resilience of Auckland’s infrastructure?
+
 
 ### Private Sector
 * Moral Hazard - take more risks - insurance
@@ -842,14 +866,32 @@ Efficiency
 * ...
 
 ### Cost Benefit Analysis (CBA)
+* Estimation and evaluation of the net benefits associated with alternatives for achieving defined public goals – in your case resilience, but to what degree?
+* First we need to stipulate a framework by which to judge the options & economic states.
+* Second we need tools to analyse the states.
+* CBA is most common form of applied welfare economics. Its limitations therefore reside in welfare economics.
+* In undertaking a CBA the analyst faces three difficulties: 
+    1. what are the relevant values of benefits and costs
+    2. what should be included in benefits and costs
+    3. how should the discount rate be determined
 
 #### Overview
 * Accounting stance
     * socio-economic analysis and not financial analysis
+* Apply the “with/without” principle.
+    * C&B say status quo cf. C&B with enhanced resilience 
+    * Scenarios
+* Reduce all costs and benefits to dollars.
+  * Benefits are defined relative to their effect on the objectives. 
+  * Costs are defined relative to their opportunity costs.
+* Intertemporal nature of the opportunities foregone 
+  * Flows of $ associated with scenarios.
+* Sooner or later we will be confronted with things that challenge our ability to measure services in money metric. How will we incorporate them into our analysis?
 
-#### Value
-* Individual preferences are equal
-* Weighted on market effect?
+#### Value Judgements
+1. Individual preferences are equal
+2. Weighted on market effect?
+  * That preferences are weighted by market power (income) => if existing prices are used, then the existing distribution of income must also be accepted
 
 #### CBA based on compensation test
 * Efficiency line
@@ -861,36 +903,106 @@ Efficiency
     * Pareto efficient?
     * Change where the gainers can fully compensate the losers and remain better off
 * B-C > 0
+* The sum of money, which, if received after the economic change would make the individual no better, or worse, off than before the change
 * Hypothetical
 
-#### Measuring costs & benefits
+#### Measuring Costs & Benefits
 * ...
+* Costs
+  * Principle of opportunity costs
+    * Market price – cement, steel, labour, etc
+    * What about loss water quality; increase in crime? Increase in hospital admissions?
+* Benefits: (WTP/WTA)
+  * Market valued - what people are willing to pay (WTP)
+    * Electricity, transport fuel, ...
+  * Non-market valued – what people WTP
 
-#### ...
+#### Measuring Benefits
+* BENEFIT = WILLINGNESS TO PAY = PRICE
+* For “small” changes in output the change in WTP is simply: WTP = Q x P
+* For “large” changes then we need to recognise and account for a change in consumer surplus.
 
-#### Comparison prior (ex ante)
+### Non-market Values
+* Relatively recent development.
+* Individuals derive benefit that is not traded in market.
+* If interested in value maximisation then these values should be considered.
+* Indirect valuation methods – infer value from related expenditures.
+* Direct valuation methods – personal valuations revealed through survey
+
+### Measuring Costs
+* For marginal changes - the amount of the input used relative to the total supply of the input - then existing price is a reasonable indicator of the value of production forgone. This is the opportunity cost.
+* For “non-marginal changes” then need to account for changes in producers’ surplus.
+* Which best fits your assignment?
+
+#### Comparison of projects prior (ex ante)
 $$ NPV(r) = \frac{ B - C }{ l } $$
 
 #### Value over time
 
 #### Discount rate?
 * unknown...
+* Marginal productivity of investment
+  * Real rate of return the economy’s marginal investment yields
+* Corporate discount rate – Rate used by corporations
+  * Government borrowing rate – Cost of borrowing
+* Pigouvian discount rate
+  * We are all short-sighted, therefore use low DR
+* Current practice r = 8%
 
 #### Risk
 * ...
+* Technical versus non-technical risk
+* Risk associated with project out comes is usually handled using probability theory – frequency distribution?
+* Do not factor this in to the discount rate, treat explicitly.
+* Attitudes to risk - risk aversion e.g. What is impact of downside relative to upside gains? Is community wiling to pay the “insurance” necessary to avoid the downside adverse outcome?
+* Uncertainty in CBA parameters can be evaluated using a sensitivity analysis or MC simulations
 
 #### Investment and trade offs
 * Can't plan behaviour
+* All costs are opportunity costs - capital is scarce, problem is to allocate scarce $ to get biggest increase in wealth (NPV).
+  * Careful screening of linkages with other sectors
+  * Major Challenge: estimating behaviour not planning behaviour!!
+  * Large projects crowding out number of smaller – Rank alternatives
+* Quantify alternatives in monetary units if at all possible – may involve non-market valuation methods.
+* Risk analysis - check robustness of NPV to changes in values, possibly undertake portfolio analysis
 
 #### Pre-project evaluation
-* ...
+* Ask basic questions:
+  * What is “the problem”? Clear statement 
+  * How do we “know” it needs fixing?
+* Evidence based advice is essential:
+  * Monitoring records e.g. traffic counts, visitor counts, sewerage spills, PT passengers stranded, etc.
+* What can be learned from published evidence? 
+  * Changes in behaviour from project investment
+  * Estimates of benefits (caution)
 
 #### CBA
-* note
-    * ...
+* Points to note:
+  * Distribution of income
+  * Compensation principle
+  * Measurement of benefits and costs
+* Incidence of costs and benefits
+  * Backward: Firm absorbs some of costs
+  * Forward: pass on cost to consumers
+  * Ultimately affects different groups: owners of capital, labour, consumers, ethnic groups
+
+### Cautionary Notes
+* Value of CBA depends on the accuracy of cost and benefit estimates.
+* Estimates often flawed by
+  * Over reliance on data from past projects 
+  * Use of subjective impressions/estimates
+* Inappropriate valuation methods e.g. impact analysis (e.g. jobs lost, GDP), use of methods to derive estimates of non-market values (e.g. sewerage spills)
 
 ### Other Approaches
 * Multi objective
+* Impact analysis e.g. Income & employment
+* Cost effectiveness
+  * Aim is to minimise cost, avoid valuing benefits
+* Multi criteria analysis
+  * Two or more metrics: e.g. Objective (K) & objective (C)
+  * One objective may dominate
+  * W(K,C) = aK + bC; questions: functional formand weights “a” and “b”
+* Distributionally weighted CBA – Auckland v. Rest of NZ
 
 ### Public Goods
 * Non rival, non excludable
@@ -921,6 +1033,12 @@ $$ NPV(r) = \frac{ B - C }{ l } $$
     * point is representative
 * ...
 * Meta
+
+### Concluding Thoughts
+* NZ is small open economy, reliant on trade, value- added challenge, exposed to dependence on imported fuel, Government faces a fiscal challenge; Auckland is the commercial engine of NZ, infrastructure to support development essential
+* Drivers in the future: scenarios to account for likely patterns of growth, population growth
+* Scope out the constraints to wealth/well being enhancement
+* Can’t do it all => opportunity cost – what is being given up when a project(s) get the nod?
 
 
 Lecture 10 - Business Operations
