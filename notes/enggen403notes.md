@@ -120,7 +120,7 @@ The One Minute Manager - Ken Blanchard and Spencer Johnson
 > 
 > Private investors aren't necessarily people minded
 
-** New Agency **
+**New Agency**
 
  * The best minds from the public sector and the private sector
  * A top down strategic approach
@@ -134,7 +134,7 @@ The One Minute Manager - Ken Blanchard and Spencer Johnson
      * An engineering strategy for NZ
      * A business plan
 
-** "Re Engineering New Zealand Limited" **
+**"Re Engineering New Zealand Limited"**
 
  * Pushes the envelope
  * Stretches creativity
