@@ -604,17 +604,16 @@ Weighted Average Cost of Capital
 * Times Interest Earning 3x?
 
 
-Lecture 6
----------
+Lecture 6 - ecoPortal
+---------------------
 
-### ecoPortal
 Simple solutions to complex sustainability issues
 
 > [template business reports](http://www.score.org/resources/business-planning-financial-statements-template-gallery)
 
-Lecture 7
----------
-The Notable Story
+Lecture 6b - The Notable Story
+------------------------------
+
 
 * Hengjie Wang
 * CEO & Co-founder
@@ -645,7 +644,7 @@ Help Desk
     * Not going to reduce the value of IP
     * Similar without contravening patent
 
-Lecture 8 - Strategy and Managing Enterprise Change
+Lecture 7 - Strategy and Managing Enterprise Change
 ---------------------------------------------------
 
 > Learning Outcomes from slides are related to Systems scenario?
@@ -743,11 +742,13 @@ Energy and Impact
 * Like to change?
 * Going to change?
 
-Help Desk 4
------------
+
+Lecture 8 - Managing Communications - Communications plan
+---------------------------------------------------------
 Fonterra executive
 
 Edward Louis Bernays
+
 * The engineering of consent
     * Uncle was Freud
 * Persuading smokers with pictures of fashion celebs smoking
@@ -799,6 +800,10 @@ Edward Louis Bernays
 
 * Alistair Campbell v Tony Blair? Who was in charge?
     * Director of Communications and Strategy
+
+
+Help Desk 4
+-----------
 
 
 Lecture 9 - Cost Benefit Analysis
