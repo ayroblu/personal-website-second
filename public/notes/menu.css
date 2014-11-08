@@ -5,12 +5,12 @@
 }
 #hamburger{
   width:50px;
-  height:42px;
+  height:44px;
   position:absolute;
   left:250px; /* Dependent */
   top:0;
   background: #58f;
-  padding:4px 0;
+  padding:3px 0;
   cursor:pointer;
   z-index:1;
   opacity:0.5;
@@ -26,6 +26,7 @@
   height:4px;
   background:#fff;
   margin: 8px auto;
+  border-radius:2px;
 }
 #hamburger:hover{
   opacity:1;
