@@ -721,6 +721,13 @@ Lecture 7 - Strategy and Managing Enterprise Change
 
 > Learning Outcomes from slides are related to Systems scenario?
 
+### Learning outcomes
+* Describe some of the important principles which are essential for developing a successful strategy
+* Describe some of the important principles which are essential for managing enterprise change
+* Feeds into the Systems Week Scenario – Respond more positively to change
+* Ask better questions at interviews
+* Ultimately.... run successful start ups and businesses
+
 * Stratagy v Mission v Vision Statements
     * Mission and Vision:
         * Intent
