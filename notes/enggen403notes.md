@@ -46,7 +46,7 @@ The One Minute Manager - Ken Blanchard and Spencer Johnson
 2. 403 Help Desk, Systems Week
 3. Consultative Committee
 4. Systems Thinking "learning by doing" approach, system scenarios
-        * Fast Forward to industrial experience and experience directors
+    * Fast Forward to industrial experience and experience directors
 
 #### Convential Teaching
  * 90% forgotten
