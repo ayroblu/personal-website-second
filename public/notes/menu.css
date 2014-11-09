@@ -27,6 +27,7 @@
   background:#fff;
   margin: 8px auto;
   border-radius:2px;
+  background-clip: padding-box;
 }
 #hamburger > div{
   -webkit-transition: all 1.5s ease-out;
@@ -34,6 +35,8 @@
       -ms-transition: all 1.5s ease-out;
        -o-transition: all 1.5s ease-out;
           transition: all 1.5s ease-out;
+
+  transform: rotate(-180deg);
 }
 #hamburger:hover{
   opacity:1;
@@ -43,14 +46,11 @@
        -o-transition: none;
           transition: none;
 }
-#hamburger.open > div .first{
-  transform: rotate(-180deg);
-}
 #hamburger.open .first{
   transform: rotate(45deg);
   border-radius: 0;
   width: 15px;
-  border-left:30px solid transparent;
+  border-left:22px solid transparent;
 }
 #hamburger.open .second{
   width: 26px;
@@ -59,7 +59,7 @@
   transform: rotate(-45deg);
   border-radius: 0;
   width: 15px;
-  border-left:30px solid transparent;
+  border-left:22px solid transparent;
 }
 .leftmenu {
   width: 300px; /* Dependent */
