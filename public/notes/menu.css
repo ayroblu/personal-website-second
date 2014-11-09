@@ -9,7 +9,7 @@
   position:absolute;
   left:250px; /* Dependent */
   top:0;
-  background: #ace;
+  background: #68a;
   padding:3px 0;
   cursor:pointer;
   z-index:1;
@@ -21,13 +21,14 @@
        -o-transition: opacity 0.5s ease-out 0.5s;
           transition: opacity 0.5s ease-out 0.5s;
 }
-#hamburger div{
+#hamburger > div > div{
   width:30px;
   height:4px;
   background:#fff;
   margin: 8px auto;
   border-radius:2px;
-
+}
+#hamburger > div{
   -webkit-transition: all 1.5s ease-out;
      -moz-transition: all 1.5s ease-out;
       -ms-transition: all 1.5s ease-out;
@@ -42,25 +43,23 @@
        -o-transition: none;
           transition: none;
 }
+#hamburger.open > div .first{
+  transform: rotate(-180deg);
+}
 #hamburger.open .first{
-  transform: rotate(-45deg);
-  border-radius: 0;
-  width: 15px;
-  margin-left: 10px;
-  margin-bottom: 0px;
-  margin-top: 16px;
-}
-#hamburger.open .second{
-  width: 26px;
-  margin-top: 0px;
-  margin-bottom: 0;
-}
-#hamburger.open .third{
   transform: rotate(45deg);
   border-radius: 0;
   width: 15px;
-  margin-left: 10px;
-  margin-top: 0px;
+  border-left:30px solid transparent;
+}
+#hamburger.open .second{
+  width: 26px;
+}
+#hamburger.open .third{
+  transform: rotate(-45deg);
+  border-radius: 0;
+  width: 15px;
+  border-left:30px solid transparent;
 }
 .leftmenu {
   width: 300px; /* Dependent */
