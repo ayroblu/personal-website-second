@@ -46,24 +46,43 @@
        -o-transition: none;
           transition: none;
 }
-.leftmenu.hidden #hamburger > div{
+.leftmenu #hamburger > div{
   transform: rotate(-180deg);
 }
-.leftmenu.hidden #hamburger .first{
+.leftmenu #hamburger .first{
   transform: rotate(45deg);
   border-radius: 0;
   width: 15px;
   border-left:24px solid transparent;
 }
-.leftmenu.hidden #hamburger .second{
+.leftmenu #hamburger .second{
   width: 26px;
 }
-.leftmenu.hidden #hamburger .third{
+.leftmenu #hamburger .third{
   transform: rotate(-45deg);
   border-radius: 0;
   width: 15px;
   border-left:24px solid transparent;
 }
+.leftmenu.hidden #hamburger > div{
+  transform: rotate(0deg);
+}
+.leftmenu.hidden #hamburger .first{
+  transform: rotate(0deg);
+  border-radius: 2px;
+  width: 30px;
+  border-left:1px solid transparent;
+}
+.leftmenu.hidden #hamburger .second{
+  width: 30px;
+}
+.leftmenu.hidden #hamburger .third{
+  transform: rotate(0deg);
+  border-radius: 2px;
+  width: 30px;
+  border-left:1px solid transparent;
+}
+
 .leftmenu {
   width: 300px; /* Dependent */
   position: fixed;
@@ -165,6 +184,7 @@
   .leftmenu #closer{
     display:none;
   }
+
 }
 @media (min-width: 600px) {
   .leftmenu{
