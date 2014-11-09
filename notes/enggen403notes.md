@@ -162,6 +162,18 @@ Lecture 2 - Business Planning
 * Commitment
 * Monitors will monitor to ensure you can ROI
 
+* Governance
+
+### What is a business plan?
+* A new business or product or service
+* A response to new market opportunities – A response to a tender / proposal
+* A change to:-
+  * Offerings and Pricing
+  * Businesses process / approach • Brand / image
+  * Demand / Customers
+  * Legal / ethics values / staff
+* Collaboration / Mergers and Acquisitions
+
 ### The players
 #### Proposers
 * New facilities
@@ -182,7 +194,7 @@ Lecture 2 - Business Planning
 * Private
 * For a non business as well
 
-### Approaches
+### Getting Started
 * The push approach
     * Creativity and originallity
 * Pull approach
@@ -200,9 +212,10 @@ Lecture 2 - Business Planning
 
 * Combination (innovation)
 
-#### Contents
+### Business Plan Contents
 * Objective
-    * Clear statement
+    * Clear statement of commitment to investors
+    * If you Invest A (resources ) you can expect B (benefits) by C (time)
 * Route to Market
 * Financials
 * Risks 
@@ -210,7 +223,8 @@ Lecture 2 - Business Planning
 * ROI
 
 ### Prospectus
-* Objective: A clear statement to investors
+* Objective
+    * A clear statement to investors
     * Legal framework
 * Different from internal (Be transparent)
 
@@ -242,9 +256,10 @@ Lecture 2 - Business Planning
 * Requirements spec
 * Multiple options
 * Best fit
-* ...
+* Validate
 
 #### Refining the specification
+* A form of validation
 * Prototyping
 * Focus Groups
 * Dry runs - small batch 
@@ -295,10 +310,11 @@ Whos helping
         * Expand an existing pipeline
 * Investment strategies - Capture plans
 
-*Missed slide...?*
+### Financial Model
+* Return > Investment
 
 ### Validate business plans
-* Strengths, weaknesses opportunities
+* Strengths, weaknesses, opportunities, threats (SWOT)
 
 ### Investors
 * Not our business
