@@ -46,19 +46,19 @@
        -o-transition: none;
           transition: none;
 }
-#hamburger.open > div{
+.leftmenu.hidden #hamburger > div{
   transform: rotate(-180deg);
 }
-#hamburger.open .first{
+.leftmenu.hidden #hamburger .first{
   transform: rotate(45deg);
   border-radius: 0;
   width: 15px;
   border-left:24px solid transparent;
 }
-#hamburger.open .second{
+.leftmenu.hidden #hamburger .second{
   width: 26px;
 }
-#hamburger.open .third{
+.leftmenu.hidden #hamburger .third{
   transform: rotate(-45deg);
   border-radius: 0;
   width: 15px;
@@ -164,6 +164,43 @@
   }
   .leftmenu #closer{
     display:none;
+  }
+
+  .leftmenu #hamburger > div{
+    transform: rotate(-180deg);
+  }
+  .leftmenu #hamburger .first{
+    transform: rotate(45deg);
+    border-radius: 0;
+    width: 15px;
+    border-left:24px solid transparent;
+  }
+  .leftmenu #hamburger .second{
+    width: 26px;
+  }
+  .leftmenu #hamburger .third{
+    transform: rotate(-45deg);
+    border-radius: 0;
+    width: 15px;
+    border-left:24px solid transparent;
+  }
+  .leftmenu.hidden #hamburger > div{
+    transform: rotate(0deg);
+  }
+  .leftmenu.hidden #hamburger .first{
+    transform: rotate(0deg);
+    border-radius: 2px;
+    width: 30px;
+    border-left:1px solid transparent;
+  }
+  .leftmenu.hidden #hamburger .second{
+    width: 30px;
+  }
+  .leftmenu.hidden #hamburger .third{
+    transform: rotate(0deg);
+    border-radius: 2px;
+    width: 30px;
+    border-left:1px solid transparent;
   }
 }
 @media (min-width: 600px) {
