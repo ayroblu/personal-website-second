@@ -27,6 +27,12 @@
   background:#fff;
   margin: 8px auto;
   border-radius:2px;
+
+  -webkit-transition: all 1.5s ease-out;
+     -moz-transition: all 1.5s ease-out;
+      -ms-transition: all 1.5s ease-out;
+       -o-transition: all 1.5s ease-out;
+          transition: all 1.5s ease-out;
 }
 #hamburger:hover{
   opacity:1;
@@ -35,6 +41,26 @@
       -ms-transition: none;
        -o-transition: none;
           transition: none;
+}
+#hamburger.open .first{
+  transform: rotate(-45deg);
+  border-radius: 0;
+  width: 15px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  margin-top: 16px;
+}
+#hamburger.open .second{
+  width: 26px;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+#hamburger.open .third{
+  transform: rotate(45deg);
+  border-radius: 0;
+  width: 15px;
+  margin-left: 10px;
+  margin-top: 0px;
 }
 .leftmenu {
   width: 300px; /* Dependent */
