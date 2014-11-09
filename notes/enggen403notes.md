@@ -307,7 +307,7 @@ Whos helping
 
 ### Opportunities
 * Pipeline
-        * Expand an existing pipeline
+    * Expand an existing pipeline
 * Investment strategies - Capture plans
 
 ### Financial Model
@@ -499,7 +499,17 @@ Lecture 4 - Principles of Business
     * Extremely tight with money
 
 ### Truisms
-...
+* Integrity and reputation
+    * My word is my bond
+    * Playing fair vs Winning at all costs
+* What’s in it for me?
+    * Motivation Win - win
+* “The tough get going when the going gets tough”
+* It’s not what you know but who you know
+    * “Networking”
+* Supply and demand 
+* Risk Vs return
+* Cash is king!
 
 
 Help Desk 2
@@ -512,7 +522,7 @@ Help Desk 2
     * Personal insights into starting up a business
 
 ### Lecture
-* What would the person reading your * want to see?
+* What would the person reading your business plan want to see?
 
 ### Q&A
 * Market Validation: do you have a solid plan from start to finish?
@@ -571,6 +581,9 @@ Speaker: Jordi Garcia
 * Net Income after tax
 
 #### Sales Forecast...
+* Detailed monthly forecast first year, annually 2nd and 3rd years
+* Include unit sales for each product as well as unit pricing
+* Ideally include unit costs and calculate Cost of Sales (direct costs) to provide gross margin
 
 #### Operating Expenses
 * Break them down in to fixed and variable costs
@@ -583,6 +596,7 @@ Speaker: Jordi Garcia
 * Account for slow payments
 
 #### Operating Cycle
+* How money flows through a business
 
 #### Statements
 Note the segregation of capital costs...
@@ -605,19 +619,61 @@ Note the segregation of capital costs...
 Weighted Average Cost of Capital
 
 ### Key Questions
-* TODO: SLIDES
+* Income
+    1. What is the profit made up of ? (capitalisation of expenses?)
+    2. Quality of the earnings (one-off windfalls or genuine trading profits ?)
+    3. Sustainability of earnings (dependency on a single product or customer?)
+    4. Realistic profit forecasts (faster than average growth cannot go on forever)
+* Assets
+    5. What perspective are you taking? (banker, investor, insurer?)
+    6. Are asset valuations realistic? (market, replacement, historical ?)
+    7. Depreciation rates and methodologies (different companies depreciate assets at different rates – note IRD tables)
+    8. Capitalisation of interest?
+    9. Capitalisation of intangibles?
+* Assessing the business
+    10. Return on assets 
+    11. Return on capital 
+    12. Return on equity
+        * (are profits overstated?)
+        * (is capital employed undervalued?)
+    13. Activity ratios
+    14. Liquidity (vulnerability – coping with the unexpected)
+    15. Gearing (a double-edged sword – can multiply profits ... and multiply losses)
+    16. Hedging (speculation vs risk management)
 
 ### Profit
 * Quality of Earnings
     * How continuous is it
 * Sustainability of earnings
-    * Product dependency
+    * Beware product dependency
 
 ### Ratios
-* Return on Capital
-* TODO: SLIDES
-* Acid Test
-* Times Interest Earning 3x?
+* Profitability
+    * Return on Capital
+        * Return on total Assets
+        * Return on Equity
+    * Profit Margin
+        * Earnings / Sales where earnings is replaced by gross profit, net profit and expense
+        * Gross Profit
+        * Net Profit
+        * Expense
+* Liquidity Ratios
+    * The Current Ratio
+        * Current Assets / Current Liabilities
+    * Acid Test
+        * 30 day test
+        * current assets less inventory / current liabilities
+* Gearing Ratios
+    * Debt to Equity
+        * total borrowings / total owners’ equity
+    * Debt ratio
+        * total liabilities / total assets
+    * Equity ratio
+        * Total owners’ equity / total assets
+    * Times Interest Earned (Interest cover)
+        * EBIT / interest charges
+
+> Times Interest Earning 3x? - am I trying to say 3 is a good ratio?
 
 
 Lecture 6 - ecoPortal
