@@ -728,47 +728,84 @@ Lecture 7 - Strategy and Managing Enterprise Change
 * Ask better questions at interviews
 * Ultimately.... run successful start ups and businesses
 
+### Strategy
 * Stratagy v Mission v Vision Statements
     * Mission and Vision:
         * Intent
     * Strategy:
         * How
 
-### Key Themes
+#### Key Themes
 * Where we NEED to be
 * Where we are now 
 * How
 * Resources
 * Courage to start and stamina to finish
 
-> Machiavell quote
+#### The right mindset
+* In advance
+* Exploiting an opportunity
+* Re-acting to a crisis
+* Timing is everything - The right mindset
 
-> Charles Darwin
+### Managing Enterprise Change
+* 75% of major change efforts fail
 
-### What we are trying to achieve
-* Battle
+> "There is nothing more difficult to plan, more doubtful of success, nor more dangerous to manage than the initiation of change in a state’s constitution.
+> For the innovator has the enmity of all who would profit by the preservation of the old institutions and merely lukewarm support from those who should gain by the new ones" - Machiavelli
+
+> "It is not the strongest species that survive , nor the most intelligent it is the one most adaptable to change" - Charles Darwin
+
+#### What we are trying to achieve
+* Battle winning differentiators
 * Strategies, techniques, product...
 * Performance capacity, Cost
 * Capability
-* Team work
-* ...
+* Streamlined organisation
+* Team work - leadership
+* New markets - responding, customer satisfaction
 
-### Strategies
+
+#### Strategies
 * Incremental - evolutionary
 * Step change - revolutionary
 
 * Proactive - ahead (no surprises)
 * Reactive
 
-> Buzz words...
+### Evolution
+#### Performance measurement
+> "In God we trust...... all others bring data" - W. Edwards Deming
 
-* Table of Benefits to weaknesses
+> "If you can’t measure it you can’t manage it” - Omachonu & Ross (1995)
 
-### Triggers for Change
+* Total Quality Management
+* 6 Sigma
+
+* Step Change v Continuous Improvement
+    * Continuous Improvement
+        * Benefits
+            * Low risk - habitual - cumulative gains
+        * Weakness
+            * Slow - tunnel vision - false security - missed opportunity
+    * Step Change
+        * Benefits
+            * Potential quick gains
+        * Weakness
+            * Risk and disruption
+
+
+### Kurt Lewin
+* Unfreezing
+* Moving
+* Refreezing
+
+#### Unfreezing - Out of the comfort zone
+##### Triggers for Change
 * Survival
     * The Burning Platform Syndrome
 
-### Getting Top People Interested
+##### Getting Top People Interested - before crisis
 * Create a burning platform
     * Bring them to the precipice
     
@@ -779,17 +816,26 @@ Lecture 7 - Strategy and Managing Enterprise Change
         * Cross examined the board
         * Chinks in process
 
-### Moving
+#### Moving
+##### Change Roller Coaster
+* Self Esteem is high, drops then bounces back
+    1. Denial
+    2. Blame Others
+    3. Blame Self
+    4. Despair
+    5. Testing New Ways
+    6. Growing Confidence
+    7. Achieving results
 
-### Change Personel Table
-Energy and Impact
+##### Change Personel Table
+Energy of response vs Impact of change
 
-* Traditionalists
-* Resistors
-* Bystanders
-* Change Agents
+* Traditionalists - high impact
+* Resistors - high impact
+* Bystanders - low impact
+* Change Agents - low impact
 
-### Refreezing
+#### Refreezing
 * Anchoring the change
 * Structure
 * Support Systems - incentives
@@ -797,8 +843,8 @@ Energy and Impact
     * Destroy symbols
     * Incentives - recognition - rewards
 
+### Case Study
 * Case Study: Spark
-
 * Case Study: Printing industry
     * Per person was 800 pounds a week in 1980s
     * Opportunity:
