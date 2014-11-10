@@ -872,11 +872,16 @@ Lecture 8 - Managing Communications - Communications plan
 ---------------------------------------------------------
 Fonterra executive
 
-Edward Louis Bernays
-
+### Edward Louis Bernays
 * The engineering of consent
     * Uncle was Freud
 * Persuading smokers with pictures of fashion celebs smoking
+
+### Learning Outcomes
+* Have a broader awareness of communications and its potential as a tool for professional engineers
+* Develop a Communications plan
+* Prepare or participate in a Team briefing
+
 
 ### Objective 
 > Changing attitudes and behaviour
@@ -896,16 +901,16 @@ Edward Louis Bernays
     * Impact of Change v Energy of Response
         * Convert Traditionalists and Resistors
 
-#### Line Item
+#### Line Item in Communications plan
 * Line
     * Stakeholder
         1. Issue
-        2. Agenda
-        3. Where would you like to be
-        4. Strategy
+        2. Their Agenda
+        3. Where would you like them to be?
+        4. Strategy?
     * Considerations
         * Impact
-        * Measures
+        * Measures of success
         * Time Line
         * Action Owner
 * Communicate:
@@ -919,12 +924,24 @@ Edward Louis Bernays
 * Dr Albert Mehrabian's research 
     * 7% of meaning in words
     * 55% in facial expressions
+* Think about your message from the recipients point of view
+* iMA
+  * Blue, green,red, yellow
+
+### Motivators
+* Communications - emotions
+* Style – messaging
+* What’s the difference between propaganda and communications ??
 
 ### Team Briefing
 * Prevent rumour and the grapevine
 
 * Alistair Campbell v Tony Blair? Who was in charge?
     * Director of Communications and Strategy
+
+### Beware
+* Rules and laws govern what you can say and what you can’t
+  * Libel
 
 
 Help Desk 4
@@ -1153,7 +1170,7 @@ $$ NPV(r) = \frac{ B - C }{ l } $$
 * Unintended impacts
 * Non-market values
     * Noise reduction of roading project
-* Hedonic model? - crime on house price
+* Hedonic model? - effect of crime on house price
 
 ### Benefits Transfer
 * ...
@@ -1270,14 +1287,15 @@ Some context (systems scenario):
 * Product / service design
 * Supply Chain / Partners
 
-### General Principles
-* Future trends
 
 ### Problems with Hierarchy
 * Triablism
 * Silos
 * Them and Us culture
 
+#### General Principles
+* Future trends -> Strategy -> Management -> Operations -> Feedback loop
+* Bad?
 * Much prefer reports about how everyone works together
 
 ### Reports Marketing and Sales
@@ -1296,11 +1314,18 @@ Some context (systems scenario):
 * ... stuff
 
 ### Business environment journey
+* A complex journey
+* Where to put the smart money
 
-### Project Management Model
+### Enterprise Architecture
+#### Project Management Model
 * Concept Plan...
+* Measurements Monitoring and Control oversight
 
 * DRA business model
+
+### Signs of success
+* Happiness / Monies
 
 
 Lecture 11 - Compliance
@@ -1309,6 +1334,57 @@ Harvey Weake, SVP Manufacturing, Methanex Corporation
 
 * Methanex occupies around 18% of the market, most competition is from governments
 * If you have poor complience, you're likely to fail, if you have good compliance, its not certain that you will succeed
+
+### Role
+* On the Executive
+* Each is responsible for a function and a region
+* ONE Team approach
+
+### Context
+* Hazard regulation
+* Hazards
+    * Insider trading
+    * Whistleblower
+    * Corporate governance
+    * Share market transparency
+    * Anti-competition
+    * Workplace safety
+    * Employee relations
+    * Human rights
+    * Corrupt payments and prevention, etc
+* All require training, verification of training, regular re-training, measurement, reporting and processes to manage on a daily basis
+
+### Driver for new laws and regulations
+* When there is a gap between perceived reality and public acceptability
+* Varies with time
+* Public perception varies across countries but multinational corporations generally adopt the highest standards and often become the driver of change through business associations
+
+### Trade-offs for Society
+* New law if well crafted moves society forward but poor law tends to have unintended consequences:
+    * The original objectives not achieved
+    * Additional compliance leads to loss of country competitiveness
+    * A set of other undesirable outcomes occur
+
+### Our personal responsibility and behaviour
+* A country’s overall wealth is proportional to the overall level of integrity
+    * Institutional Integrity. Culture matters!
+    * Individual Integrity
+* In leading any company, institution or country its always about:
+    * the Mission first
+    * care of people second
+    * and lastly, your own interests
+* Methanex Code of Business Conduct
+    * Doing it right
+        * Responsible Care
+        * No alcohol and drugs
+        * ...
+
+### Takeaways
+* What problems do you solve today? What solutions do you create?
+* How do you think your problems today are framed? Defined?
+* As you gain work experience and responsibility, how do you think this changes?
+* Where do you get guidance from?
+* Remember that compliance is simply the MINIMUM standard of acceptable behaviour
 
 
 Lecture 12 - Business Failure
