@@ -48,9 +48,11 @@
 }
 .leftmenu #hamburger > div{
   transform: rotate(-180deg);
+  -sand-transform: rotate(-180deg);
 }
 .leftmenu #hamburger .first{
   transform: rotate(45deg);
+  -sand-transform: rotate(45deg);
   border-radius: 0;
   width: 15px;
   border-left:24px solid transparent;
@@ -60,15 +62,18 @@
 }
 .leftmenu #hamburger .third{
   transform: rotate(-45deg);
+  -sand-transform: rotate(-45deg);
   border-radius: 0;
   width: 15px;
   border-left:24px solid transparent;
 }
 .leftmenu.hidden #hamburger > div{
   transform: rotate(0deg);
+  -sand-transform: rotate(0deg);
 }
 .leftmenu.hidden #hamburger .first{
   transform: rotate(0deg);
+  -sand-transform: rotate(0deg);
   border-radius: 2px;
   width: 30px;
   border-left:1px solid transparent;
@@ -78,6 +83,7 @@
 }
 .leftmenu.hidden #hamburger .third{
   transform: rotate(0deg);
+  -sand-transform: rotate(0deg);
   border-radius: 2px;
   width: 30px;
   border-left:1px solid transparent;
@@ -187,9 +193,11 @@
 
   .leftmenu.hidden #hamburger > div{
     transform: rotate(-180deg);
+    -sand-transform: rotate(-180deg);
   }
   .leftmenu.hidden #hamburger .first{
     transform: rotate(45deg);
+    -sand-transform: rotate(45deg);
     border-radius: 0;
     width: 15px;
     border-left:24px solid transparent;
@@ -199,15 +207,18 @@
   }
   .leftmenu.hidden #hamburger .third{
     transform: rotate(-45deg);
+    -sand-transform: rotate(-45deg);
     border-radius: 0;
     width: 15px;
     border-left:24px solid transparent;
   }
   .leftmenu #hamburger > div{
     transform: rotate(0deg);
+    -sand-transform: rotate(0deg);
   }
   .leftmenu #hamburger .first{
     transform: rotate(0deg);
+    -sand-transform: rotate(0deg);
     border-radius: 2px;
     width: 30px;
     border-left:1px solid transparent;
@@ -217,6 +228,7 @@
   }
   .leftmenu #hamburger .third{
     transform: rotate(0deg);
+    -sand-transform: rotate(0deg);
     border-radius: 2px;
     width: 30px;
     border-left:1px solid transparent;
