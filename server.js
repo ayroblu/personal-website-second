@@ -101,6 +101,11 @@ app.get('/seerequest', function (req, res) {
   console.log(req.body);
   res.send('See logs for more details');
 });
+app.post('/seerequest', function (req, res) {
+  console.log(req.headers+'\n');
+  console.log(req.body);
+  res.send('See logs for more details');
+});
 app.get('/cpdperf', function (req, res) {
   res.render('/cpdperf.html',{});
 });
