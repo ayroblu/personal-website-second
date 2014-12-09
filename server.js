@@ -96,6 +96,11 @@ app.get('/mail', function (req, res) {
 app.get('/affinities', function (req, res) {
   res.render('/affinities.html',{});
 });
+app.get('/seerequest', function (req, res) {
+  console.log(req.headers+'\n');
+  console.log(req.body);
+  res.send('See logs for more details');
+});
 app.get('/cpdperf', function (req, res) {
   res.render('/cpdperf.html',{});
 });

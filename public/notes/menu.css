@@ -47,12 +47,20 @@
           transition: none;
 }
 .leftmenu #hamburger > div{
-  transform: rotate(-180deg);
-  -sand-transform: rotate(-180deg);
+    -sand-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg); /* Ch, Saf  */
+     -moz-transform: rotate(-180deg); /* Fx <16 */
+      -ms-transform: rotate(-180deg); /* IE 9 */
+       -o-transform: rotate(-180deg); /* Op <12.1 */
+          transform: rotate(-180deg); /* IE 10, Fx 16+, Op 12.1+ */
 }
 .leftmenu #hamburger .first{
-  transform: rotate(45deg);
-  -sand-transform: rotate(45deg);
+    -sand-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); /* Ch, Saf  */
+     -moz-transform: rotate(45deg); /* Fx <16 */
+      -ms-transform: rotate(45deg); /* IE 9 */
+       -o-transform: rotate(45deg); /* Op <12.1 */
+          transform: rotate(45deg); /* IE 10, Fx 16+, Op 12.1+ */
   border-radius: 0;
   width: 15px;
   border-left:24px solid transparent;
@@ -61,19 +69,31 @@
   width: 26px;
 }
 .leftmenu #hamburger .third{
-  transform: rotate(-45deg);
-  -sand-transform: rotate(-45deg);
+    -sand-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); /* Ch, Saf  */
+     -moz-transform: rotate(-45deg); /* Fx <16 */
+      -ms-transform: rotate(-45deg); /* IE 9 */
+       -o-transform: rotate(-45deg); /* Op <12.1 */
+          transform: rotate(-45deg); /* IE 10, Fx 16+, Op 12.1+ */
   border-radius: 0;
   width: 15px;
   border-left:24px solid transparent;
 }
 .leftmenu.hidden #hamburger > div{
-  transform: rotate(0deg);
-  -sand-transform: rotate(0deg);
+    -sand-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg); /* Ch, Saf  */
+     -moz-transform: rotate(0deg); /* Fx <16 */
+      -ms-transform: rotate(0deg); /* IE 9 */
+       -o-transform: rotate(0deg); /* Op <12.1 */
+          transform: rotate(0deg); /* IE 10, Fx 16+, Op 12.1+ */
 }
 .leftmenu.hidden #hamburger .first{
-  transform: rotate(0deg);
-  -sand-transform: rotate(0deg);
+    -sand-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg); /* Ch, Saf  */
+     -moz-transform: rotate(0deg); /* Fx <16 */
+      -ms-transform: rotate(0deg); /* IE 9 */
+       -o-transform: rotate(0deg); /* Op <12.1 */
+          transform: rotate(0deg); /* IE 10, Fx 16+, Op 12.1+ */
   border-radius: 2px;
   width: 30px;
   border-left:1px solid transparent;
@@ -82,8 +102,12 @@
   width: 30px;
 }
 .leftmenu.hidden #hamburger .third{
-  transform: rotate(0deg);
-  -sand-transform: rotate(0deg);
+    -sand-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg); /* Ch, Saf  */
+     -moz-transform: rotate(0deg); /* Fx <16 */
+      -ms-transform: rotate(0deg); /* IE 9 */
+       -o-transform: rotate(0deg); /* Op <12.1 */
+          transform: rotate(0deg); /* IE 10, Fx 16+, Op 12.1+ */
   border-radius: 2px;
   width: 30px;
   border-left:1px solid transparent;
@@ -104,7 +128,7 @@
   width:250px; /* Dependent */
   height:100%;
   background: #fff;
-  overflow:scroll;
+  overflow-y:scroll;
 }
 .leftmenu .menuitems > ul{
   min-height: 100%;
@@ -192,12 +216,20 @@
   }
 
   .leftmenu.hidden #hamburger > div{
-    transform: rotate(-180deg);
-    -sand-transform: rotate(-180deg);
+      -sand-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg); /* Ch, Saf  */
+       -moz-transform: rotate(-180deg); /* Fx <16 */
+        -ms-transform: rotate(-180deg); /* IE 9 */
+         -o-transform: rotate(-180deg); /* Op <12.1 */
+            transform: rotate(-180deg); /* IE 10, Fx 16+, Op 12.1+ */
   }
   .leftmenu.hidden #hamburger .first{
-    transform: rotate(45deg);
-    -sand-transform: rotate(45deg);
+      -sand-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg); /* Ch, Saf  */
+       -moz-transform: rotate(45deg); /* Fx <16 */
+        -ms-transform: rotate(45deg); /* IE 9 */
+         -o-transform: rotate(45deg); /* Op <12.1 */
+            transform: rotate(45deg); /* IE 10, Fx 16+, Op 12.1+ */
     border-radius: 0;
     width: 15px;
     border-left:24px solid transparent;
@@ -206,19 +238,31 @@
     width: 26px;
   }
   .leftmenu.hidden #hamburger .third{
-    transform: rotate(-45deg);
-    -sand-transform: rotate(-45deg);
+      -sand-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); /* Ch, Saf  */
+       -moz-transform: rotate(-45deg); /* Fx <16 */
+        -ms-transform: rotate(-45deg); /* IE 9 */
+         -o-transform: rotate(-45deg); /* Op <12.1 */
+            transform: rotate(-45deg); /* IE 10, Fx 16+, Op 12.1+ */
     border-radius: 0;
     width: 15px;
     border-left:24px solid transparent;
   }
   .leftmenu #hamburger > div{
-    transform: rotate(0deg);
-    -sand-transform: rotate(0deg);
+      -sand-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); /* Ch, Saf  */
+       -moz-transform: rotate(0deg); /* Fx <16 */
+        -ms-transform: rotate(0deg); /* IE 9 */
+         -o-transform: rotate(0deg); /* Op <12.1 */
+            transform: rotate(0deg); /* IE 10, Fx 16+, Op 12.1+ */
   }
   .leftmenu #hamburger .first{
-    transform: rotate(0deg);
-    -sand-transform: rotate(0deg);
+      -sand-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); /* Ch, Saf  */
+       -moz-transform: rotate(0deg); /* Fx <16 */
+        -ms-transform: rotate(0deg); /* IE 9 */
+         -o-transform: rotate(0deg); /* Op <12.1 */
+            transform: rotate(0deg); /* IE 10, Fx 16+, Op 12.1+ */
     border-radius: 2px;
     width: 30px;
     border-left:1px solid transparent;
@@ -227,8 +271,12 @@
     width: 30px;
   }
   .leftmenu #hamburger .third{
-    transform: rotate(0deg);
-    -sand-transform: rotate(0deg);
+      -sand-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); /* Ch, Saf  */
+       -moz-transform: rotate(0deg); /* Fx <16 */
+        -ms-transform: rotate(0deg); /* IE 9 */
+         -o-transform: rotate(0deg); /* Op <12.1 */
+            transform: rotate(0deg); /* IE 10, Fx 16+, Op 12.1+ */
     border-radius: 2px;
     width: 30px;
     border-left:1px solid transparent;

@@ -7,6 +7,8 @@
 <!--[if lt IE 9]>
   <script src="/static/html5shiv.js"></script>
   <script src="/static/classlist.js"></script>
+<![endif]-->
+<!--[if lt IE 7]>
   <script type="text/javascript" src="/static/cssSandpaperjs/EventHelpers.js"></script>
   <script type="text/javascript" src="/static/cssSandpaperjs/cssQuery-p.js"></script>
   <script type="text/javascript" src="/static/cssSandpaperjs/jcoglan.com/sylvester.js"></script>
@@ -73,7 +75,7 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
   padding: 0 10% 10px;
   position: absolute;
   top:0;right:0;left:250px;bottom:0;
-  overflow:scroll;
+  overflow:auto;
   -webkit-transition: left 0.2s ease-out;
      -moz-transition: left 0.2s ease-out;
       -ms-transition: left 0.2s ease-out;
@@ -84,7 +86,7 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
   left:0;
 }
 .navcontainer{
-  overflow:scroll;
+  overflow:auto;
   position:fixed;
   box-shadow: 0 0 10px #bbbbbb;
   text-align:center;
