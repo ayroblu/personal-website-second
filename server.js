@@ -97,11 +97,11 @@ app.get('/affinities', function (req, res) {
   res.render('/affinities.html',{});
 });
 app.get('/seerequest', function (req, res) {
-  console.log(JSON.stringify(req));
+  console.log(JSON.stringify(req.headers));
   res.send('See logs for more details');
 });
 app.post('/seerequest', function (req, res) {
-  console.log(JSON.stringify(req));
+  console.log(JSON.stringify(req.headers));
   res.send('See logs for more details');
 });
 app.get('/cpdperf', function (req, res) {
