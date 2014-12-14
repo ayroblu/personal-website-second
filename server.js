@@ -99,7 +99,7 @@ app.get('/mail', function (req, res) {
 app.get('/affinities', function (req, res) {
   res.render('/affinities.html',{});
 });
-router.get('/seerequest', function (req, res) {
+app.get('/seerequest', function (req, res) {
   console.log(JSON.stringify(req.headers));
   console.log(JSON.stringify(req.body));
   console.log(JSON.stringify(req.query));
@@ -109,7 +109,7 @@ router.get('/seerequest', function (req, res) {
   console.log(from);
   res.send('See logs for more details');
 });
-router.post('/seerequest', function (req, res) {
+app.post('/seerequest', function (req, res) {
   console.log(JSON.stringify(req.headers));
   console.log(JSON.stringify(req.body));
   console.log(JSON.stringify(req.query));
