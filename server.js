@@ -10,6 +10,8 @@ var request = require('request');
 var sprintf = require('util').format;
 var mail = require("nodemailer").mail;
 
+var router = express.Router();
+
 //mongoose.connect('mongodb://localhost/app');
 
 //var highlight = require('pygments');
@@ -97,7 +99,7 @@ app.get('/mail', function (req, res) {
 app.get('/affinities', function (req, res) {
   res.render('/affinities.html',{});
 });
-app.get('/seerequest', function (req, res) {
+router.get('/seerequest', function (req, res) {
   console.log(JSON.stringify(req.headers));
   console.log(JSON.stringify(req.body));
   console.log(JSON.stringify(req.query));
@@ -107,7 +109,7 @@ app.get('/seerequest', function (req, res) {
   console.log(from);
   res.send('See logs for more details');
 });
-app.post('/seerequest', function (req, res) {
+router.post('/seerequest', function (req, res) {
   console.log(JSON.stringify(req.headers));
   console.log(JSON.stringify(req.body));
   console.log(JSON.stringify(req.query));
