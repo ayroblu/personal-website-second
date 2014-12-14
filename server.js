@@ -107,6 +107,16 @@ app.get('/seerequest', function (req, res) {
   console.log(from);
   res.send('See logs for more details');
 });
+app.post('/seerequest', function (req, res) {
+  console.log(JSON.stringify(req.headers));
+  console.log(JSON.stringify(req.body));
+  console.log(JSON.stringify(req.query));
+  var from = (req.query.from) ? req.query.from : 'noreply@benlu.co';
+  console.log(from);
+  from = (req.body.from) ? req.body.from : 'noreply@benlu.co';
+  console.log(from);
+  res.send('See logs for more details');
+});
 app.get('/cpdperf', function (req, res) {
   res.render('/cpdperf.html',{});
 });
