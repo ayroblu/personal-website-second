@@ -10,8 +10,6 @@ var request = require('request');
 var sprintf = require('util').format;
 var mail = require("nodemailer").mail;
 
-var router = express.Router();
-
 //mongoose.connect('mongodb://localhost/app');
 
 //var highlight = require('pygments');
@@ -21,12 +19,13 @@ exports.app = server;
 
 //----------------------------------Node setup
 io.set('log level', 0);
+app.use(express.json());       // to support JSON-encoded bodies
+app.use(express.urlencoded()); // to support URL-encoded bodies
 app.use(express.logger());
 app.use(app.router); // Handles get post (or called by get/post), defines the order of call (so like check if a get option before static)
 app.use('/static',express.static(pub)); //Static dir: maps to /public
 app.use(express.errorHandler()); // Allow 500 requests rather than crashing?
 app.use(express.favicon(__dirname + '/favicon.ico')); //Favicon
-app.use(express.bodyParser());
 //app.set('views', __dirname + '/views'); //Jade: didn't really like it
 //app.set('view engine', 'jade');
 nunjucks.configure('templates', { //nunjucks: jinja templating
@@ -100,23 +99,17 @@ app.get('/affinities', function (req, res) {
   res.render('/affinities.html',{});
 });
 app.get('/seerequest', function (req, res) {
-  console.log(JSON.stringify(req.headers));
-  console.log(JSON.stringify(req.body));
-  console.log(JSON.stringify(req.query));
-  var from = (req.query && req.query.from) ? req.query.from : 'noreply@benlu.co';
-  console.log(from);
-  from = (req.body && req.body.from) ? req.body.from : 'noreply@benlu.co';
-  console.log(from);
+  res.send(req.headers);
+  res.send(req.body);
+  console.log(req.headers);
+  console.log(req.body);
   res.send('See logs for more details');
 });
 app.post('/seerequest', function (req, res) {
-  console.log(JSON.stringify(req.headers));
-  console.log(JSON.stringify(req.body));
-  console.log(JSON.stringify(req.query));
-  var from = (req.query && req.query.from) ? req.query.from : 'noreply@benlu.co';
-  console.log(from);
-  from = (req.body && req.body.from) ? req.body.from : 'noreply@benlu.co';
-  console.log(from);
+  res.send(req.headers);
+  res.send(req.body);
+  console.log(req.headers);
+  console.log(req.body);
   res.send('See logs for more details');
 });
 app.get('/cpdperf', function (req, res) {
