@@ -99,18 +99,17 @@ app.get('/affinities', function (req, res) {
   res.render('/affinities.html',{});
 });
 app.get('/seerequest', function (req, res) {
-  res.send(req.headers);
-  res.send(req.body);
+  var s = req.headers + '\n' + req.body + '\n' + 'See logs?'
   console.log(req.headers);
   console.log(req.body);
-  res.send('See logs for more details');
+  var s = req.headers + '\n' + req.body + '\n' + 'See logs?'
+  res.send(s);
 });
 app.post('/seerequest', function (req, res) {
-  res.send(req.headers);
-  res.send(req.body);
   console.log(req.headers);
   console.log(req.body);
-  res.send('See logs for more details');
+  var s = req.headers + '\n' + req.body + '\n' + 'See logs?'
+  res.send(s);
 });
 app.get('/cpdperf', function (req, res) {
   res.render('/cpdperf.html',{});
