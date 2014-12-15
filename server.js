@@ -21,6 +21,7 @@ exports.app = server;
 io.set('log level', 0);
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
+app.use(express.multipart());
 app.use(express.logger());
 app.use(app.router); // Handles get post (or called by get/post), defines the order of call (so like check if a get option before static)
 app.use('/static',express.static(pub)); //Static dir: maps to /public
