@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <style>
+* {
+  margin:0;
+  padding:0;
+  text-align:center;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+h1{
+  padding:2px 0;
+  border-bottom:1px solid #aaaaaa;
+  font-weight:400;
+  font-size:250%;
+}
+.menu{
+  display:block;
+  border-bottom:1px solid #dddddd;
+  overflow-x:scroll;
+  white-space:nowrap;
+}
+.button{
+  width:200px;
+  padding:10px 0;
+  cursor: pointer;
+  display:inline-block;
+  font-size:120%;
+  border-bottom:1px solid #eeeeee;
+}
+.button:hover{
+  text-decoration:underline;
+}
+.selected{
+  border-bottom:2px solid #11aaff;
+}
+#container{
+  min-width: 310px; 
+  min-height: 400px; 
+  margin: 0 auto
+}
+@media(max-width:800px) {
+  .button{
+    width:auto;
+    padding: 10px 10px;
+  }
+}
+    </style>
+  </head>
+  <body>
+
+    <h1>Benchmark Results</h1>
+    <div class='menu'>
+    <div id='time' class='button selected'>Time</div><div id='task' class='button'>Task</div><div id='tasktime' class='button'>Task Time</div><div id='tasksplittime' class='button'>Task Split Time</div>
+    </div>
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript">
+function getBarChart() {
+  barchart = {
+    'chart': {
+      'type': 'bar',
+      //'inverted': true,
+    },
+    'title': {
+      'text': 'Parallel Performance',
+    },
+    'subtitle': {
+      'text': 'Tasks',
+    },
+    'xAxis': {
+      'title': {
+        'text': null,
+      },
+      'categories': [],
+    },
+    'yAxis': {
+      'title': {
+        'text': 'Time Taken (s)',
+      },
+    },
+    'loading': {
+      'showDuration': 20
+    },
+    'tooltip': {
+      'valueSuffix': 's',
+    },
+    'plotOptions': {
+      'series': {
+        'animation': {
+          'duration': 400,
+        },
+      },
+    },
+    'series': []
+  }
+  return barchart;
+}
+function getStackedBarChart() {
+  chart = getBarChart();
+  chart['plotOptions']['series']['stacking'] = 'normal';
+  chart['yAxis']['reversedStacks'] = false;
+  return chart;
+}
+function getTimeChart(){
+  chart = getBarChart();
+  chart['title']['text'] = 'Time Chart';
+  chart['subtitle']['text'] = 'Program run times';
+  chart['xAxis']['categories'] = ['Total Processing Time','Estimated Benchmarking Time', 'Average Task Runtime'];
+  chart['series'] = [{'name':'Tag Name','data': [32,1.2,3.2]}];
+  return chart;
+}
+function getTaskChart(){
+  chart = getBarChart();
+  chart['title']['text'] = 'Task Chart';
+  chart['subtitle']['text'] = 'Program Sub Tasks';
+  chart['xAxis']['categories'] = ['Number of Sub Tasks','Max Live Tasks'];
+  chart['series'] = [{'name':'Tag Name','data': [5,3]}];
+  return chart;
+}
+function getTaskTimeChart(){
+  chart = getBarChart();
+  chart['title']['text'] = 'Task Times Chart';
+  chart['subtitle']['text'] = 'Program Sub Task Times';
+  chart['xAxis']['categories'] = ['Live Time','CPU Scheduling Time', 'Blocking Time', 'Waiting Time'];
+  chart['series'] = [{'name':'Tag Name','data': [6.2,1.1,0.8,1.0]}];
+  return chart;
+}
+function getTaskSplitTimesChart(){
+  chart = getStackedBarChart();
+  chart['title']['text'] = 'Task Split Times Chart';
+  chart['subtitle']['text'] = 'Tag Name';
+  chart['xAxis']['title']['text'] = 'Test';
+  chart['series'] = [
+    {'name':'Task 1','data': [6.2,1.1,0.8,1.0]},
+    {'name':'Task 2','data': [5.2,0.9,0.6,0.7]},
+    {'name':'Task 3','data': [4.2,0.7,0.85,1.4]}
+  ];
+  return chart;
+}
+
+function addListeners(){
+  var time = document.getElementById('time');
+  var task = document.getElementById('task');
+  var tasktime = document.getElementById('tasktime');
+  var tasksplittime = document.getElementById('tasksplittime');
+  time.onclick = function() {
+    $('#container').highcharts(getTimeChart());
+    task.classList.remove('selected');
+    tasktime.classList.remove('selected');
+    tasksplittime.classList.remove('selected');
+    time.classList.add('selected');
+  }
+  task.onclick = function() {
+    $('#container').highcharts(getTaskChart());
+    time.classList.remove('selected');
+    tasktime.classList.remove('selected');
+    tasksplittime.classList.remove('selected');
+    task.classList.add('selected');
+  }
+  tasktime.onclick = function() {
+    $('#container').highcharts(getTaskTimeChart());
+    time.classList.remove('selected');
+    task.classList.remove('selected');
+    tasksplittime.classList.remove('selected');
+    tasktime.classList.add('selected');
+  }
+  tasksplittime.onclick = function() {
+    $('#container').highcharts(getTaskSplitTimesChart());
+    time.classList.remove('selected');
+    task.classList.remove('selected');
+    tasktime.classList.remove('selected');
+    tasksplittime.classList.add('selected');
+  }
+}
+addListeners();
+$('#container').highcharts(getTimeChart());
+    </script>
+  </body>
+</html>
+
