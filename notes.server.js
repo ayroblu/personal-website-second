@@ -64,3 +64,5 @@ app.get('/', function (req, res) {
   template_values = {'toc':notes['toc'],'markdown':notes['markdown']}
   res.render('notes.templates/index.html', template_values);
 });
+
+app.listen(process.env.PORT || 3454)
